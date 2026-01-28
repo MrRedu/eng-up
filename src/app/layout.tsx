@@ -50,7 +50,7 @@ export default function RootLayout({
       >
         <Providers>
           <AppSidebar />
-          <SidebarInset className="bg-sidebar">
+          <SidebarInset className="bg-sidebar max-w-7xl mx-auto">
             <div className="relative bg-background mx-2 my-2 border shadow-sm rounded-xl flex flex-col flex-1">
               <Header />
               <main className="flex-1 p-6 md:p-8">{children}</main>

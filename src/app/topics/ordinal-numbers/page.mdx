@@ -1,0 +1,184 @@
+# Ordinal Numbers
+
+<Typography variant="p" className="text-center">
+  {`Se utilizan para indicar orden, posición o fechas.`}
+</Typography>
+
+<br/><br/>
+
+## Algunos ejemplos
+
+<br/>
+
+<Table>
+  <TableCaption>Lista de números ordinales</TableCaption>
+    <TableHeader>
+    <TableRow>
+      <TableHead className="w-25">Posición</TableHead>
+      <TableHead>Inglés</TableHead>
+      <TableHead>Abreviatura</TableHead>
+    </TableRow>
+  </TableHeader>
+
+  <TableBody>
+    <TableRow>
+      <TableCell>1º</TableCell>
+      <TableCell>First</TableCell>
+      <TableCell>1st</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>2º</TableCell>
+      <TableCell>Second</TableCell>
+      <TableCell>2nd</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>3º</TableCell>
+      <TableCell>Third</TableCell>
+      <TableCell>3rd</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>4º</TableCell>
+      <TableCell>Fourth</TableCell>
+      <TableCell>4th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>5º</TableCell>
+      <TableCell>Fifth</TableCell>
+      <TableCell>5th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>10º</TableCell>
+      <TableCell>Tenth</TableCell>
+      <TableCell>10th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>11º</TableCell>
+      <TableCell>Eleventh</TableCell>
+      <TableCell>11th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>12º</TableCell>
+      <TableCell>Twelfth</TableCell>
+      <TableCell>12th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>13º</TableCell>
+      <TableCell>Thirteenth</TableCell>
+      <TableCell>13th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>14º</TableCell>
+      <TableCell>Fourteenth</TableCell>
+      <TableCell>14th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>15º</TableCell>
+      <TableCell>Fifteenth</TableCell>
+      <TableCell>15th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>16º</TableCell>
+      <TableCell>Sixteenth</TableCell>
+      <TableCell>16th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>17º</TableCell>
+      <TableCell>Seventeenth</TableCell>
+      <TableCell>17th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>18º</TableCell>
+      <TableCell>Eighteenth</TableCell>
+      <TableCell>18th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>19º</TableCell>
+      <TableCell>Nineteenth</TableCell>
+      <TableCell>19th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>20º</TableCell>
+      <TableCell>Twentieth</TableCell>
+      <TableCell>20th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>21º</TableCell>
+      <TableCell>Twenty-first</TableCell>
+      <TableCell>21st</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>25º</TableCell>
+      <TableCell>Twenty-fifth</TableCell>
+      <TableCell>25th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>30º</TableCell>
+      <TableCell>Thirtieth</TableCell>
+      <TableCell>30th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>31º</TableCell>
+      <TableCell>Thirty-first</TableCell>
+      <TableCell>31st</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>39º</TableCell>
+      <TableCell>Thirty-ninth</TableCell>
+      <TableCell>39th</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>100º</TableCell>
+      <TableCell>One hundredth</TableCell>
+      <TableCell>100th</TableCell>
+    </TableRow>
+  </TableBody>
+
+</Table>
+
+<Alert variant="info" title="Dato importante">
+<>
+La mayoría de los números terminan en <strong>-th</strong>, excepto el 1, 2 y 3 (y sus compuestos como 21st, 22nd, 23rd, 31st, etc.).
+</>
+</Alert>
+
+<br/><br/>
+
+## Ejemplos de uso
+
+<br />
+
+<List>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Dates:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Fechas.
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">Today is January *twenty-eighth*.</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Order:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Orden.
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">He finished in *second* place.</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Floors:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Pisos / Plantas.
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">My office is on the *tenth* floor.</Typography>
+  </ListItem>
+</List>
