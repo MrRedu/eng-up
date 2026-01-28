@@ -14,14 +14,14 @@ export function Header() {
       <div className="flex items-center gap-4">
         <SidebarTrigger />
         <div
-          className="hidden md:flex flex-row items-center gap-2 border rounded-md px-3 py-1.5 text-muted-foreground bg-muted/50 cursor-pointer"
+          className="flex items-center gap-4 justify-between border rounded-md px-3 py-1.5 text-muted-foreground bg-muted/50 cursor-pointer w-full"
           onClick={() => {
             const e = new KeyboardEvent('keydown', { key: 'k', metaKey: true });
             document.dispatchEvent(e);
           }}
         >
-          <span className="text-sm">Search notes...</span>
-          <Kbd>⌘ K</Kbd>
+          <span className="text-sm whitespace-nowrap">Buscar tema...</span>
+          <Kbd className="whitespace-nowrap">{`⌘ K`}</Kbd>
         </div>
       </div>
 
