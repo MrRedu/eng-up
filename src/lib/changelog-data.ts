@@ -7,6 +7,14 @@ export interface ChangelogEntry {
 }
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
+    {
+    version: 'v1.7.1',
+    title: 'Irregular Verbs Resource',
+    description:
+      'Created a new resource page with a comprehensive table of the most common irregular verbs in English.',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
   {
     version: 'v1.7.0',
     title: 'Present Tense Structures Expanded',
