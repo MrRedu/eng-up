@@ -190,18 +190,6 @@ export default function RoadmapPage() {
           );
         })}
       </div>
-
-      <Separator />
-
-      <div className="bg-muted/30 p-6 rounded-xl border border-dashed text-center">
-        <Typography
-          variant="p"
-          className="text-muted-foreground text-sm italic"
-        >
-          "The beautiful thing about learning is that no one can take it away
-          from you." — B.B. King
-        </Typography>
-      </div>
     </div>
   );
 }
