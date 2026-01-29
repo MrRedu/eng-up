@@ -45,6 +45,14 @@ export const metadata: Metadata = {
     description:
       'Aprende gramática inglesa de forma sencilla y estructurada con nuestro cuaderno digital interactivo.',
     siteName: 'Eng-Up',
+    images: [
+      {
+        url: '/og-1920x1080.webp',
+        width: 1920,
+        height: 1080,
+        alt: 'Eng-Up | Gramática Inglesa Interactiva',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -52,6 +60,14 @@ export const metadata: Metadata = {
     description:
       'Mejora tu nivel de inglés con notas claras y ejemplos prácticos diseñados para hispanohablantes.',
     // creator: '@MrRedu_Dev',
+    images: [
+      {
+        url: '/og-1920x1080.webp',
+        width: 1920,
+        height: 1080,
+        alt: 'Eng-Up | Gramática Inglesa Interactiva',
+      },
+    ],
   },
 };
 
