@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eng-Up 🚀
 
-## Getting Started
+**Eng-Up** es una plataforma interactiva diseñada como un cuaderno de notas digital para estudiantes de inglés. Estructurada para ser rápida, moderna y visualmente atractiva, permite a los usuarios (especialmente hispanohablantes) repasar gramática inglesa de manera eficiente.
 
-First, run the development server:
+![Eng-Up Preview](/public/og-1920x1080.webp)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Características Principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Interactividad Total**: Traducciones inteligentes a través de Popovers. Haz clic en las frases para ver su significado sin saturar la vista.
+- **Roadmap de Aprendizaje**: Seguimiento de progreso dinámico para tiempos verbales, con guardado automático en `localStorage`.
+- **Búsqueda Ultra-rápida**: Acceso instantáneo a cualquier tema mediante la paleta de comandos con `⌘ K`.
+- **Navegación Jerárquica**: Sidebar organizado por niveles (Fundamentos, Gramática Central, Estructuras Avanzadas).
+- **Contenido en MDX**: Definiciones claras y estructuras gramaticales potentes con componentes personalizados.
+- **Diseño Premium**: Interfaz moderna, minimalista y responsiva construida con Tailwind CSS y componentes de Shadcn/UI.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Stack Tecnológico
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
+- **Estilos**: [Tailwind CSS](https://tailwindcss.com/)
+- **Componentes UI**: [Shadcn/UI](https://ui.shadcn.com/)
+- **Manejo de Contenido**: [MDX](https://mdxjs.com/)
+- **Iconos**: [Lucide React](https://lucide.dev/)
 
-## Learn More
+## 🚀 Instalación y Desarrollo
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clonar el repositorio:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/MrRedu/eng-up.git
+   cd eng-up
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Instalar dependencias:**
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Ejecutar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📂 Estructura del Proyecto
+
+- `src/app/`: Rutas de la aplicación (Gramática, Temas, Roadmap, About).
+- `src/components/`: Componentes de interfaz y componentes específicos de MDX.
+- `src/lib/constants.tsx`: La "fuente de verdad" donde se define toda la estructura de navegación y temas.
+- `src/mdx-components.tsx`: Mapeo de etiquetas HTML a componentes personalizados para una legibilidad perfecta.
+
+## 📝 Personalización
+
+Para agregar nuevos temas, simplemente debes:
+
+1. Crear el archivo `.mdx` en la ruta correspondiente dentro de `src/app/`.
+2. Registrar el nuevo tema en `src/lib/constants.tsx` dentro del objeto `NAVIGATION_DATA`.
+
+## 🤝 Créditos y Colaboración
+
+Este proyecto es de código abierto. Agradecimientos especiales a todas las personas que han colaborado verificando la precisión de la gramática y contribuyendo con ejemplos prácticos.
+
+Desarrollado con ❤️ por [Eduardo R. (MrRedu)](https://github.com/MrRedu).
+
+---
+
+_Nota: Este proyecto fue diseñado para ser un recurso educativo personal extendible a la comunidad._
