@@ -6,12 +6,20 @@
 <br />
 
 <GrammarExample 
-  structure="Subject + have/has + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + have/has + Complement" },
+    { label: "Negative", value: "Subject + have/has + not + Complement" },
+    { label: "Interrogative", value: "Have/Has + Subject + Complement?" }
+  ]}
   examples={[
     { type: "Affirmative (I/You/We/They)", text: "I have a big house.", translation: "Tengo una casa grande." },
     { type: "Affirmative (He/She/It)", text: "He has a new car.", translation: "Él tiene un carro nuevo." },
     { type: "Negative", text: "I don't have enough time.", translation: "No tengo suficiente tiempo." },
-    { type: "Negative (3rd Person)", text: "She doesn't have a cat.", translation: "Ella no tiene un gato." }
+    { type: "Negative (3rd Person)", text: "She doesn't have a cat.", translation: "Ella no tiene un gato." },
+    { type: "Interrogative", text: "Do you have a car?", translation: "¿Tienes un carro?" },
+    { type: "Interrogative (3rd Person)", text: "Does she have a cat?", translation: "¿Ella tiene un gato?" },
+    { type: "Answer (+)", text: "Yes, I do.", translation: "Sí, lo tengo." },
+    { type: "Answer (-)", text: "No, she doesn't.", translation: "No, no lo tiene." },
   ]}
 />
 

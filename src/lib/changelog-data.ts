@@ -8,6 +8,31 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.7.0',
+    title: 'Present Tense Structures Expanded',
+    description:
+      'Added negative and interrogative grammatical structures to all present tense lessons (Simple, Continuous, Perfect, Perfect Continuous, and Verb to be/have).',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
+
+  {
+    version: 'v1.6.1',
+    title: 'Multi-Structure Support',
+    description:
+      'Updated GrammarExample component to support multiple grammatical structures with custom labels.',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.6.0',
+    title: 'Verb "to be" Lessons',
+    description:
+      'Added detailed lessons for Present Simple and Past Simple verb "to be" with examples.',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.5.1',
     title: 'Sidebar Footer Optimization',
     description:

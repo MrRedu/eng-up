@@ -12,7 +12,7 @@ const typographyVariants = cva('', {
       h6: 'scroll-m-20 text-lg font-semibold tracking-tight',
       p: 'leading-7 [&:not(:first-child)]:mt-6',
       blockquote: 'mt-6 border-l-2 pl-6 italic',
-      code: 'bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
+      code: 'relative block rounded-lg bg-primary/5 border border-primary/10 px-4 py-3 text-base md:text-lg font-mono text-primary',
       lead: 'text-muted-foreground text-xl',
       large: 'text-lg font-semibold',
       small: 'text-sm leading-none font-medium',

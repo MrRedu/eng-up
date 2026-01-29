@@ -4,11 +4,21 @@
   {`Se utiliza para rutinas, hechos generales y estados permanentes.`}
 </Typography>
 
+<Typography variant="p" className="text-center text-balance">
+  <>
+    {`En este caso utilizamos el verbo auxiliar "do/does"; `}<strong>do</strong>{` para los sujetos I, You, We y They, y `}<strong>does</strong>{` para los sujetos He, She, It. En el caso de las oraciones afirmativas, no utilizamos el verbo auxiliar, pero si en las oraciones negativas e interrogativas.`}
+  </>
+</Typography>
+
 <br />
 <br />
 
 <GrammarExample
-  structure="Subject + Verb (s/es for 3rd person) + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + Verb (s/es for 3rd person) + Complement" },
+    { label: "Negative", value: "Subject + do/does + not + Verb + Complement" },
+    { label: "Interrogative", value: "Do/Does + Subject + Verb + Complement?" }
+  ]}
   examples={[
     {
       type: '1st Person (Affirmative)',
@@ -40,6 +50,9 @@
   ]}
 />
 
+
+
 <Alert variant="warn" title="Recordatorio">
-  ¡Recuerda agregar **'s'** o **'es'** al verbo cuando hables de **He, She o It** en afirmativo!
+  ¡Recuerda agregar **'s'** o **'es'** al verbo cuando hables de **He, She o It** en afirmativo! ¡Solo en afirmativo!
 </Alert>
+

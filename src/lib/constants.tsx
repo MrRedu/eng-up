@@ -10,6 +10,7 @@ import {
   HelpCircle,
   MessageSquare,
   Map,
+  PackageOpen,
 } from 'lucide-react';
 
 export interface NavLeaf {
@@ -42,6 +43,13 @@ export const NAVIGATION_DATA: NavGroup[] = [
     items: [
       { title: 'Inicio', url: '/', icon: Home },
       { title: 'Glosario de Temas', url: '/topics', icon: Book },
+      {
+        title: 'Recursos',
+        icon: PackageOpen,
+        subItems: [
+          { title: 'Verbos Irregulares', url: '/resources/irregular-verbs' },
+        ],
+      },
       { title: 'Roadmap', url: '/roadmap', icon: Map },
     ],
   },
@@ -99,6 +107,7 @@ export const NAVIGATION_DATA: NavGroup[] = [
           {
             title: 'Presente',
             subItems: [
+              { title: 'Simple (am/is/are)', url: '/grammar/present-be' },
               { title: 'Simple (do/does)', url: '/grammar/present-simple' },
               {
                 title: 'Continuous (-ing)',

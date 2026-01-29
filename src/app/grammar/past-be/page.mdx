@@ -1,0 +1,57 @@
+# Past Simple: Verb "to be"
+
+<Typography variant="p" className="text-center">
+  {`El pasado del verbo "to be" se utiliza para describir estados, sentimientos o ubicaciones que ocurrieron en el pasado. Al igual que en presente, no utiliza el auxiliar 'did'.`}
+</Typography>
+
+<br />
+<br />
+
+<GrammarExample
+  structure={[
+    { label: "Affirmative", value: "Subject + was/were + Complement" },
+    { label: "Negative", value: "Subject + was/were + not + Complement" },
+    { label: "Interrogative", value: "Was/Were + Subject + Complement?" }
+  ]}
+  examples={[
+    { type: '1st & 3rd Person (was)', text: "I was at school yesterday.", translation: "Yo estuve en la escuela ayer." },
+    { type: '3rd Person (was)', text: "It was a rainy day.", translation: "Fue un día lluvioso." },
+    { type: 'You/We/They (were)', text: "We were very busy.", translation: "Nosotros estábamos muy ocupados." },
+    { type: 'Negative (wasn\'t)', text: "He wasn't (was not) at the party.", translation: "Él no estuvo en la fiesta." },
+    { type: 'Negative (weren\'t)', text: "You weren't (were not) late.", translation: "Tú no llegaste tarde." },
+    { type: 'Interrogative', text: "Were they happy with the news?", translation: "¿Estaban ellos felices con la noticia?" }
+  ]}
+/>
+
+<Alert variant="info" title="Dato importante">
+  Usamos **was** para los sujetos *I, He, She, It*. Usamos **were** para los sujetos *You, We, They*.
+</Alert>
+
+<br />
+
+## Comparativa con Presente
+
+<List>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Presente:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        I am tired now.
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">Estado actual (ahora).</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Pasado:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        I was tired last night.
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">Estado que ya terminó (ayer, anoche).</Typography>
+  </ListItem>
+</List>
