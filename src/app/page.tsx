@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="max-w-4xl mx-auto space-y-12">
       <section className="text-center space-y-4 py-12">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-primary">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl">
           Eng-Up
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
