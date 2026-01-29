@@ -1,21 +1,16 @@
 'use client';
-
 import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
 import { NAVIGATION_DATA, NavItem, NavSubItem, NavLeaf } from '@/lib/constants';
-
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import {
-  Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
@@ -23,16 +18,13 @@ import {
   SidebarMenuSubItem,
   SidebarMenuSubButton,
 } from '@/components/ui/sidebar';
+import { ScrollArea } from '../ui/scroll-area';
+import Link from 'next/link';
 
-export function AppSidebar() {
+export const ContentSidebar = () => {
   return (
-    <Sidebar className="border-none">
-      <SidebarHeader className="p-4">
-        <h1 className="text-xl font-bold tracking-tight text-primary">
-          Eng-Up
-        </h1>
-      </SidebarHeader>
-      <SidebarContent>
+    <SidebarContent>
+      <ScrollArea className="h-full">
         {NAVIGATION_DATA.map((group) => (
           <SidebarGroup key={group.title}>
             <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
@@ -110,7 +102,7 @@ export function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
-      </SidebarContent>
-    </Sidebar>
+      </ScrollArea>
+    </SidebarContent>
   );
-}
+};

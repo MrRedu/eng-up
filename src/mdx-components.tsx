@@ -1,6 +1,6 @@
 import type { MDXComponents } from 'mdx/types';
 import { GrammarExample } from '@/components/mdx/GrammarExample';
-import { Alert } from '@/components/Alert';
+import { Alert } from '@/components/alert-component';
 import {
   Table,
   TableBody,
@@ -13,13 +13,14 @@ import {
 import { AlertTriangle } from 'lucide-react';
 import { cn } from './lib/utils';
 import { Typography } from '@/components/ui/typography';
-import { List, ListItem } from '@/components/ui/list-component';
-import { Separator } from '@/components/ui/separator-component';
+import { List, ListItem } from '@/components/list-component';
+import { Separator } from '@/components/separator-component';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import Link from 'next/link';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -58,6 +59,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Typography,
     List,
     ListItem,
+    Link,
     // Shadcn
     // shadcn-Table
     Table,
