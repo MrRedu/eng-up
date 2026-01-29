@@ -9,6 +9,7 @@ import {
   Zap,
   HelpCircle,
   MessageSquare,
+  Map,
 } from 'lucide-react';
 
 export interface NavLeaf {
@@ -41,6 +42,7 @@ export const NAVIGATION_DATA: NavGroup[] = [
     items: [
       { title: 'Inicio', url: '/', icon: Home },
       { title: 'Glosario de Temas', url: '/topics', icon: Book },
+      { title: 'Roadmap', url: '/roadmap', icon: Map },
     ],
   },
   {
