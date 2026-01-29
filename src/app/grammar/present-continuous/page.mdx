@@ -4,11 +4,22 @@
   {`Se utiliza para acciones que están ocurriendo en este preciso momento o planes futuros cercanos.`}
 </Typography>
 
+
+<Typography variant="p" className="text-center text-balance">
+  <>
+    {`En este caso utilizamos el verbo auxiliar `}<strong>"to be"</strong>{` `}<em>(am/is/are)</em>{` seguido del verbo principal con la terminación `}<strong>-ing</strong>{`.`}
+  </>
+</Typography>
+
 <br />
 <br />
 
 <GrammarExample
-  structure="Subject + to be (am/is/are) + Verb-ing + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + to be (am/is/are) + Verb-ing + Complement" },
+    { label: "Negative", value: "Subject + to be (am/is/are) + not + Verb-ing + Complement" },
+    { label: "Interrogative", value: "to be (Am/Is/Are) + Subject + Verb-ing + Complement?" }
+  ]}
   examples={[
     {
       type: '1st Person (Affirmative)',

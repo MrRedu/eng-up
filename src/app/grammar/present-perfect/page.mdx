@@ -4,11 +4,21 @@
   {`Se utiliza para acciones que ocurrieron en un tiempo no específico del pasado o que tienen relevancia en el presente.`}
 </Typography>
 
+<Typography variant="p" className="text-center text-balance">
+  <>
+    {`En este caso utilizamos el verbo auxiliar `}<strong>"have/has"</strong>{` seguido del participio pasado del verbo principal; `}<strong>have</strong>{` para los sujetos I, You, We y They, y `}<strong>has</strong>{` para los sujetos He, She, It.`}
+  </>
+</Typography>
+
 <br />
 <br />
 
 <GrammarExample
-  structure="Subject + have/has + Past Participle + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + have/has + Past Participle + Complement" },
+    { label: "Negative", value: "Subject + have/has + not + Past Participle + Complement" },
+    { label: "Interrogative", value: "Have/Has + Subject + Past Participle + Complement?" }
+  ]}
   examples={[
     {
       type: '1st Person (Affirmative)',
@@ -43,6 +53,9 @@
   ]}
 />
 
-<Alert variant="warn" title="Recordatorio">
-  Usamos **'has'** para **He, She, It** y **'have'** para el resto.
-</Alert>
+<Alert variant="destructive" title="Recordatorio">
+<>
+  Usamos el participio pasado del verbo principal. Ej: [Study/Studied/<strong>Studied</strong>] / [Eat/Ate/<strong>Eaten</strong>] / [Go/Went/<strong>Gone</strong>] <br/>
+  Ver <Link href="/resources/irregular-verbs" className="underline">lista de verbos irregulares</Link> en la sección de recursos.
+</>
+</Alert>  

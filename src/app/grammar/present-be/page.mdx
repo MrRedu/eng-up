@@ -1,0 +1,86 @@
+# Present Simple: Verb "to be"
+
+<Typography variant="p" className="text-center">
+  {`Se utiliza para describir estados, ubicaciones, nombres y profesiones.`}
+</Typography>
+
+<Typography variant="p" className="text-center text-balance">
+  <>
+  {`El verbo `}<strong>"to be"</strong>{` es el más fundamental en inglés y significa `}<strong>ser</strong>{` o `}<strong>estar</strong>{`. A diferencia de otros verbos, tiene sus propias formas y `}<strong>no usa auxiliares</strong>{` como "do/does".`}
+  </>
+</Typography>
+
+<br />
+<br />
+
+<GrammarExample
+  structure={[
+    { label: "Affirmative", value: "Subject + to be (am/is/are) + Complement" },
+    { label: "Negative", value: "Subject + to be (am/is/are) + not + Complement" },
+    { label: "Interrogative", value: "to be (Am/Is/Are) + Subject + Complement?" }
+  ]}
+  examples={[
+    { type: 'Affirmative (I)', text: "I am a student.", translation: "Yo soy un estudiante." },
+    { type: 'Affirmative (He/She/It)', text: "She is happy.", translation: "Ella está feliz." },
+    { type: 'Affirmative (You/We/They)', text: "They are at home.", translation: "Ellos están en casa." },
+    { type: 'Negative', text: "I am not tired.", translation: "No estoy cansado." },
+    { type: 'Negative (Short form)', text: "He isn't (is not) here.", translation: "Él no está aquí." },
+    { type: 'Interrogative', text: "Are you ready?", translation: "¿Estás listo?" },
+    { type: 'Interrogative (Short form)', text: "Isn't he late?", translation: "¿No está él tarde?" },
+  ]}
+/>
+
+<Alert variant="info" title="Dato importante">
+  Recuerda las contracciones comunes: **I'm**, **You're**, **He's**, **She's**, **It's**, **We're**, **They're**. En negativo puedes usar **isn't** y **aren't**.
+</Alert>
+
+<br />
+
+## Usos Principales
+
+<List>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Names/Identity:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Nombres/Identidad
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">I'm Eduardo / She's a student</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Feelings:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Sentimientos
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">She is happy / They are tired</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Locations:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Ubicaciones
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">They are at home / I am here</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Nationalities/Professions:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Nacionalidades/Profesiones
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">They are from Spain / He is a doctor</Typography>
+  </ListItem>
+</List>

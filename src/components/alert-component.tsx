@@ -22,7 +22,7 @@ const variantStyles: Record<AlertVariant, string> = {
     'border-green-200 bg-green-50 text-green-900 dark:border-green-900/50 dark:bg-green-900/20 dark:text-green-100',
   warn: 'border-amber-200 bg-amber-50 text-amber-900 dark:border-amber-900/50 dark:bg-amber-900/20 dark:text-amber-100',
   destructive:
-    'border-red-200 bg-red-50 text-red-900 dark:border-red-900/50 dark:bg-red-900/20 dark:text-red-100',
+    'border-red-600 bg-red-200 text-red-900 dark:border-red-900/50 dark:bg-red-900/20 dark:text-red-100',
 };
 
 const variantIcons: Record<AlertVariant, React.ElementType> = {

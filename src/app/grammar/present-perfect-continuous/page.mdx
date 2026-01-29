@@ -4,16 +4,28 @@
   {`Se utiliza para acciones que comenzaron en el pasado y continúan en el presente, o para hablar de cuánto tiempo ha estado ocurriendo algo.`}
 </Typography>
 
+<Typography variant="p" className="text-center text-pretty">
+  <>
+    {`En este caso utilizamos el verbo auxiliar `}<strong>"have/has"</strong>{` seguido de `}<strong>"been"</strong>{` y el verbo principal con la terminación `}<strong>-ing</strong>{`.`}
+  </>
+</Typography>
+
 <br />
 <br />
 
 <GrammarExample 
-  structure="Subject + have/has + been + Verb-ing + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + have/has + been + Verb-ing + Complement" },
+    { label: "Negative", value: "Subject + have/has + not + been + Verb-ing + Complement" },
+    { label: "Interrogative", value: "Have/Has + Subject + been + Verb-ing + Complement?" }
+  ]}
   examples={[
     { type: "Affirmative", text: "I have been studying English for 5 months.", translation: "He estado estudiando inglés por 5 meses." },
     { type: "3rd Person", text: "She has been working here since Monday.", translation: "Ella ha estado trabajando aquí desde el lunes." },
     { type: "Negative", text: "It hasn't been raining today.", translation: "No ha estado lloviendo hoy." },
-    { type: "Interrogative", text: "How long have you been waiting?", translation: "¿Cuánto tiempo has estado esperando?" }
+    { type: "Interrogative", text: "How long have you been waiting?", translation: "¿Cuánto tiempo has estado esperando?" },
+    { type: "Answer (+)", text: "Yes, I have.", translation: "Sí, lo he hecho." },
+    { type: "Answer (-)", text: "No, I haven't.", translation: "No, no lo he hecho." },
   ]}
 />
 

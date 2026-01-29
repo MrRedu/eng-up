@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { Badge } from '../ui/badge';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { Typography } from '../ui/typography';
@@ -6,24 +7,43 @@ export function GrammarExample({
   structure,
   examples,
 }: {
-  structure: string;
+  structure: string | { label?: string; value: string }[];
   examples: { type: string; text: string; translation: string }[];
 }) {
+  const structures =
+    typeof structure === 'string' ? [{ value: structure }] : structure;
+
   return (
     <div className="rounded-xl border bg-muted/30 p-6">
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Estructura Gramatical
-        </h4>
-        <code className="mt-2 block rounded bg-primary/10 px-4 py-2 text-lg font-mono text-primary">
-          {structure}
-        </code>
+      <div className="mb-6 space-y-4">
+        {structures.length > 1 && (
+          <Typography variant="h4" className={cn('text-sm! uppercase')}>
+            Estructura Gramatical
+          </Typography>
+        )}
+        {structures.map((s, idx) => (
+          <div
+            key={idx}
+            className={cn('space-y-2', structures.length > 1 ? 'pl-4' : '')}
+          >
+            <Typography
+              variant="h4"
+              className={cn('text-sm! uppercase text-muted-foreground/70')}
+            >
+              {s.label ||
+                (structures.length > 1
+                  ? `Estructura ${idx + 1}`
+                  : 'Estructura Gramatical')}
+            </Typography>
+            <Typography variant="code">{s.value}</Typography>
+          </div>
+        ))}
       </div>
       <div className="space-y-4">
-        <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Ejemplos
-        </h4>
-        <div className="grid gap-3">
+        <Typography variant="h4" className={cn('text-sm! uppercase')}>
+          Ejemplos de uso
+        </Typography>
+        <div className="grid gap-3 pl-4">
           {examples.map((ex, i) => (
             <div
               key={i}
