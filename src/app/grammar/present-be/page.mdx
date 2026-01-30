@@ -44,49 +44,26 @@ export const metadata = {
 
 ## Usos Principales
 
+export const PRESENT_BE_EXAMPLES = [
+  { label: "Names/Identity", translation: "Nombres/Identidad", content: <>I'm Eduardo / She's a student</> },
+  { label: "Feelings", translation: "Sentimientos", content: <>She is happy / They are tired</> },
+  { label: "Locations", translation: "Ubicaciones", content: <>They are at home / I am here</> },
+  { label: "Nationalities/Professions", translation: "Nacionalidades/Profesiones", content: <>They are from Spain / He is a doctor</> },
+];
+
 <List>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Names/Identity:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Nombres/Identidad
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">I'm Eduardo / She's a student</Typography>
-  </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Feelings:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Sentimientos
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">She is happy / They are tired</Typography>
-  </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Locations:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Ubicaciones
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">They are at home / I am here</Typography>
-  </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Nationalities/Professions:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Nacionalidades/Profesiones
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">They are from Spain / He is a doctor</Typography>
-  </ListItem>
+  {PRESENT_BE_EXAMPLES.map((example, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <Popover>
+        <PopoverTrigger asChild>
+          <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>{example.label}:</strong>
+        </PopoverTrigger>
+        <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+          {example.translation}
+        </PopoverContent>
+      </Popover>
+      <Typography className="mt-0!">{example.content}</Typography>
+    </ListItem>
+  ))}
 </List>
+

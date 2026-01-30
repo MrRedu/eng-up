@@ -153,38 +153,26 @@ La mayoría de los números terminan en <strong>-th</strong>, excepto el 1, 2 y 
 
 <br />
 
+export const ORDINAL_NUMBERS_EXAMPLES = [
+  { label: "Dates", translation: "Fechas.", content: <>Today is January <strong>twenty-eighth</strong>.</> },
+  { label: "Order", translation: "Orden.", content: <>He finished in <strong>second</strong> place.</> },
+  { label: "Floors", translation: "Pisos / Plantas.", content: <>My office is on the <strong>tenth</strong> floor.</> }
+];
+
 <List>
-  <ListItem className='flex items-start gap-2'>
+{ORDINAL_NUMBERS_EXAMPLES.map((example, index) => (
+  <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
     <Popover>
       <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Dates:</strong>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>{example.label}:</strong>
       </PopoverTrigger>
       <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Fechas.
+        {example.translation}
       </PopoverContent>
     </Popover>
-    <Typography className="mt-0!">Today is January *twenty-eighth*.</Typography>
+    <Typography className="mt-0!">
+      {example.content}
+    </Typography>
   </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Order:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Orden.
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">He finished in *second* place.</Typography>
-  </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Floors:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Pisos / Plantas.
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">My office is on the *tenth* floor.</Typography>
-  </ListItem>
+))}
 </List>

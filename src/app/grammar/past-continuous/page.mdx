@@ -1,14 +1,28 @@
+export const metadata = {
+  title: 'Past Continuous',
+  description: 'El pasado continuo se utiliza para describir acciones que estaban en progreso en un momento específico del pasado.',
+  keywords: ['past continuous', 'pasado continuo', 'was', 'were', 'verb to be', 'verbos irregulares', 'irregular verbs'],
+}
+
 # Past Continuous
 
 <Typography variant="p" className="text-center">
   {`Se utiliza para describir acciones que estaban en progreso en un momento específico del pasado.`}
 </Typography>
 
+<Typography variant="p" className="text-center">
+  {`Para realizar oraciones interrogativas o negativas necesitamos usar el verbo auxiliar `}<strong>"to be"</strong>{` en pasado (was/were) y el verbo principal en gerundio (terminación `}<strong>-ing</strong>{`).`}
+</Typography>
+
 <br />
 <br />
 
 <GrammarExample
-  structure="Subject + to be (was/were) + Verb-ing + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + to be (was/were) + Verb-ing + Complement" },
+    { label: "Negative", value: "Subject + to be (was/were) + not + Verb-ing + Complement" },
+    { label: "Interrogative", value: "to be (Was/Were) + Subject + Verb-ing + Complement?" }
+  ]}
   examples={[
     {
       type: '1st Person (Affirmative)',
@@ -39,6 +53,6 @@
   ]}
 />
 
-<Alert variant="info" title="Dato importante">
-  Usamos **'was'** para I, He, She, It y **'were'** para You, We, They. 
+<Alert variant="info" title="Recordatorio">
+  Siempre se necesita el verbo auxiliar **to be** en pasado (was/were) y el verbo principal en gerundio (terminación <strong>-ing</strong>).
 </Alert>
