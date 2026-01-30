@@ -1,8 +1,10 @@
-export const metadata = {
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
   title: 'Past Simple',
   description: 'El pasado simple se utiliza para acciones que terminaron en un momento específico del pasado. Necesita del auxiliar did para crear oraciones interrogativas y negativas.',
-  keywords: ['past simple', 'pasado simple', 'did', 'was', 'were', 'verb to be', 'verbos irregulares', 'irregular verbs'],
-}
+  // keywords: ['past simple', 'pasado simple', 'did', 'was', 'were', 'verb to be', 'verbos irregulares', 'irregular verbs'],
+});
 
 # Past Simple
 
