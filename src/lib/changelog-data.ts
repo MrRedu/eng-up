@@ -8,6 +8,13 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.11.1',
+    title: 'Tables of Truth',
+    description: 'Added Tables of Truth for all tenses.',
+    date: '2026-01-30 23:50:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.11.0',
     title: 'Future Tenses Lessons',
     description:

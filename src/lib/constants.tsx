@@ -48,6 +48,10 @@ export const NAVIGATION_DATA: NavGroup[] = [
         icon: PackageOpen,
         subItems: [
           { title: 'Verbos Irregulares', url: '/resources/irregular-verbs' },
+          {
+            title: 'Tablas de las Verdades',
+            url: '/resources/tables-of-truth',
+          },
         ],
       },
       { title: 'Roadmap', url: '/roadmap', icon: Map },
