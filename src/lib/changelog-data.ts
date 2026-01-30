@@ -7,7 +7,47 @@ export interface ChangelogEntry {
 }
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
-    {
+  {
+    version: 'v1.9.0',
+    title: 'SEO & Grammar Improvements',
+    description:
+      'Added SEO metadata to all grammar lessons and improved the grammar examples with custom components.',
+    date: '2026-01-30 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.8.3',
+    title: 'Project Status Tracker',
+    description:
+      'Implemented a personal tracking tool for developers to monitor topic completion and verification status.',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.8.2',
+    title: 'Plural Nouns Lesson',
+    description:
+      'Developed a comprehensive guide on plural nouns, including regular rules (s, es, ies, ves) and common irregular plurals.',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.8.1',
+    title: 'Countable & Uncountable Nouns',
+    description:
+      'Added a new lesson covering the differences between countable and uncountable nouns, including specific confusing cases and measurement units.',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.8.0',
+    title: 'Articles Lesson & SEO Support',
+    description:
+      'Added the definite and indefinite articles lesson with pronunciation rules and implemented per-page SEO metadata support for MDX.',
+    date: '2026-01-29 00:00:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.7.1',
     title: 'Irregular Verbs Resource',
     description:

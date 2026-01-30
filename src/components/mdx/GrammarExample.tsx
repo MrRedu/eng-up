@@ -7,7 +7,7 @@ export function GrammarExample({
   structure,
   examples,
 }: {
-  structure: string | { label?: string; value: string }[];
+  structure?: string | { label?: string; value: string }[];
   examples: { type: string; text: string; translation: string }[];
 }) {
   const structures =
@@ -15,35 +15,40 @@ export function GrammarExample({
 
   return (
     <div className="rounded-xl border bg-muted/30 p-6">
-      <div className="mb-6 space-y-4">
-        {structures.length > 1 && (
-          <Typography variant="h4" className={cn('text-sm! uppercase')}>
-            Estructura Gramatical
-          </Typography>
-        )}
-        {structures.map((s, idx) => (
-          <div
-            key={idx}
-            className={cn('space-y-2', structures.length > 1 ? 'pl-4' : '')}
-          >
-            <Typography
-              variant="h4"
-              className={cn('text-sm! uppercase text-muted-foreground/70')}
-            >
-              {s.label ||
-                (structures.length > 1
-                  ? `Estructura ${idx + 1}`
-                  : 'Estructura Gramatical')}
+      {structures && (
+        <div className="mb-6 space-y-4">
+          {structures.length > 1 && (
+            <Typography variant="h4" className={cn('text-sm! uppercase')}>
+              Estructura Gramatical
             </Typography>
-            <Typography variant="code">{s.value}</Typography>
-          </div>
-        ))}
-      </div>
+          )}
+          {structures.map((s, idx) => (
+            <div
+              key={idx}
+              className={cn(
+                'space-y-2',
+                structures.length > 1 ? 'md:pl-4' : '',
+              )}
+            >
+              <Typography
+                variant="h4"
+                className={cn('text-sm! uppercase text-muted-foreground/70')}
+              >
+                {s.label ||
+                  (structures.length > 1
+                    ? `Estructura ${idx + 1}`
+                    : 'Estructura Gramatical')}
+              </Typography>
+              <Typography variant="code">{s.value}</Typography>
+            </div>
+          ))}
+        </div>
+      )}
       <div className="space-y-4">
         <Typography variant="h4" className={cn('text-sm! uppercase')}>
           Ejemplos de uso
         </Typography>
-        <div className="grid gap-3 pl-4">
+        <div className="grid gap-3 md:pl-4">
           {examples.map((ex, i) => (
             <div
               key={i}
