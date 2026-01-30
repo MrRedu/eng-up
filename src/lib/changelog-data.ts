@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.9.0',
+    title: 'SEO & Grammar Improvements',
+    description:
+      'Added SEO metadata to all grammar lessons and improved the grammar examples with custom components.',
+    date: '2026-01-30 00:00:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.8.3',
     title: 'Project Status Tracker',
     description:
