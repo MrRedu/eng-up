@@ -54,21 +54,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Eng-Up | Notas de Gramática Inglesa',
-    description:
-      'Mejora tu nivel de inglés con notas claras y ejemplos prácticos diseñados para hispanohablantes.',
-    // creator: '@MrRedu_Dev',
-    images: [
-      {
-        url: '/og-1920x1080.webp',
-        width: 1920,
-        height: 1080,
-        alt: 'Eng-Up | Gramática Inglesa Interactiva',
-      },
-    ],
-  },
 };
 
 export default function RootLayout({

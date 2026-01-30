@@ -21,6 +21,15 @@ export const metadata = {
 
 <br />
 
+export const PLURAL_NOUNS_REGULAR_RULES = [
+  { term: "Casi todos", rule: <>Añadir <strong>-s</strong></>, examples: <>Book → Books / Car → Cars</> },
+  { term: "s, ss, sh, ch, x, z", rule: <>Añadir <strong>-es</strong></>, examples: <>Bus → Buses / Kiss → Kisses / Watch → Watches / Box → Boxes</> },
+  { term: "Consonante + o", rule: <>Añadir <strong>-es</strong></>, examples: <>Tomato → Tomatoes / Hero → Heroes</> },
+  { term: "Consonante + y", rule: <>Cambiar por <strong>-ies</strong></>, examples: <>City → Cities / Baby → Babies</> },
+  { term: "Vocal + y", rule: <>Añadir <strong>-s</strong></>, examples: <>Boy → Boys / Day → Days</> },
+  { term: "f o fe", rule: <>Cambiar por <strong>-ves</strong></>, examples: <>Leaf → Leaves / Life → Lives / Knife → Knives</> },
+];
+
 <Table>
   <TableHeader>
     <TableRow>
@@ -30,36 +39,13 @@ export const metadata = {
     </TableRow>
   </TableHeader>
   <TableBody>
-    <TableRow>
-      <TableCell className="font-medium text-nowrap">Casi todos</TableCell>
-      <TableCell>Añadir <strong>-s</strong></TableCell>
-      <TableCell className="text-sm italic">Book → Books / Car → Cars</TableCell>
+  {PLURAL_NOUNS_REGULAR_RULES.map((rule, index) => (
+    <TableRow key={index}>
+      <TableCell className="font-medium text-nowrap">{rule.term}</TableCell>
+      <TableCell>{rule.rule}</TableCell>
+      <TableCell className="text-sm italic">{rule.examples}</TableCell>
     </TableRow>
-    <TableRow>
-      <TableCell className="font-medium text-nowrap">s, ss, sh, ch, x, z</TableCell>
-      <TableCell>Añadir <strong>-es</strong></TableCell>
-      <TableCell className="text-sm italic">Bus → Buses / Kiss → Kisses / Watch → Watches / Box → Boxes</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium text-nowrap">Consonante + o</TableCell>
-      <TableCell>Añadir <strong>-es</strong></TableCell>
-      <TableCell className="text-sm italic">Tomato → Tomatoes / Hero → Heroes</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium text-nowrap">Consonante + y</TableCell>
-      <TableCell>Cambiar por <strong>-ies</strong></TableCell>
-      <TableCell className="text-sm italic">City → Cities / Baby → Babies</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium text-nowrap">Vocal + y</TableCell>
-      <TableCell>Añadir <strong>-s</strong></TableCell>
-      <TableCell className="text-sm italic">Boy → Boys / Day → Days</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium text-nowrap">f o fe</TableCell>
-      <TableCell>Cambiar por <strong>-ves</strong></TableCell>
-      <TableCell className="text-sm italic">Leaf → Leaves / Life → Lives / Knife → Knives</TableCell>
-    </TableRow>
+  ))}
   </TableBody>
 </Table>
 
@@ -78,79 +64,29 @@ export const metadata = {
   {`Estos sustantivos cambian completamente su forma o no cambian en absoluto. No siguen ninguna de las reglas anteriores.`}
 </Typography>
 
-<div className="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4">
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Hombre</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Man</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Men</span>
+export const PLURAL_NOUNS_IRREGULARS = [
+  { translate: 'Hombre', singular: "Man", plural: "Men" },
+  { translate: 'Mujer', singular: "Woman", plural: "Women" },
+  { translate: 'Niño/a', singular: "Child", plural: "Children" },
+  { translate: 'Persona', singular: "Person", plural: "People" },
+  { translate: 'Diente', singular: "Tooth", plural: "Teeth" },
+  { translate: 'Pie', singular: "Foot", plural: "Feet" },
+  { translate: 'Ratón', singular: "Mouse", plural: "Mice" },
+  { translate: 'Pez', singular: "Fish", plural: "Fish" },
+  { translate: 'Oveja', singular: "Sheep", plural: "Sheep" },
+];
+
+<div className="grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-3 gap-4 py-4">
+  {PLURAL_NOUNS_IRREGULARS.map((noun, index) => (
+    <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs" key={index}>
+      <Typography variant="small" className="text-muted-foreground">{noun.translate}</Typography>
+      <div className="flex items-center gap-2"> 
+        <Typography className="font-mono text-xs mt-0!">{noun.singular}</Typography>
+        <Typography className="text-primary mt-0!">→</Typography>
+        <Typography className="font-bold font-mono mt-0!">{noun.plural}</Typography>
+      </div>
     </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Mujer</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Woman</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Women</span>
-    </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Niño/a</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Child</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Children</span>
-    </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Persona</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Person</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">People</span>
-    </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Diente</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Tooth</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Teeth</span>
-    </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Pie</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Foot</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Feet</span>
-    </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Ratón</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Mouse</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Mice</span>
-    </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Pez</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Fish</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Fish</span>
-    </div>
-  </div>
-  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
-    <Typography variant="small" className="text-muted-foreground">Oveja</Typography>
-    <div className="flex items-center gap-2">
-      <span className="font-mono text-xs">Sheep</span>
-      <span className="text-primary">→</span>
-      <span className="font-bold font-mono">Sheep</span>
-    </div>
-  </div>
+  ))}
 </div>
 
 <br />

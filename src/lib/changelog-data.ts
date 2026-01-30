@@ -8,6 +8,13 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.9.1',
+    title: 'Grammar Examples Layout Fix',
+    description: 'Fixed grammar examples layout.',
+    date: '2026-01-30 00:00:00',
+    type: 'fix',
+  },
+  {
     version: 'v1.9.0',
     title: 'SEO & Grammar Improvements',
     description:
