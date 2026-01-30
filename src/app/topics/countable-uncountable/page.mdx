@@ -1,0 +1,189 @@
+export const metadata = {
+  title: 'Countable & Uncountable Nouns',
+  description: 'Aprende a diferenciar entre sustantivos que se pueden contar y los que no, y cómo usar cuantificadores correctamente.',
+};
+
+# Countable & Uncountable Nouns
+
+<Typography variant="p" className="text-center">
+  {`Un sustantivo es una clase de palabra variable que designa seres, objetos, lugares, ideas, sentimientos o cualidades. `} <strong>El sustantivo es el nombre de un ente.</strong>
+</Typography>
+
+<Typography variant="p" className="text-center">
+  {`En inglés, los sustantivos se dividen en dos categorías principales: los que podemos contar por unidades (contables) y los que consideramos una masa o concepto indivisible (incontables).`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Countable Nouns (Contables)
+
+<Typography variant="p">
+  {`Son aquellos que tienen una forma singular y una plural. Se pueden usar con números y con los `}<Link href="/topics/articles" className="underline" title="Ir a la lección de artículos">artículos <strong>"A / An"</strong></Link>{`.`}
+</Typography>
+
+<br />
+
+<GrammarExample
+  structure={[
+    { label: "Singular", value: "A dog / One dog" },
+    { label: "Plural", value: "Two dogs / Many dogs" }
+  ]}
+  examples={[
+    { type: 'Singular', text: "I have an apple.", translation: "Tengo una manzana." },
+    { type: 'Plural', text: "She bought three books.", translation: "Ella compró tres libros." },
+    { type: 'Pregunta', text: "How many brothers do you have?", translation: "¿Cuántos hermanos tienes?" }
+  ]}
+/>
+
+<br />
+
+## 2. Uncountable Nouns (Incontables)
+
+<Typography variant="p">
+  {`Son sustancias, conceptos o masas que no se pueden contar individualmente. `}<strong>No tienen plural</strong>{` y no se usan con "A / An".`}
+</Typography>
+
+<List>
+  <ListItem className='flex flex-col md:flex-row items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Líquidos/Masas:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Water, Milk, Rice, Sugar, Flour
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">Sustancias que no tienen una forma definida propia.</Typography>
+  </ListItem>
+  <ListItem className='flex flex-col md:flex-row items-start gap-2'>
+    <Popover>
+      <PopoverTrigger asChild>
+        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Conceptos Abstractos:</strong>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+        Love, Happiness, Information, Advice, Time
+      </PopoverContent>
+    </Popover>
+    <Typography className="mt-0!">Ideas que no se pueden tocar o separar en partes.</Typography>
+  </ListItem>
+</List>
+
+<Alert variant="warn" title="¡Cuidado!">
+  Muchos sustantivos que son contables en español son **incontables** en inglés. Los más comunes son:
+<div className="flex flex-wrap gap-x-3 gap-y-3 items-center">
+  <Popover>
+    <PopoverTrigger asChild>
+      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Advice</strong>
+    </PopoverTrigger>
+    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+      Consejo
+    </PopoverContent>
+  </Popover>
+  <span className="text-muted-foreground/30">•</span>
+  <Popover>
+    <PopoverTrigger asChild>
+      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>News</strong>
+    </PopoverTrigger>
+    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+      Noticias
+    </PopoverContent>
+  </Popover>
+  <span className="text-muted-foreground/30">•</span>
+  <Popover>
+    <PopoverTrigger asChild>
+      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Bread</strong>
+    </PopoverTrigger>
+    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+      Pan
+    </PopoverContent>
+  </Popover>
+  <span className="text-muted-foreground/30">•</span>
+  <Popover>
+    <PopoverTrigger asChild>
+      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Furniture</strong>
+    </PopoverTrigger>
+    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+      Muebles
+    </PopoverContent>
+  </Popover>
+  <span className="text-muted-foreground/30">•</span>
+  <Popover>
+    <PopoverTrigger asChild>
+      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Money</strong>
+    </PopoverTrigger>
+    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+      Dinero
+    </PopoverContent>
+  </Popover>
+</div>
+</Alert>
+
+<br />
+
+## 3. ¿Cómo contar lo incontable?
+
+<Typography variant="p">
+  {`Para dar una cantidad a algo incontable, usamos unidades de medida o recipientes:`}
+</Typography>
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Incontable</TableHead>
+      <TableHead>Unidad / Medidor</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Water</TableCell>
+      <TableCell>A glass / A bottle</TableCell>
+      <TableCell className="italic text-sm">
+        <Popover>
+          <PopoverTrigger asChild>
+            <span className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>A glass of water</span>
+          </PopoverTrigger>
+          <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+            Un vaso de agua
+          </PopoverContent>
+        </Popover>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Information</TableCell>
+      <TableCell>A piece</TableCell>
+      <TableCell className="italic text-sm">
+        <Popover>
+          <PopoverTrigger asChild>
+            <span className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>A piece of information</span>
+          </PopoverTrigger>
+          <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+            Un pedazo de información
+          </PopoverContent>
+        </Popover>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Bread</TableCell>
+      <TableCell>A loaf / A slice</TableCell>
+      <TableCell className="italic text-sm">
+        <Popover>
+          <PopoverTrigger asChild>
+            <span className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Two slices of bread</span>
+          </PopoverTrigger>
+          <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+            Dos rebanadas de pan
+          </PopoverContent>
+        </Popover>
+      </TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="Regla Rápida">
+  - Para contables usamos **How many?** (¿Cuántos?). <br/>
+  - Para incontables usamos **How much?** (¿Cuánto?).
+</Alert>

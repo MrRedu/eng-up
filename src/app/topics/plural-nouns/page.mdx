@@ -1,0 +1,171 @@
+export const metadata = {
+  title: 'Plural Nouns',
+  description: 'Reglas completas para formar el plural en inglés, desde la simple "s" hasta los plurales irregulares más complejos.',
+};
+
+# Plural Nouns
+
+<Typography variant="p" className="text-center text-balance">
+  {`En inglés, la mayoría de los sustantivos forman el plural añadiendo una "s", pero existen varias reglas específicas dependiendo de cómo termine la palabra. Dominar estas reglas es clave para una escritura correcta.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Reglas Regulares
+
+<Typography variant="p">
+  {`La mayoría de los sustantivos siguen patrones predecibles según su terminación:`}
+</Typography>
+
+<br />
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Terminación</TableHead>
+      <TableHead>Regla</TableHead>
+      <TableHead>Ejemplos (Singular → Plural)</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium text-nowrap">Casi todos</TableCell>
+      <TableCell>Añadir <strong>-s</strong></TableCell>
+      <TableCell className="text-sm italic">Book → Books / Car → Cars</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium text-nowrap">s, ss, sh, ch, x, z</TableCell>
+      <TableCell>Añadir <strong>-es</strong></TableCell>
+      <TableCell className="text-sm italic">Bus → Buses / Kiss → Kisses / Watch → Watches / Box → Boxes</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium text-nowrap">Consonante + o</TableCell>
+      <TableCell>Añadir <strong>-es</strong></TableCell>
+      <TableCell className="text-sm italic">Tomato → Tomatoes / Hero → Heroes</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium text-nowrap">Consonante + y</TableCell>
+      <TableCell>Cambiar por <strong>-ies</strong></TableCell>
+      <TableCell className="text-sm italic">City → Cities / Baby → Babies</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium text-nowrap">Vocal + y</TableCell>
+      <TableCell>Añadir <strong>-s</strong></TableCell>
+      <TableCell className="text-sm italic">Boy → Boys / Day → Days</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium text-nowrap">f o fe</TableCell>
+      <TableCell>Cambiar por <strong>-ves</strong></TableCell>
+      <TableCell className="text-sm italic">Leaf → Leaves / Life → Lives / Knife → Knives</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="Excepciones de 'o' y 'f'">
+  Palabras terminadas en **o** de origen extranjero o abreviaturas suelen usar solo **-s**: *Photo → Photos / Piano → Pianos*. <br/>
+  Algunas palabras terminadas en **f** solo usan **-s**: *Roof → Roofs / Chef → Chefs*.
+</Alert>
+
+<br />
+
+## 2. Plurales Irregulares
+
+<Typography variant="p">
+  {`Estos sustantivos cambian completamente su forma o no cambian en absoluto. No siguen ninguna de las reglas anteriores.`}
+</Typography>
+
+<div className="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4">
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Hombre</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Man</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Men</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Mujer</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Woman</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Women</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Niño/a</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Child</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Children</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Persona</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Person</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">People</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Diente</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Tooth</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Teeth</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Pie</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Foot</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Feet</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Ratón</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Mouse</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Mice</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Pez</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Fish</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Fish</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center p-3 border rounded-lg bg-card shadow-xs">
+    <Typography variant="small" className="text-muted-foreground">Oveja</Typography>
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-xs">Sheep</span>
+      <span className="text-primary">→</span>
+      <span className="font-bold font-mono">Sheep</span>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<GrammarExample
+  examples={[
+    { type: 'Regular', text: "I have two sisters.", translation: "Tengo dos hermanas." },
+    { type: 'Ending in -es', text: "She has three boxes.", translation: "Ella tiene tres cajas." },
+    { type: 'Ending in -ies', text: "The babies are sleeping.", translation: "Los bebés están durmiendo." },
+    { type: 'Ending in -ves', text: "He has two knives.", translation: "Él tiene dos cuchillos." },
+    { type: 'Irregular', text: "There are five children in the park.", translation: "Hay cinco niños en el parque." }
+  ]}
+/>
+
+<br />
+
+<Alert variant="info" title="Dato curioso">
+  La palabra **"People"** es plural por defecto, así que siempre usamos el verbo en plural (ej: *People are...*). Nunca digas "Peoples" a menos que hables de etnias o naciones específicas.
+</Alert>
