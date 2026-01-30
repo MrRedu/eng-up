@@ -1,0 +1,181 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Future: Going to',
+  description: 'Aprende a usar going to para planes ya decididos, intenciones o predicciones basadas en evidencia.',
+  keywords: ['future simple', 'going to', 'gramática inglesa'],
+});
+
+# Future: Going to
+
+<Typography variant="p" className="text-center text-balance">
+  {`Se utiliza para planes ya decididos, intenciones o predicciones basadas en evidencia, hechos seguros/inminentes, planificaciones a largo plazo.`}
+</Typography>
+
+<br />
+<br />
+
+<GrammarExample
+  structure={[
+    { label: "Affirmative", value: "Subject + to be (am/is/are) + going to + Verb (base form)" },
+    { label: "Negative", value: "Subject + to be (am/is/are) + not + going to + Verb (base form)" },
+    { label: "Interrogative", value: "to be (Am/Is/Are) + Subject + going to + Verb (base form)?" }
+  ]}
+  examples={[
+    { type: 'Affirmative (I)', text: "I am going to study tonight.", translation: "Voy a estudiar esta noche." },
+    { type: 'Affirmative (He/She/It)', text: "She is going to travel next year.", translation: "Ella va a viajar el próximo año." },
+    { type: 'Affirmative (You/We/They)', text: "They are going to buy a new car.", translation: "Ellos van a comprar un coche nuevo." },
+    { type: 'Negative', text: "I am not going to watch TV.", translation: "No voy a ver la tele." },
+    { type: 'Negative (Short form)', text: "He isn't (is not) going to come.", translation: "Él no va a venir." },
+    { type: 'Interrogative', text: "Are you going to help me?", translation: "¿Vas a ayudarme?" },
+    { type: 'Interrogative (Short form)', text: "Isn't she going to call?", translation: "¿No va a llamar ella?" },
+  ]}
+/>
+
+<Alert variant="warn" title="Dato importante">
+  Recuerda que **going to** se usa para planes ya decididos o intenciones claras. Si es una predicción basada en evidencia, también se usa **going to**.  
+</Alert>
+
+<Alert variant="info" title="Nota">
+  De manera informal se puede usar **gonna** en lugar de **going to**. <br/>
+  Por ejemplo: **"I'm gonna go to the party"** en lugar de **"I'm going to go to the party"**.
+</Alert>
+
+<br />
+
+## Usos Principales
+
+export const FUTURE_GOING_TO_EXAMPLES = [
+  {
+    label: "Plans",
+    translation: "Planes",
+    content: "I'm going to visit my parents this weekend.",
+    contentTranslation: "Voy a visitar a mis padres este fin de semana."
+  },
+  {
+    label: "Intentions",
+    translation: "Intenciones",
+    content: "She is going to start a new job.",
+    contentTranslation: "Ella va a empezar un nuevo trabajo."
+  },
+  {
+    label: "Predictions (evidence)",
+    translation: "Predicciones (evidencia)",
+    content: "Look at those clouds! It's going to rain.",
+    contentTranslation: "¡Mira esas nubes! Va a llover."
+  },
+];
+
+<List>
+  {FUTURE_GOING_TO_EXAMPLES.map((example, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <Popover>
+        <PopoverTrigger asChild>
+          <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>{example.label}:</strong>
+        </PopoverTrigger>
+        <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+          {example.translation}
+        </PopoverContent>
+      </Popover>
+      <Popover>
+        <PopoverTrigger asChild>
+          <Typography className="mt-0! cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap">{example.content}</Typography>
+        </PopoverTrigger>
+        <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+          {example.contentTranslation}
+        </PopoverContent>
+      </Popover>
+    </ListItem>
+  ))}
+</List>
+
+<br/>
+
+<Typography variant="h2">
+  Future Going to vs. <Link href="/grammar/future-simple" className="underline" title="Ir a la sección de Future Simple">Future Simple</Link>
+</Typography>
+
+<Typography variant="p">
+  {`El futuro simple se usa para predicciones, promesas, decisiones espontáneas o hechos futuros. El futuro going to se usa para planes ya decididos, intenciones o predicciones basadas en evidencia, hechos seguros/inminentes, planificaciones a largo plazo.`}
+</Typography>
+
+<br/>
+
+export const FUTURE_COMPARISON_EXAMPLES = [
+  {
+    will: "It will rain tomorrow.",
+    willTranslation: 'Lloverá mañana.',
+    goingTo: "Look at those clouds! It's going to rain.",
+    goingToTranslation: '¡Mira esas nubes! Va a llover.',
+    context: "Prediction vs. Evidence",
+    contextTranslation: 'Predicción vs. Evidencia'
+  },
+  {
+    will: "I'm hungry. I'll make a sandwich.",
+    willTranslation: 'Tengo hambre. Prepararé un sándwich.',
+    goingTo: "I'm going to make a sandwich for lunch.",
+    goingToTranslation: 'Voy a preparar un sándwich para el almuerzo.',
+    context: "Spontaneous vs. Planned",
+    contextTranslation: 'Espontáneo vs. Planificado'
+  },
+  {
+    will: "I will help you with your bags.",
+    willTranslation: 'Te ayudaré con tus maletas.',
+    goingTo: "I'm going to help my brother move this weekend.",
+    goingToTranslation: 'Voy a ayudar a mi hermano a mudarse este fin de semana.',
+    context: "Promise vs. Intention",
+    contextTranslation: 'Promesa vs. Intención'
+  }
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Future Simple (Will)</TableHead>
+      <TableHead>Future Going to</TableHead>
+      <TableHead>Context</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {FUTURE_COMPARISON_EXAMPLES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell>
+          <Popover>
+            <PopoverTrigger asChild>
+              <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30">
+                {item.will}
+              </span>
+            </PopoverTrigger>
+            <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+              {item.willTranslation}
+            </PopoverContent>
+          </Popover>
+        </TableCell>
+        <TableCell>
+          <Popover>
+            <PopoverTrigger asChild>
+              <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30">
+                {item.goingTo}
+              </span>
+            </PopoverTrigger>
+            <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+              {item.goingToTranslation}
+            </PopoverContent>
+          </Popover>
+        </TableCell>
+        <TableCell className="text-muted-foreground italic text-sm">
+          <Popover>
+            <PopoverTrigger asChild>
+              <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30">
+                {item.context}
+              </span>
+            </PopoverTrigger>
+            <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+              {item.contextTranslation}
+            </PopoverContent>
+          </Popover>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>

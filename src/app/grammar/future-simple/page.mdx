@@ -1,14 +1,30 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Future Simple: Will',
+  description: 'Aprende a usar will para predicciones, promesas, decisiones espontáneas o hechos futuros.',
+  keywords: ['futuro simple', 'will', 'gramática inglesa'],
+});
+
 # Future Simple
 
 <Typography variant="p" className="text-center">
   {`Se utiliza para predicciones, promesas, decisiones espontáneas o hechos futuros.`}
 </Typography>
 
+<Typography variant="p" className="text-center">
+  {`El futuro simple se forma con el auxiliar `}<strong>will</strong>{` seguido del verbo en su forma base.`}
+</Typography>
+
 <br />
 <br />
 
 <GrammarExample
-  structure="Subject + will + Verb (Base Form) + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + will + Verb (Base Form) + Complement" },
+    { label: "Negative", value: "Subject + won't (will + not) + Verb (Base Form) + Complement" },
+    { label: "Interrogative", value: "Will + Subject + Verb (Base Form) + Complement?" }
+  ]}
   examples={[
     {
       type: 'Affirmative',
@@ -35,5 +51,5 @@
 />
 
 <Alert variant="info" title="Recordatorio">
-  Recuerda que también existe **'going to'** para planes ya decididos. Más información en la sección de <Link href="/grammar/future-going-to" className="underline">Future Going to</Link>.
+  Recuerda que también existe **going to** para planes ya decididos. Más información en la sección de <Link href="/grammar/future-going-to" className="underline">Future Going to</Link>.
 </Alert>

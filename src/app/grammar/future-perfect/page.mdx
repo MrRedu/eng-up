@@ -1,3 +1,12 @@
+import { Fragment } from "react";
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Future Perfect',
+  description: 'Aprende a usar el futuro perfecto para acciones que habrán terminado en un punto específico del futuro.',
+  keywords: ['future perfect', 'future simple', 'gramática inglesa'],
+});
+
 # Future Perfect
 
 <Typography variant="p" className="text-center">
@@ -8,7 +17,11 @@
 <br />
 
 <GrammarExample
-  structure="Subject + will have + Past Participle + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + will have + Past Participle + Complement" },
+    { label: "Negative", value: "Subject + won't (will + not) + Past Participle + Complement" },
+    { label: "Interrogative", value: "Will + Subject + have + Past Participle + Complement?" }
+  ]}
   examples={[
     {
       type: 'Affirmative',
@@ -39,5 +52,34 @@
 />
 
 <Alert variant="info" title="Información">
-  A menudo se usa con la expresión **'by'** (para tal momento).
+  A menudo se usa con la expresión **by** (para tal momento).
 </Alert>
+
+## Common time prepositions
+
+Generalmente en el futuro perfecto se suelen usar las siguientes preposiciones de tiempo:
+
+export const COMMON_PREPOSITIONS_FUTURE_PERFECT = [
+  { label: "by", value: "para" },
+  { label: "by the time", value: "para cuando" },
+  { label: "when", value: "cuando" },
+  { label: "by this time next year", value: "para esta fecha el próximo año" },
+  { label: "for", value: "por" },
+  { label: "before", value: "antes de" },
+  { label: "after", value: "después de" },
+  { label: "until", value: "hasta" },
+];
+
+<div className="flex flex-wrap gap-x-3 gap-y-3 items-center mt-4 mb-8">
+{COMMON_PREPOSITIONS_FUTURE_PERFECT.map((preposition, index) => (
+  <Fragment key={`${preposition.label}-${index}`}>
+    <Popover>
+      <PopoverTrigger asChild>
+        <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 font-medium whitespace-nowrap">{preposition.label}</span>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">{preposition.value}</PopoverContent>
+    </Popover>  
+    <span className="text-muted-foreground/30">•</span>
+  </Fragment>
+  ))}
+</div>

@@ -1,0 +1,62 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Future Perfect Continuous',
+  description: 'Aprende a usar el futuro perfecto continuo para acciones que habrán estado en progreso hasta un punto específico del futuro.',
+  keywords: ['future perfect continuous', 'future simple', 'gramática inglesa'],
+});
+
+# Future Perfect Continuous
+
+<Typography variant="p" className="text-center text-balance">
+  {`Se utiliza para describir acciones que estarán (o no) en progreso en un momento específico del futuro. Enfatiza la duración de la acción.`}
+</Typography>
+
+<br />
+<br />
+
+<GrammarExample
+  structure={[
+    { label: "Affirmative", value: "Subject + will + have been + Verb-ing + Complement" },
+    { label: "Negative", value: "Subject + won't (will + not) + have been + Verb-ing + Complement" },
+    { label: "Interrogative", value: "Will + Subject + have been + Verb-ing + Complement?" }
+  ]}
+  examples={[
+    {
+      type: '1st Person (Affirmative)',
+      text: 'I will have been studying for 2 hours by 10 PM.',
+      translation: 'Habré estado estudiando por 2 horas a las 10 PM.',
+    },
+    {
+      type: '3rd Person (Affirmative)',
+      text: "She will have been traveling to Japan for 3 weeks by next month.",
+      translation: 'Ella habrá estado viajando a Japón por 3 semanas para el próximo mes.',
+    },
+    {
+      type: '3rd Person (Negative)',
+      text: "They won't have been working for 8 hours by 5 PM.",
+      translation: 'Ellos no habrán estado trabajando por 8 horas a las 5 PM.',
+    },
+    {
+      type: '2nd Person (Interrogative)',
+      text: 'Will you have been sleeping for 6 hours by midnight?',
+      translation: '¿Habrás estado durmiendo por 6 horas a medianoche?',
+    },
+    {
+      type: '3rd Person (Interrogative)',
+      text: 'Will she have been traveling to Japan for 3 weeks by next month?',
+      translation: '¿Habrá estado ella viajando a Japón por 3 semanas para el próximo mes?',
+    },
+    { type: '1st Person (Answer (+))', text: 'Yes, I will.', translation: 'Sí, lo habré estado.' },
+    {
+      type: '3rd Person (Answer (-))',
+      text: "No, she won't.",
+      translation: 'No, no lo habrá estado.',
+    },
+  ]}
+/>
+
+<Alert variant="warn" title="¡Recuerda!">
+  Usamos **will have been** para todos los sujetos.
+</Alert>
+

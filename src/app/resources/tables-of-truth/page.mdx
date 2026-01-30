@@ -1,0 +1,83 @@
+# Tables of Truth
+
+<br/><br/>
+
+<Table>
+  <TableCaption>Tiempos verbales con sus aspectos verbales.</TableCaption>
+  <TableHeader >
+    <TableRow className="[&>th]:text-center">
+      <TableHead className="text-xl font-bold">Tiempo verbal</TableHead>
+      <TableHead className="text-lg font-semibold">Presente</TableHead>
+      <TableHead className="text-lg font-semibold">Pasado</TableHead>
+      <TableHead className="text-lg font-semibold">Futuro</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody >
+    <TableRow className="[&>td]:text-center">
+      <TableCell rowSpan={4} className="text-xl font-bold">Aspecto verbal</TableCell>
+      <TableCell><Link href="/grammar/present-simple" className="underline">Simple</Link></TableCell>
+      <TableCell><Link href="/grammar/past-simple" className="underline">Simple</Link></TableCell>
+      <TableCell><Link href="/grammar/future-simple" className="underline">Simple</Link></TableCell>
+    </TableRow>
+    <TableRow className="[&>td]:text-center">
+      <TableCell><Link href="/grammar/present-continuous" className="underline">Continuous</Link></TableCell>
+      <TableCell><Link href="/grammar/past-continuous" className="underline">Continuous</Link></TableCell>
+      <TableCell><Link href="/grammar/future-continuous" className="underline">Continuous</Link></TableCell>
+    </TableRow>
+    <TableRow className="[&>td]:text-center">
+      <TableCell><Link href="/grammar/present-perfect" className="underline">Perfect</Link></TableCell>
+      <TableCell><Link href="/grammar/past-perfect" className="underline">Perfect</Link></TableCell>
+      <TableCell><Link href="/grammar/future-perfect" className="underline">Perfect</Link></TableCell>
+    </TableRow>
+    <TableRow className="[&>td]:text-center">
+      <TableCell><Link href="/grammar/present-perfect-continuous" className="underline">Perfect Continuous</Link></TableCell>
+      <TableCell><Link href="/grammar/past-perfect-continuous" className="underline">Perfect Continuous</Link></TableCell>
+      <TableCell><Link href="/grammar/future-perfect-continuous" className="underline">Perfect Continuous</Link></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+<br/><br/>
+
+<Table>
+  <TableCaption>Ejemplos de los tiempos verbales con el verbo "talk" (verbo regular).</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead/>
+      <TableHead>Presente</TableHead>
+      <TableHead>Pasado</TableHead>
+      <TableHead>Futuro</TableHead>
+      <TableHead>Regla</TableHead>
+    </TableRow>
+  </TableHeader>
+    <TableBody >
+    <TableRow>
+      <TableCell className="text-lg font-semibold">Simple</TableCell>
+      <TableCell><span>I talk</span><br/><span>She talk<em className='text-primary'>s</em></span></TableCell>
+      <TableCell><span>I talk<em className='text-primary'>ed</em></span><br/><span>She talk<em className='text-primary'>ed</em></span></TableCell>
+      <TableCell><span>I <em className='text-primary'>will</em> talk</span><br/><span>She <em className='text-primary'>will</em> talk</span></TableCell>
+      <TableCell className="md:max-w-[200px]! break-all! whitespace-break-spaces!">**s**/**es** al verbo si el sujeto es tercera persona en singular </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="text-lg font-semibold">Continuous</TableCell>
+      <TableCell><span>I'm <span className='text-muted-foreground text-xs'>(I am)</span> talk<em className='text-primary'>ing</em></span><br/><span>She's <span className='text-muted-foreground text-xs'>(She is)</span> talk<em className='text-primary'>ing</em></span></TableCell>
+      <TableCell><span>I was talk<em className='text-primary'>ing</em></span><br/><span>She was talk<em className='text-primary'>ing</em></span></TableCell>
+      <TableCell><span>I will be talk<em className='text-primary'>ing</em></span><br/><span>She will be talk<em className='text-primary'>ing</em></span></TableCell>
+      <TableCell className="md:max-w-[200px]! break-all! whitespace-break-spaces!">Auxiliar **be** + **V. -ing**</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="text-lg font-semibold">Perfect</TableCell>
+      <TableCell><span>I<em className='text-primary'>'ve</em> <span className='text-muted-foreground text-xs'>(I have)</span> <em className='text-primary'>talked</em></span><br/><span>She<em className='text-primary'>'s</em> <span className='text-muted-foreground text-xs'>(She has)</span> <em className='text-primary'>talked</em></span></TableCell>
+      <TableCell><span>I had <em className='text-primary'>talked</em></span><br/><span>She had <em className='text-primary'>talked</em></span></TableCell>
+      <TableCell><span>I will have <em className='text-primary'>talked</em></span><br/><span>She will have <em className='text-primary'>talked</em></span></TableCell>
+      <TableCell className="md:max-w-[200px]! break-all! whitespace-break-spaces!">Auxiliar **have** + **V. Past Participle**</TableCell>
+    </TableRow>
+    <TableRow>  
+      <TableCell className="text-lg font-semibold">Perfect Continuous</TableCell>
+      <TableCell><span>I've <span className='text-muted-foreground text-xs'>(I have)</span> <em className='text-primary'>been</em> talk<em className="text-primary">ing</em></span><br/><span>She's <span className='text-muted-foreground text-xs'>(She has)</span> <em className='text-primary'>been</em> talk<em className="text-primary">ing</em></span></TableCell>
+      <TableCell><span>I had <em className='text-primary'>been</em> talk<em className="text-primary">ing</em></span><br/><span>She had <em className='text-primary'>been</em> talk<em className="text-primary">ing</em></span></TableCell>
+      <TableCell><span>I will have <em className='text-primary'>been</em> talk<em className="text-primary">ing</em></span><br/><span>She will have <em className='text-primary'>been</em> talk<em className="text-primary">ing</em></span></TableCell>
+      <TableCell className="md:max-w-[200px]! break-all! whitespace-break-spaces!">Auxiliar **have** + *(V.P.P del verbo "to be")*  **been** + **V. -ing**</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>

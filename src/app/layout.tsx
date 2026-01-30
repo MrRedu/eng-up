@@ -33,10 +33,9 @@ export const metadata: Metadata = {
     'verbos ingleses',
     'recursos educativos',
   ],
-  authors: [{ name: 'Eduardo R.', url: 'https://github.com/MrRedu' }],
-  creator: 'Eduardo R.',
-  publisher: 'Eduardo R.',
-  robots: 'index, follow',
+  authors: [{ name: 'Eduardo R. (@MrRedu)', url: 'https://github.com/MrRedu' }],
+  creator: 'Eduardo R. (@MrRedu)',
+  publisher: 'Eduardo R. (@MrRedu)',
   openGraph: {
     type: 'website',
     locale: 'es_ES',
@@ -53,6 +52,10 @@ export const metadata: Metadata = {
         alt: 'Eng-Up | Gramática Inglesa Interactiva',
       },
     ],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
