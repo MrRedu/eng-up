@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.10.0',
+    title: 'Past Tenses Lessons',
+    description:
+      'Added Past Simple: Verb to be, Past Simple (did), Past Continuous, and Past Perfect lessons.',
+    date: '2026-01-30 00:00:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.9.1',
     title: 'Grammar Examples Layout Fix',
     description: 'Fixed grammar examples layout.',

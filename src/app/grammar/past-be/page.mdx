@@ -1,7 +1,21 @@
+export const metadata = {
+  title: "Past Simple: Verb to be",
+  description: "El pasado del verbo 'to be' se utiliza para describir estados, sentimientos o ubicaciones que ocurrieron en el pasado. Al igual que en presente, no utiliza el auxiliar 'did'.",
+  keywords: ['past simple', 'verb to be', 'was', 'were', 'pasado simple', 'verbo to be', 'was', 'were',],
+  openGraph: {
+    title: "Past Simple: Verb to be",
+    description: "El pasado del verbo 'to be' se utiliza para describir estados, sentimientos o ubicaciones que ocurrieron en el pasado. Al igual que en presente, no utiliza el auxiliar 'did'.",
+  },
+}
+
 # Past Simple: Verb "to be"
 
 <Typography variant="p" className="text-center">
-  {`El pasado del verbo "to be" se utiliza para describir estados, sentimientos o ubicaciones que ocurrieron en el pasado. Al igual que en presente, no utiliza el auxiliar 'did'.`}
+  {`El pasado del verbo `}<strong>"to be"</strong>{` se utiliza para describir estados, sentimientos o ubicaciones que ocurrieron en el pasado. Al igual que en presente, no utiliza el auxiliar 'did'.`} 
+</Typography>
+
+<Typography variant="p" className="text-center">
+  {`Para los sujetos `}<strong>I, He, She, It</strong>{` usamos `}<strong>was</strong>{` y para `}<strong>You, We, They</strong>{` usamos `}<strong>were</strong>{`.`}
 </Typography>
 
 <br />
@@ -9,9 +23,9 @@
 
 <GrammarExample
   structure={[
-    { label: "Affirmative", value: "Subject + was/were + Complement" },
-    { label: "Negative", value: "Subject + was/were + not + Complement" },
-    { label: "Interrogative", value: "Was/Were + Subject + Complement?" }
+    { label: "Affirmative", value: "Subject + to be (was/were) + Complement" },
+    { label: "Negative", value: "Subject + to be (was/were) + not + Complement" },
+    { label: "Interrogative", value: "to be (Was/Were) + Subject + Complement?" }
   ]}
   examples={[
     { type: '1st & 3rd Person (was)', text: "I was at school yesterday.", translation: "Yo estuve en la escuela ayer." },
@@ -23,7 +37,7 @@
   ]}
 />
 
-<Alert variant="info" title="Dato importante">
+<Alert variant="info" title="Recordatorio">
   Usamos **was** para los sujetos *I, He, She, It*. Usamos **were** para los sujetos *You, We, They*.
 </Alert>
 
@@ -31,27 +45,26 @@
 
 ## Comparativa con Presente
 
+export const COMPARATIVE_PAST_BE_WITH_PRESENT_BE_EXAMPLES = [
+  { label: "Estado actual (ahora)", tense: "I am tired now.", translation: "Estoy cansado ahora." },
+  { label: "Estado que ya terminó (ayer, anoche)", tense: "I was tired last night.", translation: "Estaba cansado anoche." },
+] 
+
 <List>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Presente:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        I am tired now.
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">Estado actual (ahora).</Typography>
+{COMPARATIVE_PAST_BE_WITH_PRESENT_BE_EXAMPLES.map((example, index) => (
+  <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+    <strong>{example.label}:</strong>
+    <Typography className="mt-0!">
+      <Popover>
+        <PopoverTrigger asChild>
+          <span className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>{example.tense}</span>
+        </PopoverTrigger>
+        <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+          {example.translation}
+        </PopoverContent>
+      </Popover>
+    </Typography>
   </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Pasado:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        I was tired last night.
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">Estado que ya terminó (ayer, anoche).</Typography>
-  </ListItem>
+))}
+
 </List>

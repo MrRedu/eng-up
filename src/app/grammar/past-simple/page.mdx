@@ -1,14 +1,28 @@
+export const metadata = {
+  title: 'Past Simple',
+  description: 'El pasado simple se utiliza para acciones que terminaron en un momento específico del pasado. Necesita del auxiliar did para crear oraciones interrogativas y negativas.',
+  keywords: ['past simple', 'pasado simple', 'did', 'was', 'were', 'verb to be', 'verbos irregulares', 'irregular verbs'],
+}
+
 # Past Simple
 
 <Typography variant="p" className="text-center">
   {`Se utiliza para acciones que terminaron en un momento específico del pasado.`}
 </Typography>
 
+<Typography variant="p" className="text-center">
+  {`Para realizar oraciones interrogativas o negativas necesitamos usar el verbo auxiliar `}<strong>did</strong>{`. En el caso de las oraciones afirmativas, no utilizamos el verbo auxiliar.`}
+</Typography>
+
 <br />
 <br />
 
 <GrammarExample
-  structure="Subject + Verb(-ed / irregular) + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + Verb(-ed / irregular) + Complement" },
+    { label: "Negative", value: "Subject + Verb(-ed / irregular) + not + Complement" },
+    { label: "Interrogative", value: "Did + Subject + Verb (Base Form) + Complement?" }
+  ]}
   examples={[
     {
       type: 'Affirmative',
@@ -39,7 +53,13 @@
   ]}
 />
 
-<Alert variant="info" title="Dato importante">
-  Cuando usamos el auxiliar **'did'**, el verbo vuelve a su forma base (ej: **'Did
+<Alert variant="warn" title="Recuerda">
+  Cuando usamos el auxiliar **did**, el verbo vuelve a su forma base (ej: **'Did
   you go?'** en lugar de **'Did you went?'**).
+</Alert>
+
+<Alert variant="destructive" title="Dato importante">
+  En muchos casos los verbos son irregulares, por lo que no siguen la regla de 
+  agregar **-ed** al final del verbo. En estos casos simplemente debemos aprenderlos de memoria. <br/> <br/>
+  Consulta la <Link href="/resources/irregular-verbs" className="underline" title="Ir a la lista de verbos irregulares">lista de verbos irregulares más comunes</Link> para conocer gran parte de ellos.
 </Alert>
