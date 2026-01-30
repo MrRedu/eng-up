@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.11.0',
+    title: 'Future Tenses Lessons',
+    description:
+      'Added Future Simple, Future Going to, Future Continuous, Future Perfect lessons and Future Perfect Continuous.',
+    date: '2026-01-30 23:49:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.10.2',
     title: 'Loading State Fix',
     description: 'Fixed loading state.',

@@ -1,9 +1,10 @@
+import { Fragment } from "react";
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata = constructMetadata({
   title: 'Present Simple: Verb "to have"',
   description: 'Aprende a usar el verbo "to have" en presente simple para expresar posesión, características y también como auxiliar o en modismos.',
-  // keywords: ['present simple', 'presente simple', 'verbo to have', 'gramática inglesa', 'posesión', 'características', 'auxiliar', 'modismos']
+  keywords: ['present simple', 'presente simple', 'verbo to have', 'gramática inglesa', 'posesión', 'características', 'auxiliar', 'modismos']
 });
 
 # Present Simple: Verb "to have"
@@ -40,43 +41,28 @@ export const metadata = constructMetadata({
 
 ## Como Modismo (<Link href="/topics/have-idioms" className="underline">Have as an idiom</Link>)
 
-A veces **'have'** no significa **'tener'**, sino que forma parte de una expresión:
+A veces **have** no significa **tener**, sino que forma parte de una expresión:
+
+export const HAVE_AS_AN_IDIOM = [
+  { label: "Have lunch", value: "Almorzar." },
+  { label: "Have a party", value: "Hacer una fiesta." },
+  { label: "Have fun", value: "Divertirse." },
+  { label: "Have a talk", value: "Conversar." },
+  { label: "Have a rest", value: "Descansar." },
+];
 
 <div className="flex flex-wrap gap-x-3 gap-y-3 items-center mt-4 mb-8">
-  <Popover>
-    <PopoverTrigger asChild>
-      <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 font-medium whitespace-nowrap">Have lunch</span>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">Almorzar.</PopoverContent>
-  </Popover>
-  <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 font-medium whitespace-nowrap">Have a party</span>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">Hacer una fiesta.</PopoverContent>
-  </Popover>
-  <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 font-medium whitespace-nowrap">Have fun</span>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">Divertirse.</PopoverContent>
-  </Popover>
-  <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 font-medium whitespace-nowrap">Have a talk</span>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">Conversar.</PopoverContent>
-  </Popover>
-  <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 font-medium whitespace-nowrap">Have a rest</span>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">Descansar.</PopoverContent>
-  </Popover>
+{HAVE_AS_AN_IDIOM.map((idiom, index) => (
+  <Fragment key={`${idiom.label}-${index}`}>
+    <Popover >
+      <PopoverTrigger asChild>
+        <span className="cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 font-medium whitespace-nowrap">{idiom.label}</span>
+      </PopoverTrigger>
+      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">{idiom.value}</PopoverContent>
+    </Popover>
+    <span className="text-muted-foreground/30">•</span>
+    </Fragment>
+  ))}
 </div>
 
 <Typography variant="blockquote">

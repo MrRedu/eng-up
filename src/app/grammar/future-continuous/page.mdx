@@ -1,3 +1,11 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Future Continuous',
+  description: 'Aprende a usar el futuro continuo para acciones que estarán en progreso en un momento específico del futuro.',
+  keywords: ['future continuous', 'future simple', 'gramática inglesa'],
+});
+
 # Future Continuous
 
 <Typography variant="p" className="text-center">
@@ -8,32 +16,46 @@
 <br />
 
 <GrammarExample
-  structure="Subject + will be + Verb-ing + Complement"
+  structure={[
+    { label: "Affirmative", value: "Subject + will be + Verb-ing + Complement" },
+    { label: "Negative", value: "Subject + won't (will + not) + be + Verb-ing + Complement" },
+    { label: "Interrogative", value: "Will + Subject + be + Verb-ing + Complement?" }
+  ]}
   examples={[
     {
-      type: 'Affirmative',
+      type: '1st Person (Affirmative)',
       text: 'I will be studying at 10 PM.',
       translation: 'Estaré estudiando a las 10 PM.',
     },
     {
-      type: 'Negative',
+      type: '3rd Person (Affirmative)',
+      text: "She will be traveling to Japan next month.",
+      translation: 'Ella estará viajando a Japón el próximo mes.',
+    },
+    {
+      type: '3rd Person (Negative)',
       text: "They won't be working tomorrow.",
       translation: 'Ellos no estarán trabajando mañana.',
     },
     {
-      type: 'Interrogative',
+      type: '2nd Person (Interrogative)',
       text: 'Will you be sleeping?',
       translation: '¿Estarás durmiendo?',
     },
-    { type: 'Answer (+)', text: 'Yes, I will.', translation: 'Sí, lo estaré.' },
     {
-      type: 'Answer (-)',
-      text: "No, I won't.",
-      translation: 'No, no lo estaré.',
+      type: '3rd Person (Interrogative)',
+      text: 'Will she be traveling to Japan next month?',
+      translation: '¿Estará ella viajando a Japón el próximo mes?',
+    },
+    { type: '1st Person (Answer (+))', text: 'Yes, I will.', translation: 'Sí, lo estaré.' },
+    {
+      type: '3rd Person (Answer (-))',
+      text: "No, she won't.",
+      translation: 'No, no lo estará.',
     },
   ]}
 />
 
-<Alert variant="warn" title="Dato importante">
-  Usamos **'will be'** para todos los sujetos.
+<Alert variant="warn" title="¡Recuerda!">
+  Usamos **will be** para todos los sujetos.
 </Alert>
