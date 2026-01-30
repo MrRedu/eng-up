@@ -8,6 +8,13 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.10.1',
+    title: 'SEO Metadata Fix',
+    description: 'Fixed SEO metadata for all grammar lessons.',
+    date: '2026-01-30 18:31:00',
+    type: 'fix',
+  },
+  {
     version: 'v1.10.0',
     title: 'Past Tenses Lessons',
     description:
