@@ -8,6 +8,13 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.10.2',
+    title: 'Loading State Fix',
+    description: 'Fixed loading state.',
+    date: '2026-01-30 18:49:00',
+    type: 'style',
+  },
+  {
     version: 'v1.10.1',
     title: 'SEO Metadata Fix',
     description: 'Fixed SEO metadata for all grammar lessons.',
