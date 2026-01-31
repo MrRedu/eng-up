@@ -8,6 +8,21 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.9.2',
+    title: 'New Basic Topics',
+    description:
+      'Added "There is / There are" and "Much / Many" lessons with initial content and SEO metadata.',
+    date: '2026-01-31 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.12.0',
+    title: 'Layout Overflow Fix',
+    description: 'Fixed layout overflow.',
+    date: '2026-01-31 00:00:00',
+    type: 'fix',
+  },
+  {
     version: 'v1.11.1',
     title: 'Tables of Truth',
     description: 'Added Tables of Truth for all tenses.',
