@@ -12,7 +12,7 @@ export const CHANGELOG_DATA: ChangelogEntry[] = [
     title: 'New Basic Topics',
     description:
       'Added "There is / There are" and "Much / Many" lessons with initial content and SEO metadata.',
-    date: '2026-01-30 00:00:00',
+    date: '2026-01-31 00:00:00',
     type: 'feat',
   },
   {
