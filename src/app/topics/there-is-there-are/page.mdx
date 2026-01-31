@@ -1,0 +1,94 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'There is / There are',
+  description: 'Aprende a usar "There is" y "There are" para expresar existencia en inglés, en sus formas afirmativa, negativa e interrogativa.',
+  keywords: ['there is', 'there are', 'existencia', 'gramática inglesa'],
+});
+
+<span  className="text-xs mb-4 bg-amber-500/10 text-amber-500 border-amber-500/20">
+  (Tema por corregir*)
+</span>
+
+# There is / There are
+
+<Typography variant="p" className="text-center text-balance">
+  {`Ambos significan `}**Hay**{` en español. Utilizamos `}**There is**{` para el singular y `}**There are**{` para el plural.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Estructura Básica
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Forma</TableHead>
+      <TableHead>Singular (There is)</TableHead>
+      <TableHead>Plural (There are)</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Afirmación</TableCell>
+      <TableCell>There is a cat.</TableCell>
+      <TableCell>There are two cats.</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Negación</TableCell>
+      <TableCell>There is not (isn't) a cat.</TableCell>
+      <TableCell>There are not (aren't) any cats.</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Interrogación</TableCell>
+      <TableCell>Is there a cat?</TableCell>
+      <TableCell>Are there any cats?</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Contracciones Comunes
+
+<List>
+  <ListItem className='flex items-start gap-2'>
+    <strong>There is:</strong>
+    <Typography className="mt-0! text-sm font-mono text-primary">There's</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <strong>There is not:</strong>
+    <Typography className="mt-0! text-sm font-mono text-primary">There isn't</Typography>
+  </ListItem>
+  <ListItem className='flex items-start gap-2'>
+    <strong>There are not:</strong>
+    <Typography className="mt-0! text-sm font-mono text-primary">There aren't</Typography>
+  </ListItem>
+</List>
+
+<br />
+
+## 3. Uso con Quantifiers (Some / Any)
+
+<Typography variant="p">
+  {`Es muy común usar "There is/are" con cuantificadores para hablar de cantidades no específicas:`}
+</Typography>
+
+<GrammarExample
+  structure={[
+    { label: "Affirmative", value: "There is some + Uncountable / There are some + Plural" },
+    { label: "Negative/Question", value: "There isn't any... / Are there any...?" }
+  ]}
+  examples={[
+    { type: 'Some', text: "There is some milk in the fridge.", translation: "Hay algo de leche en el refrigerador." },
+    { type: 'Any (-)', text: "There aren't any eggs left.", translation: "No quedan huevos." },
+    { type: 'Any (?)', text: "Is there any sugar in the coffee?", translation: "¿Hay azúcar en el café?" }
+  ]}
+/>
+
+<br />
+
+<Alert variant="info" title="Recuerda">
+  Usamos **a / an** para objetos únicos (singular) y **some / any** para masas o varios objetos (plural/incontable).
+</Alert>

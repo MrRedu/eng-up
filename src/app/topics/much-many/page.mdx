@@ -1,0 +1,99 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Much / Many',
+  description: 'Aprende cuándo usar "Much" y "Many", y cómo preguntar por cantidades usando "How much" y "How many".',
+  keywords: ['much', 'many', 'existencia', 'gramática inglesa'],
+});
+
+<span  className="text-xs mb-4 bg-amber-500/10 text-amber-500 border-amber-500/20">
+  (Tema por corregir*)
+</span>
+
+# Much / Many
+
+<Typography variant="p" className="text-center text-balance">
+  {`Ambos se traducen como "mucho", "mucha", "muchos" o "muchas". La diferencia clave es si el sustantivo que acompañan es contable o incontable.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Diferencia Principal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Palabra</TableHead>
+      <TableHead>Uso</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-bold text-primary">Many</TableCell>
+      <TableCell>Sustantivos **Contables** (plural)</TableCell>
+      <TableCell className="italic">Many books, many people.</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-bold text-primary">Much</TableCell>
+      <TableCell>Sustantivos **Incontables** (singular)</TableCell>
+      <TableCell className="italic">Much water, much time.</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Preguntas: How much / How many
+
+<Typography variant="p">
+  {`Usamos estas expresiones para preguntar por la cantidad de algo:`}
+</Typography>
+
+<GrammarExample
+  structure={[
+    { label: "Quantity (Cont.)", value: "How many + Plural noun + ... ?" },
+    { label: "Amount (Incont.)", value: "How much + Uncountable noun + ... ?" }
+  ]}
+  examples={[
+    { type: 'Countable', text: "How many friends do you have?", translation: "¿Cuántos amigos tienes?" },
+    { type: 'Uncountable', text: "How much money do we need?", translation: "¿Cuánto dinero necesitamos?" },
+    { type: 'Price', text: "How much is this shirt?", translation: "¿Cuánto cuesta esta camisa? (También para precios)" }
+  ]}
+/>
+
+<br />
+
+## 3. ¿Cuándo usar "A lot of"?
+
+<Typography variant="p">
+  {`En oraciones **afirmativas**, es mucho más natural usar **a lot of** o **lots of** tanto para contables como para incontables.`}
+</Typography>
+
+<Alert variant="info" title="Regla de oro">
+  - **Many / Much**: Se usan principalmente en oraciones **negativas** e **interrogativas**. <br/>
+  - **A lot of / Lots of**: Se usan principalmente en oraciones **afirmativas**.
+</Alert>
+
+<Table className="mt-6">
+  <TableHeader>
+    <TableRow>
+      <TableHead>Contexto</TableHead>
+      <TableHead>Natural</TableHead>
+      <TableHead>Menos común</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium text-green-600">Afirmativo</TableCell>
+      <TableCell>I have **a lot of** books.</TableCell>
+      <TableCell className="opacity-50 text-xs">I have many books.</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium text-red-600">Negativo</TableCell>
+      <TableCell>I don't have **many** books.</TableCell>
+      <TableCell className="opacity-50 text-xs">I don't have a lot of books.</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
