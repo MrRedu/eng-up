@@ -17,11 +17,16 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
   SidebarMenuSubButton,
+  useSidebar,
 } from '@/components/ui/sidebar';
 import { ScrollArea } from '../ui/scroll-area';
 import Link from 'next/link';
 
 export const ContentSidebar = () => {
+  const { setOpenMobile } = useSidebar();
+  const handleLinkClick = () => {
+    setOpenMobile(false);
+  };
   return (
     <SidebarContent>
       <ScrollArea className="h-full">
@@ -65,7 +70,10 @@ export const ContentSidebar = () => {
                                                 key={leaf.title}
                                               >
                                                 <SidebarMenuSubButton asChild>
-                                                  <Link href={leaf.url}>
+                                                  <Link
+                                                    href={leaf.url}
+                                                    onClick={handleLinkClick}
+                                                  >
                                                     <span>{leaf.title}</span>
                                                   </Link>
                                                 </SidebarMenuSubButton>
@@ -77,7 +85,10 @@ export const ContentSidebar = () => {
                                     </Collapsible>
                                   ) : (
                                     <SidebarMenuSubButton asChild>
-                                      <Link href={subItem.url || '#'}>
+                                      <Link
+                                        href={subItem.url || '#'}
+                                        onClick={handleLinkClick}
+                                      >
                                         <span>{subItem.title}</span>
                                       </Link>
                                     </SidebarMenuSubButton>
@@ -90,7 +101,7 @@ export const ContentSidebar = () => {
                       </Collapsible>
                     ) : (
                       <SidebarMenuButton asChild tooltip={item.title}>
-                        <Link href={item.url!}>
+                        <Link href={item.url!} onClick={handleLinkClick}>
                           {item.icon && <item.icon className="h-4 w-4" />}
                           <span>{item.title}</span>
                         </Link>

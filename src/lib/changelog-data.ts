@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.13.1',
+    title: 'Sidebar Mobile Navigation Fix',
+    description:
+      'Fixed a visual bug on mobile devices where the sidebar remained open after clicking a link, ensuring it now closes automatically upon navigation.',
+    date: '2026-02-03 00:00:00',
+    type: 'style',
+  },
+  {
     version: 'v1.13.0',
     title: 'Past Perfect Continuous Lesson',
     description:

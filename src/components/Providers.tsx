@@ -4,7 +4,12 @@ import * as React from 'react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { SidebarProvider } from '@/components/ui/sidebar';
 
-export function Providers({ children }: { children: React.ReactNode }) {
+interface ProvidersProps {
+  children: React.ReactNode;
+  isSidebarOpen?: boolean;
+}
+
+export function Providers({ children, isSidebarOpen }: ProvidersProps) {
   return (
     <NextThemesProvider
       attribute="class"
@@ -12,7 +17,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <SidebarProvider>{children}</SidebarProvider>
+      <SidebarProvider defaultOpen={isSidebarOpen}>{children}</SidebarProvider>
     </NextThemesProvider>
   );
 }
