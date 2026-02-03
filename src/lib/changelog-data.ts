@@ -8,6 +8,38 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.9.6',
+    title: 'Reflexive Pronouns & Global Comparison',
+    description:
+      'Added Reflexive Pronouns lesson and a comprehensive comparison table for all types of pronouns in the resources section.',
+    date: '2026-02-03 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.9.5',
+    title: 'Object Pronouns Lesson',
+    description:
+      'Added a new topic for object pronouns (me, you, him, her, etc.) with usage rules and subject/object comparisons.',
+    date: '2026-02-03 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.9.4',
+    title: 'Possessive Pronouns Lesson',
+    description:
+      'Added a new topic for possessive pronouns (mine, yours, hers, etc.) with comparison tables and usage rules.',
+    date: '2026-02-03 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.9.3',
+    title: 'Possessive Adjectives Lesson',
+    description:
+      'Added a new topic for possessive adjectives (my, your, his, her, etc.) with comparison tables and common mistake alerts.',
+    date: '2026-02-03 00:00:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.14.0',
     title: 'Added Zero conditional lesson',
     description:

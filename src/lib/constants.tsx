@@ -56,6 +56,10 @@ export const NAVIGATION_DATA: NavGroup[] = [
             title: 'Tablas de las Verdades',
             url: '/resources/tables-of-truth',
           },
+          {
+            title: 'Pronouns & Possessive Adj.',
+            url: '/resources/pronouns-comparison',
+          },
         ],
       },
       { title: 'Roadmap', url: '/roadmap', icon: Map },

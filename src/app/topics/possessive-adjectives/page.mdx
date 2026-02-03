@@ -1,0 +1,133 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Possessive Adjectives',
+  description: 'Aprende a indicar posesión en inglés usando adjetivos posesivos (my, your, his, her, its, our, their).',
+  keywords: ['possessive adjectives', 'adjetivos posesivos', 'posesión en inglés', 'gramática básica'],
+});
+
+# Possessive Adjectives
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adjetivos posesivos se utilizan para indicar que algo pertenece a alguien. A diferencia del español, estos adjetivos concuerdan con el `}<strong>poseedor</strong>{` y no con el objeto poseído.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Relación con Pronombres Personales
+
+export const POSSESSIVE_ADJECTIVES = [
+  { subject: 'I', possessive: 'My', translation: 'Mi / Mis' },
+  { subject: 'You', possessive: 'Your', translation: 'Tu / Tus / Su / Sus (de usted)' },
+  { subject: 'He', possessive: 'His', translation: 'Su / Sus (de él)' },
+  { subject: 'She', possessive: 'Her', translation: 'Su / Sus (de ella)' },
+  { subject: 'It', possessive: 'Its', translation: 'Su / Sus (de una cosa o animal)' },
+  { subject: 'We', possessive: 'Our', translation: 'Nuestro(a) / Nuestros(as)' },
+  { subject: 'They', possessive: 'Their', translation: 'Su / Sus (de ellos/as)' },
+];
+
+<Table>
+  <TableCaption>Sujeto vs. Adjetivo Posesivo.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Pronombre Sujeto</TableHead>
+      <TableHead>Adjetivo Posesivo</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {POSSESSIVE_ADJECTIVES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.subject}</TableCell>
+        <TableCell>{item.possessive}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Reglas Importantes
+
+<List>
+  <ListItem className='flex flex-col md:flex-row items-start gap-2'>
+    <strong>Posición:</strong>
+    <Typography className="mt-0!">Siempre van colocados **antes** del <HasTranslation translation="el ente/la cosa">sustantivo</HasTranslation>.</Typography>
+  </ListItem>
+  <ListItem className='flex flex-col md:flex-row items-start gap-2'>
+    <strong>Sin plural:</strong>
+    <Typography className="mt-0!">No tienen forma plural. Se dice **my book** y **my books** *(nunca "mys books")*.</Typography>
+  </ListItem>
+  <ListItem className='flex flex-col md:flex-row items-start gap-2'>
+    <strong>Género:</strong>
+    <Typography className="mt-0!">Dependen de quién posee el objeto (**His house** = la casa de él / **Her house** = la casa de ella).</Typography>
+  </ListItem>
+</List>
+
+<br />
+
+<GrammarExample
+  structure="Possessive Adjective + Noun"
+  examples={[
+    { type: '1st Person', text: "My car is blue.", translation: "Mi carro es azul." },
+    { type: '3rd Person (Masculine)', text: "His name is John.", translation: "Su nombre es John (el nombre de él)." },
+    { type: '3rd Person (Feminine)', text: "Her sister is a doctor.", translation: "Su hermana es doctora (la hermana de ella)." },
+    { type: '1st Person (Plural)', text: "Our house is big.", translation: "Nuestra casa es grande." },
+    { type: '3rd Person (Plural)', text: "Their parents are at home.", translation: "Sus padres están en casa (los padres de ellos)." }
+  ]}
+/>
+
+<br />
+
+## 3. Confusiones Comunes
+
+<br/>
+
+export const POSSESSIVE_ADJECTIVES_CONFUSIONS = [
+  {
+    correct: <>The dog wagged <strong>its</strong> tail.</>,
+    correctTranslation: "El perro movió su cola.",
+    incorrect: <>The dog wagged <strong>it's</strong> tail.</>
+  },
+  {
+    correct: <><strong>Your</strong> house is beautiful.</>,
+    correctTranslation: "Tu casa es hermosa.",
+    incorrect: <><strong>You're</strong> house is beautiful.</>
+  },
+  {
+    correct: <>I like <strong>their</strong> car.</>,
+    correctTranslation: "Me gusta su carro.",
+    incorrect: <>I like <strong>there</strong> car.</>
+  },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Correcto</TableHead>
+      <TableHead>Incorrecto</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+  {POSSESSIVE_ADJECTIVES_CONFUSIONS.map((confusion, index) => (
+    <TableRow key={index}>
+      <TableCell className="text-green-600">
+      <HasTranslation translation={confusion.correctTranslation}>{confusion.correct}</HasTranslation>
+      </TableCell>
+      <TableCell className="text-red-500 line-through">{confusion.incorrect}</TableCell>
+    </TableRow>
+  ))}
+  </TableBody>
+</Table>
+
+<Alert variant="destructive" title="No confundas">
+  **Its** (posesivo) vs. **It's** (It is). <br/>
+  **Your** (posesivo) vs. **You're** (You are). <br/>
+  **Their** (posesivo) vs. **They're** (They are) vs. **There** (Allí).
+</Alert>
+
+<Typography variant="blockquote">
+  Ver tabla comparativa de pronombres y adjetivos posesivos en <Link href="/resources/pronouns-comparison" className="underline">Pronouns & Possessive Adjectives Table</Link>.
+</Typography>

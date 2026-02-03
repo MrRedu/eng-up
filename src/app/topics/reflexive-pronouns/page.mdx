@@ -1,0 +1,129 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Reflexive Pronouns',
+  description: 'Aprende a usar los pronombres reflexivos en inglés (myself, yourself, himself, etc.) para indicar que el sujeto realiza y recibe la acción.',
+  keywords: ['reflexive pronouns', 'pronombres reflexivos', 'myself himself themselves', 'gramática inglesa'],
+});
+
+# Reflexive Pronouns
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los pronombres reflexivos se utilizan cuando el sujeto y el objeto de la oración son la misma persona o cosa. Es decir, la acción recae sobre quien la realiza.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Relación con Pronombres Sujeto
+
+export const REFLEXIVE_PRONOUNS_COMPARISON = [
+  { subject: 'I', reflexive: 'Myself', translation: 'Yo mismo / Me' },
+  { subject: 'You (Singular)', reflexive: 'Yourself', translation: 'Tú mismo / Te' },
+  { subject: 'He', reflexive: 'Himself', translation: 'Él mismo / Se' },
+  { subject: 'She', reflexive: 'Herself', translation: 'Ella misma / Se' },
+  { subject: 'It', reflexive: 'Itself', translation: 'Sí mismo (objeto/animal)' },
+  { subject: 'We', reflexive: 'Ourselves', translation: 'Nosotros mismos / Nos' },
+  { subject: 'You (Plural)', reflexive: 'Yourselves', translation: 'Ustedes mismos / Os' },
+  { subject: 'They', reflexive: 'Themselves', translation: 'Ellos mismos / Se' },
+];
+
+<Table>
+  <TableCaption>Sujeto vs. Pronombre Reflexivo.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Pronombre Sujeto</TableHead>
+      <TableHead>Pronombre Reflexivo</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {REFLEXIVE_PRONOUNS_COMPARISON.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.subject}</TableCell>
+        <TableCell className="font-bold text-primary">{item.reflexive}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. ¿Cuándo Usarlos?
+
+export const REFLEXIVE_RULES = [
+  {
+    rule: 'Sujeto = Objeto',
+    description: <>Cuando la persona que hace la acción es la misma que la recibe. <br /> <em>I cut <strong>myself</strong> while cooking.</em></>
+  },
+  {
+    rule: 'Énfasis',
+    description: <>Para enfatizar que alguien hizo algo personalmente. <br /> <em>The President <strong>himself</strong> called me.</em></>
+  },
+  {
+    rule: 'Con "By"',
+    description: <>Para indicar que algo se hizo solo o sin ayuda. <br /> <em>She lives by <strong>herself</strong>.</em></>
+  },
+];
+
+<List>
+  {REFLEXIVE_RULES.map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <strong className="text-nowrap">{item.rule}:</strong>
+      <Typography className="mt-0!">{item.description}</Typography>
+    </ListItem>
+  ))}
+</List>
+
+<br />
+
+<GrammarExample
+  structure="Subject + Verb + Reflexive Pronoun"
+  examples={[
+    { type: 'Reflexive', text: "He looks at himself in the mirror.", translation: "Él se mira a sí mismo en el espejo." },
+    { type: 'By + Reflexive', text: "I finished the project by myself.", translation: "Terminé el proyecto yo solo (por mi cuenta)." },
+    { type: 'Emphasis', text: "Did you bake this cake yourself?", translation: "¿Hiciste tú mismo este pastel?" },
+    { type: 'Plural', text: "We can take care of ourselves.", translation: "Podemos cuidarnos a nosotros mismos." }
+  ]}
+/>
+
+<br />
+<br />
+
+## 3. Cuidado con el Plural
+
+<Alert variant="info" title="Diferencia de terminación">
+  Los pronombres en singular terminan en **-self**, mientras que los plurales terminan en **-selves**.
+  - **Singular:** yourself (tú mismo).
+  - **Plural:** yourselves (ustedes mismos).
+</Alert>
+
+<br />
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Contexto</TableHead>
+      <TableHead>Correcto</TableHead>
+      <TableHead>Incorrecto</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {[
+      { ctx: "A una persona", c: "Be careful with **yourself**.", i: "Be careful with yourselves." },
+      { ctx: "A varias personas", c: "Be careful with **yourselves**.", i: "Be careful with yourself." },
+    ].map((row, i) => (
+      <TableRow key={i}>
+        <TableCell className="font-medium">{row.ctx}</TableCell>
+        <TableCell className="text-green-600 font-bold">{row.c}</TableCell>
+        <TableCell className="text-red-500 line-through text-xs">{row.i}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<Typography variant="blockquote">
+  Ver tabla comparativa de pronombres y adjetivos posesivos en <Link href="/resources/pronouns-comparison" className="underline">Pronouns & Possessive Adjectives Table</Link>.
+</Typography>
