@@ -6,6 +6,7 @@ import { AppSidebar } from '@/components/app-sidebar/app-sidebar';
 import { Header } from '@/components/Header';
 import { Search } from '@/components/Search';
 import { SidebarInset } from '@/components/ui/sidebar';
+import { cookies } from 'next/headers';
 
 const soraSans = Sora({
   variable: '--font-sora-sans',
@@ -59,17 +60,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const isSidebarOpen = cookieStore.get('sidebar_state')?.value === 'true';
+
   return (
     <html lang="es" suppressHydrationWarning>
       <body
         className={`${soraSans.variable} ${geistMono.variable} antialiased font-sans bg-sidebar`}
       >
-        <Providers>
+        <Providers isSidebarOpen={isSidebarOpen}>
           <AppSidebar />
           <SidebarInset className="bg-sidebar max-w-7xl overflow-hidden mx-auto">
             <div className="relative bg-background mx-2 my-2 border shadow-sm rounded-xl flex flex-col flex-1">

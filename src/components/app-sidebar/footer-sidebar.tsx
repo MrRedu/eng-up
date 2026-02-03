@@ -1,9 +1,11 @@
+'use client';
 import Link from 'next/link';
 import {
   SidebarFooter,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  useSidebar,
 } from '../ui/sidebar';
 import { Info, Settings, Settings2 } from 'lucide-react';
 import {
@@ -14,6 +16,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 export const FooterSidebar = () => {
+  const { setOpenMobile } = useSidebar();
   return (
     <SidebarFooter>
       <SidebarMenu>
@@ -30,6 +33,7 @@ export const FooterSidebar = () => {
                 <Link
                   href="/about"
                   className="flex items-center gap-2 cursor-pointer"
+                  onClick={() => setOpenMobile(false)}
                 >
                   <Info className="size-4" />
                   <span>Información</span>
@@ -39,6 +43,7 @@ export const FooterSidebar = () => {
                 <Link
                   href="/settings"
                   className="flex items-center gap-2 cursor-pointer"
+                  onClick={() => setOpenMobile(false)}
                 >
                   <Settings className="size-4" />
                   <span>Configuración</span>

@@ -1,0 +1,25 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Zero Conditional',
+  description: 'Aprende a usar el zero conditional (condicional cero) para hablar de situaciones generales, hechos científicos y hábitos.',
+  keywords: ['zero conditional', 'condicional cero', 'gramática inglesa', 'situaciones generales', 'hechos científicos', 'hábitos']
+});
+
+# Zero Conditional
+
+<Typography variant="p" className="text-center text-balance">{`El zero conditional se utiliza para hablar de situaciones generales, hechos científicos y hábitos. Situaciones muy probables en el futuro.`}</Typography>
+
+<br />
+<br />
+
+<GrammarExample 
+structure={[
+  { label: "Affirmative", value: "If + Subject + Present Simple, Subject + Present Simple" },
+  { label: "Negative", value: "If + Subject + don't/doesn't + Present Simple, Subject + don't/doesn't + Present Simple" }
+]}
+examples={[
+  { type: "Affirmative", text: "If I heat water to 100 degrees Celsius, it boils.", translation: "Si caliento agua a 100 grados Celsius, hierve." },
+  { type: "Negative", text: "If you don't water plants, they die.", translation: "Si no riegas las plantas, se mueren." },
+]}
+/>
