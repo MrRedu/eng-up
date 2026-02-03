@@ -3,7 +3,7 @@ import { constructMetadata } from "@/lib/seo";
 export const metadata = constructMetadata({
   title: 'Ordinal Numbers',
   description: 'Aprende a contar y expresar números en inglés con ejemplos interactivos.',
-  // keywords: ['ordinal numbers', 'contar en inglés', 'gramática inglesa', 'números en inglés'],
+  keywords: ['ordinal numbers', 'contar en inglés', 'gramática inglesa', 'números en inglés'],
 });
 
 # Ordinal Numbers
@@ -25,6 +25,9 @@ export const metadata = constructMetadata({
       <TableHead className="w-25">Posición</TableHead>
       <TableHead>Inglés</TableHead>
       <TableHead>Abreviatura</TableHead>
+      <TableHead className="w-25">Posición</TableHead>
+      <TableHead>Inglés</TableHead>
+      <TableHead>Abreviatura</TableHead>
     </TableRow>
   </TableHeader>
 
@@ -33,8 +36,6 @@ export const metadata = constructMetadata({
       <TableCell>1º</TableCell>
       <TableCell>First</TableCell>
       <TableCell>1st</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>2º</TableCell>
       <TableCell>Second</TableCell>
       <TableCell>2nd</TableCell>
@@ -43,8 +44,6 @@ export const metadata = constructMetadata({
       <TableCell>3º</TableCell>
       <TableCell>Third</TableCell>
       <TableCell>3rd</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>4º</TableCell>
       <TableCell>Fourth</TableCell>
       <TableCell>4th</TableCell>
@@ -53,13 +52,14 @@ export const metadata = constructMetadata({
       <TableCell>5º</TableCell>
       <TableCell>Fifth</TableCell>
       <TableCell>5th</TableCell>
+      <TableCell>6º</TableCell>
+      <TableCell>Sixth</TableCell>
+      <TableCell>6th</TableCell>
     </TableRow>
     <TableRow>
       <TableCell>10º</TableCell>
       <TableCell>Tenth</TableCell>
       <TableCell>10th</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>11º</TableCell>
       <TableCell>Eleventh</TableCell>
       <TableCell>11th</TableCell>
@@ -68,8 +68,6 @@ export const metadata = constructMetadata({
       <TableCell>12º</TableCell>
       <TableCell>Twelfth</TableCell>
       <TableCell>12th</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>13º</TableCell>
       <TableCell>Thirteenth</TableCell>
       <TableCell>13th</TableCell>
@@ -78,8 +76,6 @@ export const metadata = constructMetadata({
       <TableCell>14º</TableCell>
       <TableCell>Fourteenth</TableCell>
       <TableCell>14th</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>15º</TableCell>
       <TableCell>Fifteenth</TableCell>
       <TableCell>15th</TableCell>
@@ -88,8 +84,6 @@ export const metadata = constructMetadata({
       <TableCell>16º</TableCell>
       <TableCell>Sixteenth</TableCell>
       <TableCell>16th</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>17º</TableCell>
       <TableCell>Seventeenth</TableCell>
       <TableCell>17th</TableCell>
@@ -98,8 +92,6 @@ export const metadata = constructMetadata({
       <TableCell>18º</TableCell>
       <TableCell>Eighteenth</TableCell>
       <TableCell>18th</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>19º</TableCell>
       <TableCell>Nineteenth</TableCell>
       <TableCell>19th</TableCell>
@@ -108,8 +100,6 @@ export const metadata = constructMetadata({
       <TableCell>20º</TableCell>
       <TableCell>Twentieth</TableCell>
       <TableCell>20th</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>21º</TableCell>
       <TableCell>Twenty-first</TableCell>
       <TableCell>21st</TableCell>
@@ -118,8 +108,6 @@ export const metadata = constructMetadata({
       <TableCell>25º</TableCell>
       <TableCell>Twenty-fifth</TableCell>
       <TableCell>25th</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>30º</TableCell>
       <TableCell>Thirtieth</TableCell>
       <TableCell>30th</TableCell>
@@ -128,8 +116,6 @@ export const metadata = constructMetadata({
       <TableCell>31º</TableCell>
       <TableCell>Thirty-first</TableCell>
       <TableCell>31st</TableCell>
-    </TableRow>
-    <TableRow>
       <TableCell>39º</TableCell>
       <TableCell>Thirty-ninth</TableCell>
       <TableCell>39th</TableCell>
@@ -138,6 +124,9 @@ export const metadata = constructMetadata({
       <TableCell>100º</TableCell>
       <TableCell>One hundredth</TableCell>
       <TableCell>100th</TableCell>
+      <TableCell>101º</TableCell>
+      <TableCell>One hundred first</TableCell>
+      <TableCell>101st</TableCell>
     </TableRow>
   </TableBody>
 
@@ -153,28 +142,21 @@ La mayoría de los números terminan en <strong>-th</strong>, excepto el 1, 2 y 
 
 ## Ejemplos de uso
 
-<br />
-
 export const ORDINAL_NUMBERS_EXAMPLES = [
-  { label: "Dates", translation: "Fechas.", content: <>Today is January <strong>twenty-eighth</strong>.</> },
-  { label: "Order", translation: "Orden.", content: <>He finished in <strong>second</strong> place.</> },
-  { label: "Floors", translation: "Pisos / Plantas.", content: <>My office is on the <strong>tenth</strong> floor.</> }
+  { label: "Dates", translation: "Fechas.", content: <>Today is January <strong>twenty-eighth</strong>.</>, contentTranslation: <>Hoy es <strong>veintiocho</strong> de enero.</> },
+  { label: "Order", translation: "Orden.", content: <>He finished in <strong>second</strong> place.</>, contentTranslation: <>Él terminó en <strong>segundo</strong> lugar.</> },
+  { label: "Floors", translation: "Pisos / Plantas.", content: <>My office is on the <strong>tenth</strong> floor.</>, contentTranslation: <>Mi oficina está en el <strong>décimo</strong> piso.</> }
 ];
 
 <List>
 {ORDINAL_NUMBERS_EXAMPLES.map((example, index) => (
   <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>{example.label}:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        {example.translation}
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">
+    <HasTranslation translation={example.translation} as="strong">
+      {example.label}
+    </HasTranslation>
+    <HasTranslation translation={example.contentTranslation}>
       {example.content}
-    </Typography>
+    </HasTranslation>
   </ListItem>
 ))}
 </List>

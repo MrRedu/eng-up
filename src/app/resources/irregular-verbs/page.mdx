@@ -3,9 +3,8 @@ import { constructMetadata } from "@/lib/seo";
 export const metadata = constructMetadata({
   title: 'Common Irregular Verbs',
   description: 'Aprende los verbos irregulares más comunes en inglés con ejemplos interactivos.',
-  // keywords: ['common irregular verbs', 'verbos irregulares', 'gramática inglesa', 'conjugación de verbos', 'lista de verbos irregulares', 'verbos irregulares en inglés', 'lista de verbos irregulares en inglés'],
+  keywords: ['common irregular verbs', 'verbos irregulares', 'gramática inglesa', 'conjugación de verbos', 'lista de verbos irregulares', 'verbos irregulares en inglés', 'lista de verbos irregulares en inglés'],
 });
-
 
 # Common Irregular Verbs
 
@@ -15,6 +14,56 @@ export const metadata = constructMetadata({
 
 <br />
 <br />
+
+export const MOST_COMMON_IRREGULAR_VERBS = [
+  { infinitive: 'Be', pastSimple: 'Was / Were', pastParticiple: 'Been', translate: 'Ser / Estar' },
+  { infinitive: 'Become', pastSimple: 'Became', pastParticiple: 'Become', translate: 'Llegar a ser' },
+  { infinitive: 'Begin', pastSimple: 'Began', pastParticiple: 'Begun', translate: 'Empezar' },
+  { infinitive: 'Break', pastSimple: 'Broke', pastParticiple: 'Broken', translate: 'Romper' },
+  { infinitive: 'Bring', pastSimple: 'Brought', pastParticiple: 'Brought', translate: 'Traer' },
+  { infinitive: 'Buy', pastSimple: 'Bought', pastParticiple: 'Bought', translate: 'Comprar' },
+  { infinitive: 'Choose', pastSimple: 'Chose', pastParticiple: 'Chosen', translate: 'Elegir' },
+  { infinitive: 'Come', pastSimple: 'Came', pastParticiple: 'Come', translate: 'Venir' },
+  { infinitive: 'Do', pastSimple: 'Did', pastParticiple: 'Done', translate: 'Hacer' },
+  { infinitive: 'Drink', pastSimple: 'Drank', pastParticiple: 'Drunk', translate: 'Beber' },
+  { infinitive: 'Drive', pastSimple: 'Drove', pastParticiple: 'Driven', translate: 'Conducir' },
+  { infinitive: 'Eat', pastSimple: 'Ate', pastParticiple: 'Eaten', translate: 'Comer' },
+  { infinitive: 'Fall', pastSimple: 'Fell', pastParticiple: 'Fallen', translate: 'Caer' },
+  { infinitive: 'Feel', pastSimple: 'Felt', pastParticiple: 'Felt', translate: 'Sentir' },
+  { infinitive: 'Find', pastSimple: 'Found', pastParticiple: 'Found', translate: 'Encontrar' },
+  { infinitive: 'Fly', pastSimple: 'Flew', pastParticiple: 'Flown', translate: 'Volar' },
+  { infinitive: 'Forget', pastSimple: 'Forgot', pastParticiple: 'Forgotten', translate: 'Olvidar' },
+  { infinitive: 'Get', pastSimple: 'Got', pastParticiple: 'Got / Gotten', translate: 'Conseguirse / Recibir' },
+  { infinitive: 'Give', pastSimple: 'Gave', pastParticiple: 'Given', translate: 'Dar' },
+  { infinitive: 'Go', pastSimple: 'Went', pastParticiple: 'Gone', translate: 'Ir' },
+  { infinitive: 'Have', pastSimple: 'Had', pastParticiple: 'Had', translate: 'Tener / Haber' },
+  { infinitive: 'Know', pastSimple: 'Knew', pastParticiple: 'Known', translate: 'Saber / Conocer' },
+  { infinitive: 'Leave', pastSimple: 'Left', pastParticiple: 'Left', translate: 'Salir / Dejar' },
+  { infinitive: 'Lose', pastSimple: 'Lost', pastParticiple: 'Lost', translate: 'Perder' },
+  { infinitive: 'Make', pastSimple: 'Made', pastParticiple: 'Made', translate: 'Hacer / Fabricar' },
+  { infinitive: 'Meet', pastSimple: 'Met', pastParticiple: 'Met', translate: 'Conocer / Encontrarse' },
+  { infinitive: 'Pay', pastSimple: 'Paid', pastParticiple: 'Paid', translate: 'Pagar' },
+  { infinitive: 'Read', pastSimple: 'Read (/red/)', pastParticiple: 'Read (/red/)', translate: 'Leer' },
+  { infinitive: 'Run', pastSimple: 'Ran', pastParticiple: 'Run', translate: 'Correr' },
+  { infinitive: 'Say', pastSimple: 'Said', pastParticiple: 'Said', translate: 'Decir' },
+  { infinitive: 'See', pastSimple: 'Saw', pastParticiple: 'Seen', translate: 'Ver' },
+  { infinitive: 'Sell', pastSimple: 'Sold', pastParticiple: 'Sold', translate: 'Vender' },
+  { infinitive: 'Send', pastSimple: 'Sent', pastParticiple: 'Sent', translate: 'Enviar' },
+  { infinitive: 'Sing', pastSimple: 'Sang', pastParticiple: 'Sung', translate: 'Cantar' },
+  { infinitive: 'Sit', pastSimple: 'Sat', pastParticiple: 'Sat', translate: 'Sentarse' },
+  { infinitive: 'Sleep', pastSimple: 'Slept', pastParticiple: 'Slept', translate: 'Dormir' },
+  { infinitive: 'Speak', pastSimple: 'Spoke', pastParticiple: 'Spoken', translate: 'Hablar' },
+  { infinitive: 'Spend', pastSimple: 'Spent', pastParticiple: 'Spent', translate: 'Gastar / Pasar tiempo' },
+  { infinitive: 'Swim', pastSimple: 'Swam', pastParticiple: 'Swum', translate: 'Nadar' },
+  { infinitive: 'Take', pastSimple: 'Took', pastParticiple: 'Taken', translate: 'Tomar / Llevar' },
+  { infinitive: 'Teach', pastSimple: 'Taught', pastParticiple: 'Taught', translate: 'Enseñar' },
+  { infinitive: 'Tell', pastSimple: 'Told', pastParticiple: 'Told', translate: 'Decir / Contar' },
+  { infinitive: 'Think', pastSimple: 'Thought', pastParticiple: 'Thought', translate: 'Pensar' },
+  { infinitive: 'Understand', pastSimple: 'Understood', pastParticiple: 'Understood', translate: 'Entender' },
+  { infinitive: 'Wake', pastSimple: 'Woke', pastParticiple: 'Woken', translate: 'Despertar' },
+  { infinitive: 'Wear', pastSimple: 'Wore', pastParticiple: 'Worn', translate: 'Llevar puesto' },
+  { infinitive: 'Write', pastSimple: 'Wrote', pastParticiple: 'Written', translate: 'Escribir' },
+];
 
 <Table>
   <TableCaption>Lista de los verbos irregulares más comunes.</TableCaption>
@@ -27,288 +76,14 @@ export const metadata = constructMetadata({
     </TableRow>
   </TableHeader>
   <TableBody>
-    <TableRow>
-      <TableCell className="font-medium">Be</TableCell>
-      <TableCell>Was / Were</TableCell>
-      <TableCell>Been</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Ser / Estar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Become</TableCell>
-      <TableCell>Became</TableCell>
-      <TableCell>Become</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Llegar a ser</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Begin</TableCell>
-      <TableCell>Began</TableCell>
-      <TableCell>Begun</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Empezar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Break</TableCell>
-      <TableCell>Broke</TableCell>
-      <TableCell>Broken</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Romper</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Bring</TableCell>
-      <TableCell>Brought</TableCell>
-      <TableCell>Brought</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Traer</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Buy</TableCell>
-      <TableCell>Bought</TableCell>
-      <TableCell>Bought</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Comprar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Choose</TableCell>
-      <TableCell>Chose</TableCell>
-      <TableCell>Chosen</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Elegir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Come</TableCell>
-      <TableCell>Came</TableCell>
-      <TableCell>Come</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Venir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Do</TableCell>
-      <TableCell>Did</TableCell>
-      <TableCell>Done</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Hacer</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Drink</TableCell>
-      <TableCell>Drank</TableCell>
-      <TableCell>Drunk</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Beber</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Drive</TableCell>
-      <TableCell>Drove</TableCell>
-      <TableCell>Driven</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Conducir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Eat</TableCell>
-      <TableCell>Ate</TableCell>
-      <TableCell>Eaten</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Comer</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Fall</TableCell>
-      <TableCell>Fell</TableCell>
-      <TableCell>Fallen</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Caer</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Feel</TableCell>
-      <TableCell>Felt</TableCell>
-      <TableCell>Felt</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Sentir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Find</TableCell>
-      <TableCell>Found</TableCell>
-      <TableCell>Found</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Encontrar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Fly</TableCell>
-      <TableCell>Flew</TableCell>
-      <TableCell>Flown</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Volar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Forget</TableCell>
-      <TableCell>Forgot</TableCell>
-      <TableCell>Forgotten</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Olvidar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Get</TableCell>
-      <TableCell>Got</TableCell>
-      <TableCell>Got / Gotten</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Conseguirse / Recibir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Give</TableCell>
-      <TableCell>Gave</TableCell>
-      <TableCell>Given</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Dar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Go</TableCell>
-      <TableCell>Went</TableCell>
-      <TableCell>Gone</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Ir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Have</TableCell>
-      <TableCell>Had</TableCell>
-      <TableCell>Had</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Tener / Haber</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Know</TableCell>
-      <TableCell>Knew</TableCell>
-      <TableCell>Known</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Saber / Conocer</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Leave</TableCell>
-      <TableCell>Left</TableCell>
-      <TableCell>Left</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Salir / Dejar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Lose</TableCell>
-      <TableCell>Lost</TableCell>
-      <TableCell>Lost</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Perder</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Make</TableCell>
-      <TableCell>Made</TableCell>
-      <TableCell>Made</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Hacer / Fabricar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Meet</TableCell>
-      <TableCell>Met</TableCell>
-      <TableCell>Met</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Conocer / Encontrarse</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Pay</TableCell>
-      <TableCell>Paid</TableCell>
-      <TableCell>Paid</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Pagar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Read</TableCell>
-      <TableCell>Read (/red/)</TableCell>
-      <TableCell>Read (/red/)</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Leer</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Run</TableCell>
-      <TableCell>Ran</TableCell>
-      <TableCell>Run</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Correr</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Say</TableCell>
-      <TableCell>Said</TableCell>
-      <TableCell>Said</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Decir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">See</TableCell>
-      <TableCell>Saw</TableCell>
-      <TableCell>Seen</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Ver</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Sell</TableCell>
-      <TableCell>Sold</TableCell>
-      <TableCell>Sold</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Vender</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Send</TableCell>
-      <TableCell>Sent</TableCell>
-      <TableCell>Sent</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Enviar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Sing</TableCell>
-      <TableCell>Sang</TableCell>
-      <TableCell>Sung</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Cantar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Sit</TableCell>
-      <TableCell>Sat</TableCell>
-      <TableCell>Sat</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Sentarse</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Sleep</TableCell>
-      <TableCell>Slept</TableCell>
-      <TableCell>Slept</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Dormir</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Speak</TableCell>
-      <TableCell>Spoke</TableCell>
-      <TableCell>Spoken</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Hablar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Spend</TableCell>
-      <TableCell>Spent</TableCell>
-      <TableCell>Spent</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Gastar / Pasar tiempo</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Swim</TableCell>
-      <TableCell>Swam</TableCell>
-      <TableCell>Swum</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Nadar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Take</TableCell>
-      <TableCell>Took</TableCell>
-      <TableCell>Taken</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Tomar / Llevar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Teach</TableCell>
-      <TableCell>Taught</TableCell>
-      <TableCell>Taught</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Enseñar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Tell</TableCell>
-      <TableCell>Told</TableCell>
-      <TableCell>Told</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Decir / Contar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Think</TableCell>
-      <TableCell>Thought</TableCell>
-      <TableCell>Thought</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Pensar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Understand</TableCell>
-      <TableCell>Understood</TableCell>
-      <TableCell>Understood</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Entender</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Wake</TableCell>
-      <TableCell>Woke</TableCell>
-      <TableCell>Woken</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Despertar</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Wear</TableCell>
-      <TableCell>Wore</TableCell>
-      <TableCell>Worn</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Llevar puesto</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Write</TableCell>
-      <TableCell>Wrote</TableCell>
-      <TableCell>Written</TableCell>
-      <TableCell className="italic text-muted-foreground text-sm">Escribir</TableCell>
-    </TableRow>
+    {MOST_COMMON_IRREGULAR_VERBS.map((verb, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{verb.infinitive}</TableCell>
+        <TableCell>{verb.pastSimple}</TableCell>
+        <TableCell>{verb.pastParticiple}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{verb.translate}</TableCell>
+      </TableRow>
+    ))}
   </TableBody>
 </Table>
 

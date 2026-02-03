@@ -8,8 +8,10 @@ export function GrammarExample({
   examples,
 }: {
   structure?: string | { label?: string; value: string }[];
-  examples: { type: string; text: string; translation: string }[];
+  examples?: { type: string; text: string; translation: string }[];
 }) {
+  if (!structure && !examples) return null;
+
   const structures =
     typeof structure === 'string' ? [{ value: structure }] : structure;
 
@@ -44,34 +46,36 @@ export function GrammarExample({
           ))}
         </div>
       )}
-      <div className="space-y-4">
-        <Typography variant="h4" className={cn('text-sm! uppercase')}>
-          Ejemplos de uso
-        </Typography>
-        <div className="grid gap-3 md:pl-4">
-          {examples.map((ex, i) => (
-            <div
-              key={i}
-              className="flex flex-col border-b border-border/50 pb-2 last:border-0 last:pb-0"
-            >
-              <Badge variant="outline">{ex.type}</Badge>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Typography className="pl-2 mt-0! font-medium cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30">
-                    {ex.text}
-                  </Typography>
-                </PopoverTrigger>
-                <PopoverContent
-                  align="start"
-                  className="w-fit max-w-70 p-3 text-sm italic"
-                >
-                  {ex.translation}
-                </PopoverContent>
-              </Popover>
-            </div>
-          ))}
+      {examples && (
+        <div className="space-y-4">
+          <Typography variant="h4" className={cn('text-sm! uppercase')}>
+            Ejemplos de uso
+          </Typography>
+          <div className="grid gap-3 md:pl-4">
+            {examples.map((ex, i) => (
+              <div
+                key={i}
+                className="flex flex-col border-b border-border/50 pb-2 last:border-0 last:pb-0"
+              >
+                <Badge variant="outline">{ex.type}</Badge>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Typography className="pl-2 mt-0! font-medium cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30">
+                      {ex.text}
+                    </Typography>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    align="start"
+                    className="w-fit max-w-70 p-3 text-sm italic"
+                  >
+                    {ex.translation}
+                  </PopoverContent>
+                </Popover>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

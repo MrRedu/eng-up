@@ -3,20 +3,20 @@ import { constructMetadata } from "@/lib/seo";
 export const metadata = constructMetadata({
   title: 'Articles: Definite & Indefinite',
   description: 'Aprende a usar "The", "A" y "An" correctamente en inglés, incluyendo reglas de pronunciación y sonidos vocálicos.',
-  // keywords: ['articles', 'the', 'a', 'an', 'artículos en inglés', 'artículos definidos', 'artículos indefinidos', 'gramática inglesa']
+  keywords: ['articles', 'the', 'a', 'an', 'artículos en inglés', 'artículos definidos', 'artículos indefinidos', 'gramática inglesa']
 });
 
 
 # Articles: Definite & Indefinite
 
 <Typography variant="p" className="text-center text-balance">
-  {`Los artículos son palabras que acompañan a los sustantivos. En inglés tenemos el artículo definido `}<strong>The</strong>{` y los indefinidos `}<strong>A / An</strong>{`. La clave para usarlos bien no es la escritura, sino el sonido.`}
+  {`Los artículos son palabras que acompañan a los sustantivos. En inglés tenemos el artículo definido `}<strong>The</strong>{` y los indefinidos `}<strong>A / An</strong>{`.`}
 </Typography>
 
 <br />
 <br />
 
-## 1. Indefinite Articles: A / An
+## 1. Indefinite Articles: **A / An**
 
 <Typography variant="p">
   {`Ambos significan `}<strong>un</strong>{` o `}<strong>una</strong>{` y se usan solo con `}<Link href="/topics/countable-uncountable" className="underline" title="Ir a la lección de sustantivos contables e incontables">sustantivos contables</Link>{` en singular. La elección depende del `}<strong>sonido</strong>{` inicial de la siguiente palabra:`}
@@ -39,7 +39,7 @@ export const metadata = constructMetadata({
 
 <br />
 
-## 2. Definite Article: The
+## 2. Definite Article: **The**
 
 <Typography variant="p">
   {`Significa `}<strong>el/la/los/las</strong>{`. Se usa para cosas específicas o que ya han sido mencionadas. Lo más interesante es su `}<strong>pronunciación</strong>{`, que cambia según la siguiente palabra:`}
@@ -47,34 +47,27 @@ export const metadata = constructMetadata({
 
 <List>
   <ListItem className='flex flex-col md:flex-row items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>The /ðə/ (como 'za'):</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Pronunciación estándar
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">Se usa antes de sonidos de <strong>consonante</strong>. Ej: *The book, The car, The university.*</Typography>
+    <HasTranslation translation="Pronunciación estándar" as="strong">
+      Pronunciación estándar
+    </HasTranslation>
+    <Typography className="mt-0!">Se usa antes de sonidos de <strong>consonante</strong>.</Typography>
+    <HasTranslation translation="p. ej: El libro, el coche, la universidad">
+      e.g: The book, The car, The university.
+    </HasTranslation>
   </ListItem>
   <ListItem className='flex flex-col md:flex-row items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>The /ði/ (como 'zi'):</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Efecto de enlace (linking)
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">Se usa antes de sonidos de **vocal**. Ej: *The earth, The apple, The ice cream.*</Typography>
+    <HasTranslation translation="Efecto de enlace (linking)" as="strong">
+      The /ði/ (como 'zi'):
+    </HasTranslation>
+    <Typography className="mt-0!">Se usa antes de sonidos de **vocal**.</Typography>
+    <HasTranslation translation="p. ej: La tierra, la manzana, el helado">
+      e.g: The earth, The apple, The ice cream.
+    </HasTranslation>
   </ListItem>
 </List>
 
-<Alert variant="info" title="Regla de oro">
-  Aunque suele enseñarse que el artículo se elige por la escritura, lo que importa es el **oído**. Si la palabra empieza con sonido de vocal, usa **An** o pronuncia **The** como /ði/. 
-</Alert>
 
-<br />
+<br/>
 
 ## Ejemplos Comparativos
 
@@ -100,3 +93,8 @@ export const metadata = constructMetadata({
     </TableRow>
   </TableBody>
 </Table>
+
+<Alert variant="info" title="Regla de oro">
+  Aunque suele enseñarse que el artículo se elige por la escritura, lo que importa es el **oído**. Si la palabra empieza con sonido de vocal, usa **An** o pronuncia **The** como /ði/. 
+</Alert>
+

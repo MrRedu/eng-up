@@ -6,84 +6,86 @@ export const metadata = constructMetadata({
   keywords: ['there is', 'there are', 'existencia', 'gramática inglesa'],
 });
 
-<span  className="text-xs mb-4 bg-amber-500/10 text-amber-500 border-amber-500/20">
-  (Tema por corregir*)
-</span>
-
 # There is / There are
 
 <Typography variant="p" className="text-center text-balance">
-  {`Ambos significan `}**Hay**{` en español. Utilizamos `}**There is**{` para el singular y `}**There are**{` para el plural.`}
+  {`Ambos significan `}<HasTranslation translation="Del verbo haber." as="strong">Hay</HasTranslation>{` en español. Utilizamos `}<strong>There is</strong>{` para el singular y `}<strong>There are</strong>{` para el plural.`}
 </Typography>
 
 <br />
 <br />
 
-## 1. Estructura Básica
+<GrammarExample structure={[
+  { label: "Affirmative", value: "There is + Singular" },
+  { label: "Affirmative", value: "There are + Plural" },
+  { label: "Negative", value: "There is not + Singular" },
+  { label: "Negative", value: "There are not + Plural" },
+  { label: "Interrogative", value: "Is there + Singular?" },
+  { label: "Interrogative", value: "Are there + Plural?" },
+  ]}
+  examples={[
+    { type: 'Affirmative (Singular)', text: "There is a cat.", translation: "Hay un gato." },
+    { type: 'Affirmative (Plural)', text: "There are two cats.", translation: "Hay dos gatos." },
+    { type: 'Negative (Singular)', text: "There is not (isn't) a cat.", translation: "No hay un gato." },
+    { type: 'Negative (Plural)', text: "There are not (aren't) any cats.", translation: "No hay gatos." },
+    { type: 'Interrogative (Singular)', text: "Is there a cat?", translation: "¿Hay un gato?" },
+    { type: 'Interrogative (Plural)', text: "Are there any cats?", translation: "¿Hay gatos?" },
+]}/>
+
+<br />
+
+## Contracciones Comunes
 
 <Table>
-  <TableHeader>
-    <TableRow>
-      <TableHead>Forma</TableHead>
-      <TableHead>Singular (There is)</TableHead>
-      <TableHead>Plural (There are)</TableHead>
-    </TableRow>
-  </TableHeader>
-  <TableBody>
-    <TableRow>
-      <TableCell className="font-medium">Afirmación</TableCell>
-      <TableCell>There is a cat.</TableCell>
-      <TableCell>There are two cats.</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Negación</TableCell>
-      <TableCell>There is not (isn't) a cat.</TableCell>
-      <TableCell>There are not (aren't) any cats.</TableCell>
-    </TableRow>
-    <TableRow>
-      <TableCell className="font-medium">Interrogación</TableCell>
-      <TableCell>Is there a cat?</TableCell>
-      <TableCell>Are there any cats?</TableCell>
-    </TableRow>
-  </TableBody>
+<TableCaption>Contracciones comunes.</TableCaption>
+<TableHeader>
+  <TableRow>
+    <TableHead>Forma larga</TableHead>
+    <TableHead>Forma corta</TableHead>
+  </TableRow>
+</TableHeader>
+<TableBody>
+  <TableRow>
+    <TableCell>There is → </TableCell>
+    <TableCell className="font-mono text-primary">There's</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>There is not → </TableCell>
+    <TableCell className="font-mono text-primary">There isn't</TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>There are not → </TableCell>
+    <TableCell className="font-mono text-primary">There aren't</TableCell>
+  </TableRow>
+</TableBody>
 </Table>
 
 <br />
 
-## 2. Contracciones Comunes
-
-<List>
-  <ListItem className='flex items-start gap-2'>
-    <strong>There is:</strong>
-    <Typography className="mt-0! text-sm font-mono text-primary">There's</Typography>
-  </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <strong>There is not:</strong>
-    <Typography className="mt-0! text-sm font-mono text-primary">There isn't</Typography>
-  </ListItem>
-  <ListItem className='flex items-start gap-2'>
-    <strong>There are not:</strong>
-    <Typography className="mt-0! text-sm font-mono text-primary">There aren't</Typography>
-  </ListItem>
-</List>
-
-<br />
-
-## 3. Uso con Quantifiers (Some / Any)
+## Uso con Quantifiers (Some / Any)
 
 <Typography variant="p">
-  {`Es muy común usar "There is/are" con cuantificadores para hablar de cantidades no específicas:`}
+  {`Es muy común usar `}<strong>There is/are</strong>{` con cuantificadores para hablar de cantidades no específicas.`}
 </Typography>
+
+<br/>
 
 <GrammarExample
   structure={[
-    { label: "Affirmative", value: "There is some + Uncountable / There are some + Plural" },
-    { label: "Negative/Question", value: "There isn't any... / Are there any...?" }
+    { label: "Affirmative (Singular)", value: "There is some + Uncountable" },
+    { label: "Affirmative (Plural)", value: "There are some + Plural" },
+    { label: "Negative (Singular)", value: "There isn't any..." },
+    { label: "Negative (Plural)", value: "There aren't any..." },
+    { label: "Interrogative (Singular)", value: "Is there any...?" },
+    { label: "Interrogative (Plural)", value: "Are there any...?" }
   ]}
   examples={[
-    { type: 'Some', text: "There is some milk in the fridge.", translation: "Hay algo de leche en el refrigerador." },
-    { type: 'Any (-)', text: "There aren't any eggs left.", translation: "No quedan huevos." },
-    { type: 'Any (?)', text: "Is there any sugar in the coffee?", translation: "¿Hay azúcar en el café?" }
+    { type: 'Affirmative (Singular)', text: "There is some milk in the fridge.", translation: "Hay algo de leche en el refrigerador." },
+    { type: 'Affirmative (Plural)', text: "There are some eggs in the fridge.", translation: "Hay huevos en el refrigerador." },
+    { type: 'Negative (Singular)', text: "There isn't any milk in the fridge.", translation: "No hay leche en el refrigerador." },
+    { type: 'Negative (Plural)', text: "There aren't any eggs in the fridge.", translation: "No hay huevos en el refrigerador." },
+    { type: 'Interrogative (Singular)', text: "Is there any milk in the fridge?", translation: "¿Hay leche en el refrigerador?" },
+    { type: 'Interrogative (Plural)', text: "Are there any eggs in the fridge?", translation: "¿Hay huevos en el refrigerador?" }
   ]}
 />
 

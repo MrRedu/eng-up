@@ -3,7 +3,7 @@ import { constructMetadata } from "@/lib/seo";
 export const metadata = constructMetadata({
   title: 'Countable & Uncountable Nouns',
   description: 'Aprende a diferenciar entre sustantivos que se pueden contar y los que no, y cómo usar cuantificadores correctamente.',
-  // keywords: ['countable nouns', 'uncountable nouns', 'sustantivos contables', 'sustantivos incontables', 'gramática inglesa']
+  keywords: ['countable nouns', 'uncountable nouns', 'sustantivos contables', 'sustantivos incontables', 'gramática inglesa']
 });
 
 # Countable & Uncountable Nouns
@@ -35,7 +35,7 @@ export const metadata = constructMetadata({
   examples={[
     { type: 'Singular', text: "I have an apple.", translation: "Tengo una manzana." },
     { type: 'Plural', text: "She bought three books.", translation: "Ella compró tres libros." },
-    { type: 'Pregunta', text: "How many brothers do you have?", translation: "¿Cuántos hermanos tienes?" }
+    { type: 'Interrogative', text: "How many brothers do you have?", translation: "¿Cuántos hermanos tienes?" }
   ]}
 />
 
@@ -44,7 +44,7 @@ export const metadata = constructMetadata({
 ## 2. Uncountable Nouns (Incontables)
 
 <Typography variant="p">
-  {`Son sustancias, conceptos o masas que no se pueden contar individualmente. `}<strong>No tienen plural</strong>{` y no se usan con "A / An".`}
+  {`Son sustancias, conceptos o masas que no se pueden contar individualmente. `}<strong>No tienen plural</strong>{` y no se usan con `}<strong>"A / An"</strong>{`.`}
 </Typography>
 
 <List>
@@ -72,53 +72,40 @@ export const metadata = constructMetadata({
   </ListItem>
 </List>
 
+<GrammarExample
+  structure={[
+    { label: "Uncountable", value: "Water / Milk / Rice / Bread" },
+  ]}
+  examples={[
+    { type: 'Uncountable (Singular)', text: "I have some water.", translation: "Tengo agua." },
+    { type: 'Uncountable (Singular)', text: "She bought some rice.", translation: "Ella compró arroz." },
+    { type: 'Interrogative', text: "How much water do you have?", translation: "¿Cuánta agua tienes?" }
+  ]}
+/>
+
 <Alert variant="warn" title="¡Cuidado!">
   Muchos sustantivos que son contables en español son **incontables** en inglés. Los más comunes son:
 <div className="flex flex-wrap gap-x-3 gap-y-3 items-center">
-  <Popover>
-    <PopoverTrigger asChild>
-      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Advice</strong>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-      Consejo
-    </PopoverContent>
-  </Popover>
+  <HasTranslation as="strong" translation="Consejo">
+    Advice
+  </HasTranslation>
   <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>News</strong>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-      Noticias
-    </PopoverContent>
-  </Popover>
+  <HasTranslation as="strong" translation="Pan">
+    Bread
+  </HasTranslation>
   <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Bread</strong>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-      Pan
-    </PopoverContent>
-  </Popover>
+  <HasTranslation as="strong" translation="Noticias">
+    News
+  </HasTranslation>
   <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Furniture</strong>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-      Muebles
-    </PopoverContent>
-  </Popover>
+  <HasTranslation as="strong" translation="Muebles">
+    Furniture
+  </HasTranslation>
   <span className="text-muted-foreground/30">•</span>
-  <Popover>
-    <PopoverTrigger asChild>
-      <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30 text-nowrap'>Money</strong>
-    </PopoverTrigger>
-    <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-      Dinero
-    </PopoverContent>
-  </Popover>
+  <HasTranslation as="strong" translation="Dinero">
+    Money
+  </HasTranslation>
+  <span className="text-muted-foreground/30">•</span>
 </div>
 </Alert>
 
@@ -129,6 +116,8 @@ export const metadata = constructMetadata({
 <Typography variant="p">
   {`Para dar una cantidad a algo incontable, usamos unidades de medida o recipientes:`}
 </Typography>
+
+<br/>
 
 <Table>
   <TableHeader>
@@ -187,6 +176,8 @@ export const metadata = constructMetadata({
 <br />
 
 <Alert variant="info" title="Regla Rápida">
-  - Para contables usamos **How many?** (¿Cuántos?). <br/>
-  - Para incontables usamos **How much?** (¿Cuánto?).
+  Para contables usamos <HasTranslation translation="¿Cuántos?" as="strong">How many?</HasTranslation>. <br/>
+  Para incontables usamos <HasTranslation translation="¿Cuánto?" as="strong">How much?</HasTranslation>.
+
+  Ver más sobre el tema en la sección de <Link href="/topics/much-many" className="underline" title='Ir a la sección de "Much / Many"'>Much / Many</Link>.
 </Alert>

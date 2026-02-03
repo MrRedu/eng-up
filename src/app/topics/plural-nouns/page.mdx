@@ -3,13 +3,13 @@ import { constructMetadata } from "@/lib/seo";
 export const metadata = constructMetadata({
   title: 'Plural Nouns',
   description: 'Reglas completas para formar el plural en inglés, desde la simple "s" hasta los plurales irregulares más complejos.',
-  // keywords: ['plural nouns', 'sustantivos plurales', 'gramática inglesa', 'plurales irregulares', 'plurales regulares', 'plurales en inglés', 'plurales irregulares en inglés', 'plurales regulares en inglés']
+  keywords: ['plural nouns', 'sustantivos plurales', 'gramática inglesa', 'plurales irregulares', 'plurales regulares', 'plurales en inglés', 'plurales irregulares en inglés', 'plurales regulares en inglés']
 });
 
 # Plural Nouns
 
 <Typography variant="p" className="text-center text-balance">
-  {`En inglés, la mayoría de los sustantivos forman el plural añadiendo una "s", pero existen varias reglas específicas dependiendo de cómo termine la palabra. Dominar estas reglas es clave para una escritura correcta.`}
+  {`En inglés, la mayoría de los sustantivos forman el plural añadiendo una `}<strong>"s"</strong>{`, pero existen varias reglas específicas dependiendo de cómo termine la palabra. Dominar estas reglas es clave para una escritura correcta.`}
 </Typography>
 
 <br />
@@ -90,6 +90,10 @@ export const PLURAL_NOUNS_IRREGULARS = [
     </div>
   ))}
 </div>
+
+<Typography variant="blockquote">
+  Puedes encontrar más ejemplos en la sección de <Link href="/resources/irregular-nouns" className="underline">Sustantivos Irregulares</Link>.
+</Typography>
 
 <br />
 

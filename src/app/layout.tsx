@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { Search } from '@/components/Search';
 import { SidebarInset } from '@/components/ui/sidebar';
 import { cookies } from 'next/headers';
+import { MobileSidebarTrigger } from '@/components/app-sidebar/mobile-sidebar-trigger';
 
 const soraSans = Sora({
   variable: '--font-sora-sans',
@@ -19,6 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://eng-up.vercel.app'),
   title: {
     default: 'Eng-Up | Gramática Inglesa Interactiva',
     template: '%s | Eng-Up',
@@ -54,6 +56,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Eng-Up | Gramática Inglesa Interactiva',
+    description: 'Aprende gramática inglesa de forma sencilla y estructurada.',
+    images: ['/og-1920x1080.webp'],
+    creator: '@MrRedu',
+  },
   robots: {
     index: true,
     follow: true,
@@ -81,6 +90,7 @@ export default async function RootLayout({
               <main className="flex-1 p-6 md:p-8">{children}</main>
             </div>
             <Search />
+            <MobileSidebarTrigger />
           </SidebarInset>
         </Providers>
       </body>

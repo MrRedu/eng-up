@@ -1,0 +1,56 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Common Irregular Nouns',
+  description: 'Aprende los sustantivos irregulares más comunes en inglés con ejemplos interactivos.',
+  keywords: ['common irregular nouns', 'sustantivos irregulares', 'gramática inglesa', 'lista de sustantivos irregulares', 'sustantivos irregulares en inglés', 'lista de sustantivos irregulares en inglés'],
+});
+
+# Common Irregular Nouns
+
+<Typography variant="p" className="text-center text-balance">
+  {`A diferencia de los `}<Link href="/topics/plural-nouns" className="underline">sustantivos regulares</Link>{`, los sustantivos irregulares no siguen la regla de añadir `}<strong>"-s"</strong>{` para formar el plural. Cada uno tiene su propia forma que debe ser memorizada.`}
+</Typography>
+
+<br/><br/>
+
+export const PLURAL_NOUNS_IRREGULARS = [
+  { translate: 'Hombre', singular: "Man", plural: "Men" },
+  { translate: 'Mujer', singular: "Woman", plural: "Women" },
+  { translate: 'Niño/a', singular: "Child", plural: "Children" },
+  { translate: 'Persona', singular: "Person", plural: "People" },
+  { translate: 'Diente', singular: "Tooth", plural: "Teeth" },
+  { translate: 'Pie', singular: "Foot", plural: "Feet" },
+  { translate: 'Ratón', singular: "Mouse", plural: "Mice" },
+  { translate: 'Pez', singular: "Fish", plural: "Fish" },
+  { translate: 'Oveja', singular: "Sheep", plural: "Sheep" },
+  { translate: 'Cuchillo', singular: "Knife", plural: "Knives" },
+  { translate: 'Hoja', singular: "Leaf", plural: "Leaves" },
+  { translate: 'Vida', singular: "Life", plural: "Lives" },
+  { translate: 'Lobo', singular: "Wolf", plural: "Wolves" },
+  { translate: 'Mitad', singular: "Half", plural: "Halves" },
+  { translate: 'Ladrillo', singular: "Brick", plural: "Bricks" },
+  { translate: 'Cabo', singular: "Chief", plural: "Chiefs" },
+  { translate: 'Pie', singular: "Foot", plural: "Feet" },
+  { translate: 'Índice', singular: "Index", plural: "Indices" },
+];
+
+<Table>
+  <TableCaption>Lista de los sustantivos irregulares más comunes.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Singular</TableHead>
+      <TableHead>Plural</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {PLURAL_NOUNS_IRREGULARS.map((noun, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{noun.singular}</TableCell>
+        <TableCell>{noun.plural}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{noun.translate}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
