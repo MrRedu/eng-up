@@ -47,10 +47,10 @@ export const metadata = constructMetadata({
 ## Usos Principales
 
 export const PRESENT_BE_EXAMPLES = [
-  { label: "Names/Identity", translation: "Nombres/Identidad", content: <>I'm Eduardo / She's a student</> },
-  { label: "Feelings", translation: "Sentimientos", content: <>She is happy / They are tired</> },
-  { label: "Locations", translation: "Ubicaciones", content: <>They are at home / I am here</> },
-  { label: "Nationalities/Professions", translation: "Nacionalidades/Profesiones", content: <>They are from Spain / He is a doctor</> },
+  { label: "Names/Identity", translation: "Nombres/Identidad", content: "I'm Eduardo / She's a student", contentTranslation: "Yo soy Eduardo / Ella es una estudiante" },
+  { label: "Feelings", translation: "Sentimientos", content: "She is happy / They are tired", contentTranslation: "Ella está feliz / Ellos están cansados" },
+  { label: "Locations", translation: "Ubicaciones", content: "They are at home / I am here", contentTranslation: "Ellos están en casa / Yo estoy aquí" },
+  { label: "Nationalities/Professions", translation: "Nacionalidades/Profesiones", content: "They are from Spain / He is a doctor", contentTranslation: "Ellos son de España / Él es un doctor" },
 ];
 
 <List>
@@ -64,7 +64,14 @@ export const PRESENT_BE_EXAMPLES = [
           {example.translation}
         </PopoverContent>
       </Popover>
-      <Typography className="mt-0!">{example.content}</Typography>
+      <Popover>
+        <PopoverTrigger asChild>
+          <Typography className="mt-0! underline underline-offset-4 decoration-dotted decoration-primary/30">{`${example.content}`}</Typography>
+        </PopoverTrigger>
+        <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
+          {example.contentTranslation}
+        </PopoverContent>
+      </Popover>
     </ListItem>
   ))}
 </List>

@@ -8,6 +8,13 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.13.2',
+    title: 'Added translations for Present Be examples',
+    description: 'Added translations for Present Be examples.',
+    date: '2026-02-03 00:00:00',
+    type: 'fix',
+  },
+  {
     version: 'v1.13.1',
     title: 'Sidebar Mobile Navigation Fix',
     description:
