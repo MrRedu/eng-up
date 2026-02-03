@@ -8,7 +8,15 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
-    version: 'v1.9.2',
+    version: 'v1.13.0',
+    title: 'Past Perfect Continuous Lesson',
+    description:
+      'Added Past Perfect Continuous lesson with initial content and SEO metadata.',
+    date: '2026-02-03 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.12.2',
     title: 'New Basic Topics',
     description:
       'Added "There is / There are" and "Much / Many" lessons with initial content and SEO metadata.',
