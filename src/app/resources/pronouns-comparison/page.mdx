@@ -1,0 +1,119 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Pronouns & Possessive Adjectives Table',
+  description: 'Una tabla comparativa completa de todos los tipos de pronombres y adjetivos posesivos en inglés.',
+  keywords: ['pronouns table', 'object pronouns', 'possessive adjectives', 'possessive pronouns', 'reflexive pronouns'],
+});
+
+# Pronouns & Possessive Adjectives Table
+
+<Typography variant="p" className="text-center text-balance">
+  {`Esta tabla reúne todas las formas gramaticales que hemos estudiado. Úsala como referencia rápida para entender las diferencias entre cómo se realiza la acción, quién la recibe y a quién le pertenecen las cosas.`}
+</Typography>
+
+<br />
+<br />
+
+export const COMPLETE_PRONOUNS_DATA = [
+  { subj: 'I', obj: 'Me', adj: 'My', poss: 'Mine', refl: 'Myself' },
+  { subj: 'You', obj: 'You', adj: 'Your', poss: 'Yours', refl: 'Yourself' },
+  { subj: 'He', obj: 'Him', adj: 'His', poss: 'His', refl: 'Himself' },
+  { subj: 'She', obj: 'Her', adj: 'Her', poss: 'Hers', refl: 'Herself' },
+  { subj: 'It', obj: 'It', adj: 'Its', poss: 'Its*', refl: 'Itself' },
+  { subj: 'We', obj: 'Us', adj: 'Our', poss: 'Ours', refl: 'Ourselves' },
+  { subj: 'You (pl)', obj: 'You', adj: 'Your', poss: 'Yours', refl: 'Yourselves' },
+  { subj: 'They', obj: 'Them', adj: 'Their', poss: 'Theirs', refl: 'Themselves' },
+];
+
+  <Table>
+    <TableCaption>Resumen general de pronombres y adjetivos.</TableCaption>
+    <TableHeader className="bg-muted/50">
+      <TableRow>
+        <TableHead className="font-bold text-xs uppercase">Subject</TableHead>
+        <TableHead className="font-bold text-xs uppercase">
+          <Link href="/topics/object-pronouns" className="underline">Object pronouns</Link>
+        </TableHead>
+        <TableHead className="font-bold text-xs uppercase">
+          <Link href="/topics/possessive-adjectives" className="underline">
+          Possessive Adjectives
+          </Link>
+        </TableHead>
+        <TableHead className="font-bold text-xs uppercase">
+          <Link href="/topics/possessive-pronouns" className="underline">Possessive Pronouns</Link>
+        </TableHead>
+        <TableHead className="font-bold text-xs uppercase">
+          <Link href="/topics/reflexive-pronouns" className="underline">
+          Reflexive Pronouns
+          </Link>
+        </TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      {COMPLETE_PRONOUNS_DATA.map((row, index) => (
+        <TableRow key={index} className="hover:bg-muted/30 transition-colors">
+          <TableCell className="font-bold">{row.subj}</TableCell>
+          <TableCell className="">{row.obj}</TableCell>
+          <TableCell className="">{row.adj}</TableCell>
+          <TableCell className="">{row.poss}</TableCell>
+          <TableCell className="">{row.refl}</TableCell>
+        </TableRow>
+      ))}
+    </TableBody>
+  </Table>
+
+<br />
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <Alert variant="info" title="Pronombres Sujeto vs Objeto">
+    **Sujeto:** Realiza la acción (va antes del verbo). <br/>
+    **Objeto:** Recibe la acción (va después del verbo).
+  </Alert>
+  <Alert variant="info" title="Adjetivos vs Pronombres Posesivos">
+    **Adjetivo:** Necesita un sustantivo después (*My house*). <br/>
+    **Pronombre:** Sustituye al sustantivo (*The house is mine*).
+  </Alert>
+</div>
+
+<br />
+
+## Ejemplos de cada uno
+
+<List>
+  {[
+    { label: 'Subject', text: 'I love music.', translation: 'Yo amo la música.' },
+    { label: 'Object', text: 'Music loves me.', translation: 'La música me ama.' },
+    { label: 'Poss. Adj.', text: 'This is my music.', translation: 'Esta es mi música.' },
+    { label: 'Poss. Pron.', text: 'The music is mine.', translation: 'La música es mía.' },
+    { label: 'Reflexive', text: 'I make music for myself.', translation: 'Hago música para mí mismo.' },
+  ].map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <strong className="text-nowrap min-w-25">{item.label}:</strong>
+      <HasTranslation translation={item.translation} className="mt-0!">{item.text}</HasTranslation>
+    </ListItem>
+  ))}
+</List>
+
+<Alert variant="warn" title="Nota técnica">
+  El uso de **its** como pronombre posesivo es muy poco común en el inglés moderno y suele evitarse.
+</Alert>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/possessive-adjectives" className="underline">Possessive Adjectives</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/possessive-pronouns" className="underline">Possessive Pronouns</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/object-pronouns" className="underline">Object Pronouns</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/reflexive-pronouns" className="underline">Reflexive Pronouns</Link>
+  </ListItem>
+</List>
+    

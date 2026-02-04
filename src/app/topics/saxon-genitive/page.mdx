@@ -3,7 +3,7 @@ import { constructMetadata } from "@/lib/seo";
 export const metadata = constructMetadata({
   title: 'Saxon genitive',
   description: 'Aprende a usar el genitivo sajón para indicar posesión o relación entre personas y cosas.',
-  // keywords: ['saxon genitive', 'genitivo sajón', 'gramática inglesa', 'posesión', 'relación', 'genitivo sajón en inglés', 'posesión en inglés', 'relación en inglés']
+  keywords: ['saxon genitive', 'genitivo sajón', 'gramática inglesa', 'posesión', 'relación', 'genitivo sajón en inglés', 'posesión en inglés', 'relación en inglés']
 });
 
 # Saxon Genitive ('s)
@@ -32,29 +32,21 @@ export const metadata = constructMetadata({
 ## ¿Cuándo NO usarlo?
 Para objetos inanimados, se suele usar la preposición **"of"**:
 
-<br />
-
 <List>
   <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Correct:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Correcto.
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">The window **of** the house.</Typography>
+    <HasTranslation as="strong" translation="Correcto">
+      Correct:
+    </HasTranslation>
+    <HasTranslation as="p" translation="La ventana de la casa">
+      The window **of** the house.
+    </HasTranslation>
   </ListItem>
   <ListItem className='flex items-start gap-2'>
-    <Popover>
-      <PopoverTrigger asChild>
-        <strong className='cursor-pointer underline underline-offset-4 decoration-dotted decoration-primary/30'>Incorrect:</strong>
-      </PopoverTrigger>
-      <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">
-        Incorrecto.
-      </PopoverContent>
-    </Popover>
-    <Typography className="mt-0!">The house's window (menos común).</Typography>
+    <HasTranslation as="strong" translation="Incorrecto">
+      Incorrect:
+    </HasTranslation>
+    <HasTranslation as="p" translation="La ventana de la casa">
+      The house's window (menos común).
+    </HasTranslation>
   </ListItem>
 </List>

@@ -1,0 +1,126 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Object Pronouns',
+  description: 'Aprende a usar los pronombres de objeto en inglés (me, you, him, her, it, us, them) para indicar quién recibe la acción.',
+  keywords: ['object pronouns', 'pronombres de objeto', 'me him her us them', 'gramática inglesa'],
+});
+
+# Object Pronouns
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los pronombres de objeto son aquellos que reciben la acción del verbo. A diferencia de los pronombres de sujeto (I, You, He...), estos siempre van después del verbo o de una preposición.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Relación con Pronombres Sujeto
+
+export const OBJECT_PRONOUNS_COMPARISON = [
+  { subject: 'I', object: 'Me', translation: 'Me / Mí' },
+  { subject: 'You', object: 'You', translation: 'Te / Ti / Lo / La / a usted' },
+  { subject: 'He', object: 'Him', translation: 'Lo / Le / a él' },
+  { subject: 'She', object: 'Her', translation: 'La / Le / a ella' },
+  { subject: 'It', object: 'It', translation: 'Lo / La / a ello (objeto/animal)' },
+  { subject: 'We', object: 'Us', translation: 'Nos / a nosotros' },
+  { subject: 'They', object: 'Them', translation: 'Los / Las / Les / a ellos' },
+];
+
+<Table>
+  <TableCaption>Sujeto (realiza la acción) vs. Objeto (recibe la acción).</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Pronombre Sujeto</TableHead>
+      <TableHead>Pronombre Objeto</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {OBJECT_PRONOUNS_COMPARISON.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.subject}</TableCell>
+        <TableCell className="font-bold text-primary">{item.object}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. Cuándo usarlos
+
+<List>
+  {[{
+    rule: 'Después de un verbo',
+    description: <>Indican quién recibe la acción de manera directa. <em>(I love <strong>her</strong>)</em>.</>
+  }, {
+    rule: 'Después de preposiciones',
+    description: <>Se usan después de palabras como <em>to, with, for, at, about...</em> <em>(This is for <strong>them</strong>)</em>.</>
+  }].map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <strong className="text-nowrap">{item.rule}:</strong>
+      <Typography className="mt-0!">{item.description}</Typography>
+    </ListItem>
+  ))}
+</List>
+
+<GrammarExample
+  structure="Subject + Verb + Object Pronoun"
+  examples={[
+    { type: 'After Verb', text: "Can you help me?", translation: "¿Puedes ayudarme?" },
+    { type: 'After Verb', text: "I see him every day.", translation: "Lo veo todos los días." },
+    { type: 'After Preposition', text: "She is talking to us.", translation: "Ella está hablando con nosotros." },
+    { type: 'After Preposition', text: "Wait for them!", translation: "¡Espéralos! (Espera por ellos)" },
+    { type: 'Mixed', text: "Give it to her.", translation: "Dáselo a ella." }
+  ]}
+/>
+
+<br />
+<br />
+
+## 3. Sujeto vs. Objeto
+
+<br />
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Acción (Sujeto)</TableHead>
+      <TableHead>Receptor (Objeto)</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {[
+      { s: "I called Mary.", o: <>Mary called <strong>me</strong>.</> },
+      { s: "We like them.", o: <>They like <strong>us</strong>.</> },
+      { s: "He knows Sarah.", o: <>Sarah knows <strong>him</strong>.</> },
+    ].map((row, i) => (
+      <TableRow key={i}>
+        <TableCell>{row.s}</TableCell>
+        <TableCell>
+           <HasTranslation translation="Aquí el pronombre recibe la acción">{row.o}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="Regla mnemotécnica">
+  Recuerda: El **Sujeto** va *antes* del verbo. El **Objeto** va *después* del verbo.
+</Alert>
+
+<Alert variant="destructive" title="Error común">
+  No uses pronombres de sujeto después de preposiciones. 
+
+  **Incorrecto:** This gift is for **I/he/she/they**. <br/>
+  **Correcto:** This gift is for **me/him/her/them**.
+</Alert>
+
+<Typography variant="blockquote">
+  Ver tabla comparativa de pronombres y adjetivos posesivos en <Link href="/resources/pronouns-comparison" className="underline">Pronouns & Possessive Adjectives Table</Link>.
+</Typography>

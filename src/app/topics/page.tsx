@@ -1,6 +1,22 @@
 import Link from 'next/link';
 import { NAVIGATION_DATA, NavLeaf } from '@/lib/constants';
 import { ChevronRight } from 'lucide-react';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata = constructMetadata({
+  title: 'Glosario de Temas',
+  description:
+    'Explora todos los temas disponibles. Haz clic en cualquier tema para ver tus notas.',
+  keywords: [
+    'aprender inglés',
+    'gramática inglesa',
+    'notas de inglés',
+    'inglés para hispanohablantes',
+    'tiempos verbales',
+    'verbos ingleses',
+    'recursos educativos',
+  ],
+});
 
 export default function TopicsPage() {
   return (

@@ -21,11 +21,12 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import Link from 'next/link';
+import { HasTranslation } from '@/components/ui/has-translation';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
-    // Estilos para etiquestas estándar
+    // Estilos para etiquetas estándar
     h1: ({ className, ...props }) => (
       <Typography variant="h1" className={cn(className)} {...props} />
     ),
@@ -60,6 +61,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     List,
     ListItem,
     Link,
+    HasTranslation,
     // Shadcn
     // shadcn-Table
     Table,

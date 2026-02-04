@@ -49,8 +49,16 @@ export const NAVIGATION_DATA: NavGroup[] = [
         subItems: [
           { title: 'Verbos Irregulares', url: '/resources/irregular-verbs' },
           {
+            title: 'Sustantivos Irregulares',
+            url: '/resources/irregular-nouns',
+          },
+          {
             title: 'Tablas de las Verdades',
             url: '/resources/tables-of-truth',
+          },
+          {
+            title: 'Pronouns & Possessive Adj.',
+            url: '/resources/pronouns-comparison',
           },
         ],
       },

@@ -6,14 +6,10 @@ export const metadata = constructMetadata({
   keywords: ['much', 'many', 'existencia', 'gramática inglesa'],
 });
 
-<span  className="text-xs mb-4 bg-amber-500/10 text-amber-500 border-amber-500/20">
-  (Tema por corregir*)
-</span>
-
 # Much / Many
 
 <Typography variant="p" className="text-center text-balance">
-  {`Ambos se traducen como "mucho", "mucha", "muchos" o "muchas". La diferencia clave es si el sustantivo que acompañan es contable o incontable.`}
+  {`Ambos se traducen como `}<strong>mucho</strong>{`, `}<strong>mucha</strong>{`, `}<strong>muchos</strong>{` o `}<strong>muchas</strong>{`. La diferencia clave es si el sustantivo que acompañan es contable o incontable.`}
 </Typography>
 
 <br />
@@ -44,12 +40,15 @@ export const metadata = constructMetadata({
 </Table>
 
 <br />
+<br />
 
 ## 2. Preguntas: How much / How many
 
 <Typography variant="p">
-  {`Usamos estas expresiones para preguntar por la cantidad de algo:`}
+  {`Usamos estas expresiones para preguntar por la cantidad de algo.`}
 </Typography>
+
+<br />
 
 <GrammarExample
   structure={[
@@ -63,20 +62,18 @@ export const metadata = constructMetadata({
   ]}
 />
 
+<br />  
 <br />
 
-## 3. ¿Cuándo usar "A lot of"?
+## 3. ¿Cuándo usar **"A lot of"**?
 
 <Typography variant="p">
-  {`En oraciones **afirmativas**, es mucho más natural usar **a lot of** o **lots of** tanto para contables como para incontables.`}
+  {`Se utiliza en oraciones afirmativas para indicar una gran cantidad de algo, ya sea contable o incontable. Es mucho más natural usar `}<HasTranslation as="strong" translation="mucho(a/os/as)/un montón de">a lot of</HasTranslation>{` o `}<HasTranslation as="strong" translation="mucho(a/os/as)/un montón de (mínimamente más informal)">lots of</HasTranslation>{` tanto para contables como para incontables.`}
 </Typography>
 
-<Alert variant="info" title="Regla de oro">
-  - **Many / Much**: Se usan principalmente en oraciones **negativas** e **interrogativas**. <br/>
-  - **A lot of / Lots of**: Se usan principalmente en oraciones **afirmativas**.
-</Alert>
+<br/>
 
-<Table className="mt-6">
+<Table>
   <TableHeader>
     <TableRow>
       <TableHead>Contexto</TableHead>
@@ -97,3 +94,10 @@ export const metadata = constructMetadata({
     </TableRow>
   </TableBody>
 </Table>
+
+
+<Alert variant="info" title="Regla de oro">
+  **Many (contables) / Much (incontables)**: Se usan principalmente en oraciones <strong>negativas</strong> e <strong>interrogativas</strong>. <br/>
+  **A lot of / Lots of**: Se usan principalmente en oraciones <strong>afirmativas</strong>.
+</Alert>
+

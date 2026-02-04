@@ -1,0 +1,154 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Possessive Pronouns',
+  description: 'Aprende a usar los pronombres posesivos en inglés (mine, yours, his, hers, ours, theirs) para evitar repeticiones.',
+  keywords: ['possessive pronouns', 'pronombres posesivos', 'mine yours hers', 'gramática inglesa'],
+});
+
+# Possessive Pronouns
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los pronombres posesivos se utilizan para sustituir a un sustantivo y evitar la repetición. Indican posesión pero, a diferencia de los adjetivos, `}<strong>no van seguidos de un sustantivo</strong>{`.`}
+</Typography>
+
+<br />
+<br />
+
+{/* ## 1. Relación con Adjetivos Posesivos */}
+<Typography variant="h2">
+  {`1. Relación con `}
+  <Link href="/topics/possessive-adjectives" className="underline">{`Adjetivos Posesivos`}</Link>
+</Typography>
+
+export const POSSESSIVE_PRONOUNS_COMPARISON = [
+  { subject: 'I', adjective: 'My', pronoun: 'Mine → ', translation: 'Mío(a) / Míos(as)' },
+  { subject: 'You', adjective: 'Your', pronoun: 'Yours → ', translation: 'Tuyo / Suyo' },
+  { subject: 'He', adjective: 'His', pronoun: 'His →', translation: 'Suyo (de él)' },
+  { subject: 'She', adjective: 'Her', pronoun: 'Hers →', translation: 'Suyo (de ella)' },
+  { subject: 'It', adjective: 'Its', pronoun: 'X (no existe) →', translation: 'Las cosas no poseen pertenencias.' },
+  { subject: 'We', adjective: 'Our', pronoun: 'Ours →', translation: 'Nuestro' },
+  { subject: 'They', adjective: 'Their', pronoun: 'Theirs →', translation: 'Suyo (de ellos)' },
+];
+
+<Table>
+  <TableCaption>Comparación entre Adjetivos y Pronombres Posesivos.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Pronombre Sujeto</TableHead>
+      <TableHead>Adjetivo Posesivo</TableHead>
+      <TableHead>Pronombre Posesivo</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {POSSESSIVE_PRONOUNS_COMPARISON.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.subject}</TableCell>
+        <TableCell className="text-muted-foreground">{item.adjective}</TableCell>
+        <TableCell className="font-bold text-primary">{item.pronoun}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. Reglas Fundamentales
+
+export const POSSESSIVE_PRONOUNS_RULES = [
+  { rule: 'Sustitución', description: <>Sustituyen a la estructura "Adjetivo + Sustantivo" (My car → <strong>Mine</strong>).</> },
+  { rule: 'Sin Sustantivo', description: <>Nunca verás un sustantivo después de un pronombre posesivo. <br /> <em>(Incorrecto: "This is mine book")</em>.</> },
+  { rule: 'Independencia', description: <>Suelen ir al final de la oración o después del verbo <strong>to be</strong>.</> },
+];
+
+<List>
+  {POSSESSIVE_PRONOUNS_RULES.map((rule, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <strong className="text-nowrap">{rule.rule}:</strong>
+      <Typography className="mt-0!">{rule.description}</Typography>
+    </ListItem>
+  ))}
+</List>
+
+<br />
+
+<GrammarExample
+  structure="Subject + Verb + Possessive Pronoun"
+  examples={[
+    { type: '1st Person', text: "This phone is mine.", translation: "Este teléfono es mío." },
+    { type: '2nd Person', text: "Is this pen yours?", translation: "¿Este bolígrafo es tuyo?" },
+    { type: '3rd Person (Fem)', text: "The house is hers.", translation: "La casa es de ella (suya)." },
+    { type: '1st Person (Plural)', text: "The victory is ours.", translation: "La victoria es nuestra." },
+    { type: '3rd Person (Plural)', text: "Those bags are theirs.", translation: "Esas bolsas son de ellos (suyas)." }
+  ]}
+/>
+
+<br />
+<br />
+
+{/* ## 3. Possessive Adjectives vs. Possessive Pronouns */}
+
+<Typography variant="h2">
+  {`3. `}<Link href="/topics/possessive-adjectives" className="underline">Possessive Adjectives</Link>{` vs. Possessive Pronouns`}
+</Typography>
+
+<br/>
+
+export const POSSESSIVE_COMPARISON = [
+  {
+    adjective: <>This is <strong>my</strong> book.</>,
+    pronoun: <>This book is <strong>mine</strong>.</>,
+    translation: <>Este es mi libro / Este libro es mío.</>
+  },
+  {
+    adjective: <>Is that <strong>your</strong> car?</>,
+    pronoun: <>Is that car <strong>yours</strong>?</>,
+    translation: <>¿Es ese tu carro? / ¿Es ese carro tuyo?</>
+  },
+  {
+    adjective: <>It is <strong>their</strong> problem.</>,
+    pronoun: <>The problem is <strong>theirs</strong>.</>,
+    translation: <>Es su problema / El problema es suyo.</>
+  }
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Con Adjetivo (+ Sustantivo)</TableHead>
+      <TableHead>Con Pronombre (Sustituto)</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+  {POSSESSIVE_COMPARISON.map((item, index) => (
+    <TableRow key={index}>
+      <TableCell>
+        <Typography className="mt-0!">{item.adjective}</Typography>
+      </TableCell>
+      <TableCell className="font-bold">
+        <HasTranslation translation={item.translation}>{item.pronoun}</HasTranslation>
+      </TableCell>
+    </TableRow>
+  ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="Dato curioso">
+  Aunque técnicamente existe **"its"** como pronombre posesivo, es extremadamente raro usarlo solo. Normalmente preferimos reformular la oración o usar el adjetivo.
+</Alert>
+
+<Alert variant="destructive" title="¡Sin Apóstrofes!">
+  A diferencia del <Link href="/topics/saxon-genitive" className="underline">genitivo sajón (*John's*)</Link>, los pronombres posesivos **NUNCA** llevan apóstrofe.
+  
+  **Correcto:** hers, yours, ours, theirs. <br/>
+  **Incorrecto:** her's, your's, our's, their's.
+</Alert>
+
+<Typography variant="blockquote">
+  Ver tabla comparativa de pronombres y adjetivos posesivos en <Link href="/resources/pronouns-comparison" className="underline">Pronouns & Possessive Adjectives Table</Link>.
+</Typography>
