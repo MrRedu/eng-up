@@ -1,0 +1,158 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Comparative & Superlative Adjectives',
+  description: 'Guía rápida y profesional sobre cómo usar comparativos y superlativos en inglés. Reglas, excepciones y ejemplos prácticos.',
+  keywords: ['comparatives', 'superlatives', 'comparativos inglés', 'superlativos inglés', 'gramática inglesa'],
+});
+
+# Comparative & Superlative Adjectives
+
+<Typography variant="p" className="text-center text-balance">
+  {`Usamos los comparativos para contrastar dos cosas y los superlativos para destacar una cosa dentro de un grupo. La regla de oro: la longitud del adjetivo determina qué estructura usar.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Comparativos (Contrastando dos cosas)
+
+Para formar el comparativo, clasificamos los adjetivos según su longitud y terminación:
+
+<br />
+
+export const COMPARATIVE_RULES = [
+  { type: 'Adjetivos CVC', rules: <>Doblar consonante + "-er" + than</>, examples: 'Big → Bigger than', translation: 'Más grande que' },
+  { type: 'Adjetivos Cortos', rules: <>Añadir "-er" + than</>, examples: 'Fast → Faster than', translation: 'Más rápido que' },
+  { type: 'Adj. terminados en "-y"', rules: <>Cambiar "y" por "-ier" + than</>, examples: 'Happy → Happier than', translation: 'Más feliz que' },
+  { type: 'Adjetivos Largos (2+ sílabas)', rules: <>Usar "more" + adjetivo + than</>, examples: 'Expensive → More expensive than', translation: 'Más costoso que' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Tipo de Adjetivo</TableHead>
+      <TableHead>Regla</TableHead>
+      <TableHead>Ejemplo</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {COMPARATIVE_RULES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.type}</TableCell>
+        <TableCell>{item.rules}</TableCell>
+        <TableCell className="font-bold text-primary">{item.examples}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<Typography variant="blockquote">
+  **CVC**: Consonante + Vocal + Consonante
+</Typography>
+
+<br />
+
+<Alert variant="info" title="Recordatorio: CVC">
+  Si un adjetivo corto termina en **Consonante + Vocal + Consonante** (como *Big* o *Hot*), debemos duplicar la última consonante antes de añadir el sufijo: **Big → Bigger**, **Hot → Hotter**.
+</Alert>
+
+<br />
+
+## 2. Superlativos (El máximo nivel)
+
+El superlativo siempre requiere el artículo **"the"**.
+
+<br />
+
+export const SUPERLATIVE_RULES = [
+  { type: 'Adjetivos CVC', rules: 'the + (doble consonante) + "-est"', examples: 'The biggest', translation: 'El más grande' },
+  { type: 'Adjetivos Cortos', rules: 'the + adjective + "-est"', examples: 'The fastest', translation: 'El más rápido' },
+  { type: 'Adjetivos en "-y"', rules: 'the + adjective + "-iest"', examples: 'The happiest', translation: 'El más feliz' },
+  { type: 'Adjetivos Largos', rules: 'the + most + adjective', examples: 'The most expensive', translation: 'El más costoso' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Tipo de Adjetivo</TableHead>
+      <TableHead>Regla</TableHead>
+      <TableHead>Ejemplo</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {SUPERLATIVE_RULES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.type}</TableCell>
+        <TableCell>{item.rules}</TableCell>
+        <TableCell className="font-bold text-primary">{item.examples}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<Typography variant="blockquote">
+  **CVC**: Consonante + Vocal + Consonante
+</Typography>
+
+<br />
+<br />
+
+## 3. Adjetivos Irregulares
+
+Estos rompen todas las reglas. Memorízalos, son fundamentales.
+
+<br />
+
+export const IRREGULAR_ADJECTIVES = [
+  { adj: 'Good', comp: 'Better', super: 'The best', trans: 'Bueno → Mejor → El mejor' },
+  { adj: 'Bad', comp: 'Worse', super: 'The worst', trans: 'Malo → Peor → El peor' },
+  { adj: 'Much / Many', comp: 'More', super: 'The most', trans: 'Mucho → Más → Lo que más' },
+  { adj: 'Little', comp: 'Less', super: 'The least', trans: 'Poco → Menos → Lo menos' },
+  { adj: 'Far', comp: 'Farther / Further', super: 'The farthest / furthest', trans: 'Lejos → Más lejos → Lo más lejano' },
+  { adj: 'Old', comp: 'Older / Elder', super: 'The oldest / eldest', trans: 'Viejo → Mayor → El mayor' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adjetivo</TableHead>
+      <TableHead>Comparativo</TableHead>
+      <TableHead>Superlativo</TableHead>
+      <TableHead>Significado</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {IRREGULAR_ADJECTIVES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.adj}</TableCell>
+        <TableCell className="font-bold">{item.comp}</TableCell>
+        <TableCell className="font-bold text-primary">{item.super}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.trans}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<GrammarExample
+  structure="Subject + Verb + Comparative/Superlative + Context"
+  examples={[
+    { type: 'Comparative', text: "My car is faster than yours.", translation: "Mi carro es más rápido que el tuyo." },
+    { type: 'Comparative', text: "This book is more interesting than the movie.", translation: "Este libro es más interesante que la película." },
+    { type: 'Superlative', text: "He is the tallest student in the class.", translation: "Él es el estudiante más alto de la clase." },
+    { type: 'Superlative', text: "This is the most beautiful place I've ever seen.", translation: "Este es el lugar más hermoso que he visto." },
+    { type: 'Irregular', text: "Your English is getting better every day!", translation: "¡Tu inglés está mejorando cada día!" }
+  ]}
+/>
+
+<br />
+
+<Typography variant="blockquote">
+  Recuerda: Si quieres comparar indicando que algo es "menos" que otra cosa, revisa el tema sobre <Link href="/topics/comparatives-inferiority" className="underline">Inferiority Comparison</Link>.
+</Typography>
