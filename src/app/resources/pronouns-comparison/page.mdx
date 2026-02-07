@@ -1,29 +1,77 @@
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata = constructMetadata({
-  title: 'Pronouns & Possessive Adjectives Table',
+  title: 'Types of Pronouns',
   description: 'Una tabla comparativa completa de todos los tipos de pronombres y adjetivos posesivos en inglés.',
   keywords: ['pronouns table', 'object pronouns', 'possessive adjectives', 'possessive pronouns', 'reflexive pronouns'],
 });
 
-# Pronouns & Possessive Adjectives Table
+# Types of Pronouns
 
 <Typography variant="p" className="text-center text-balance">
-  {`Esta tabla reúne todas las formas gramaticales que hemos estudiado. Úsala como referencia rápida para entender las diferencias entre cómo se realiza la acción, quién la recibe y a quién le pertenecen las cosas.`}
+  {`Referencia rápida para entender las diferencias entre cómo se realiza la acción, quién la recibe y a quién le pertenecen las cosas.`}
 </Typography>
 
 <br />
 <br />
 
 export const COMPLETE_PRONOUNS_DATA = [
-  { subj: 'I', obj: 'Me', adj: 'My', poss: 'Mine', refl: 'Myself' },
-  { subj: 'You', obj: 'You', adj: 'Your', poss: 'Yours', refl: 'Yourself' },
-  { subj: 'He', obj: 'Him', adj: 'His', poss: 'His', refl: 'Himself' },
-  { subj: 'She', obj: 'Her', adj: 'Her', poss: 'Hers', refl: 'Herself' },
-  { subj: 'It', obj: 'It', adj: 'Its', poss: 'Its*', refl: 'Itself' },
-  { subj: 'We', obj: 'Us', adj: 'Our', poss: 'Ours', refl: 'Ourselves' },
-  { subj: 'You (pl)', obj: 'You', adj: 'Your', poss: 'Yours', refl: 'Yourselves' },
-  { subj: 'They', obj: 'Them', adj: 'Their', poss: 'Theirs', refl: 'Themselves' },
+  {
+    subj: 'I', subjT: 'Yo',
+    obj: 'Me', objT: 'Me / Mí',
+    adj: 'My', adjT: 'Mi / Mis',
+    poss: 'Mine', possT: 'Mío(a) / Míos(as)',
+    refl: 'Myself', reflT: 'Yo mismo / Me'
+  },
+  {
+    subj: 'You', subjT: 'Tú',
+    obj: 'You', objT: 'Te / Ti / Lo / La / a usted',
+    adj: 'Your', adjT: 'Tu / Tus / Su / Sus (de usted)',
+    poss: 'Yours', possT: 'Tuyo / Suyo',
+    refl: 'Yourself', reflT: 'Tú mismo / Te'
+  },
+  {
+    subj: 'He', subjT: 'Él',
+    obj: 'Him', objT: 'Le / Lo / a él',
+    adj: 'His', adjT: 'Su / Sus (de él)',
+    poss: 'His', possT: 'Suyo (de él)',
+    refl: 'Himself', reflT: 'Él mismo / Se'
+  },
+  {
+    subj: 'She', subjT: 'Ella',
+    obj: 'Her', objT: 'La / Le / a ella',
+    adj: 'Her', adjT: 'Su / Sus (de ella)',
+    poss: 'Hers', possT: 'Suyo (de ella)',
+    refl: 'Herself', reflT: 'Ella misma / Se'
+  },
+  {
+    subj: 'It', subjT: 'Eso',
+    obj: 'It', objT: 'Lo / Le / a ello (objecto/animal)',
+    adj: 'Its', adjT: 'Su / Sus (objecto/animal)',
+    poss: 'Its*', possT: 'Suyo',
+    refl: 'Itself', reflT: 'Sí mismo (objeto/animal)'
+  },
+  {
+    subj: 'We', subjT: 'Nosotros',
+    obj: 'Us', objT: 'Nos / a nosotros',
+    adj: 'Our', adjT: 'Nuestro(a) / Nuestros(as)',
+    poss: 'Ours', possT: 'Nuestro',
+    refl: 'Ourselves', reflT: 'Nosotros mismos / Nos'
+  },
+  {
+    subj: 'You', subjT: 'Ustedes',
+    obj: 'You', objT: 'Les / Los / Las / a ustedes',
+    adj: 'Your', adjT: 'Su / Sus (de ustedes)',
+    poss: 'Yours', possT: 'Suyo (de ustedes)',
+    refl: 'Yourselves', reflT: 'Ustedes mismos / Os'
+  },
+  {
+    subj: 'They', subjT: 'Ellos',
+    obj: 'Them', objT: 'Los / Las / Les / a ellos',
+    adj: 'Their', adjT: 'Su / Sus (de ellos/as)',
+    poss: 'Theirs', possT: 'Suyo (de ellos)',
+    refl: 'Themselves', reflT: 'Ellos mismos / Se'
+  },
 ];
 
   <Table>
@@ -51,12 +99,32 @@ export const COMPLETE_PRONOUNS_DATA = [
     </TableHeader>
     <TableBody>
       {COMPLETE_PRONOUNS_DATA.map((row, index) => (
-        <TableRow key={index} className="hover:bg-muted/30 transition-colors">
-          <TableCell className="font-bold">{row.subj}</TableCell>
-          <TableCell className="">{row.obj}</TableCell>
-          <TableCell className="">{row.adj}</TableCell>
-          <TableCell className="">{row.poss}</TableCell>
-          <TableCell className="">{row.refl}</TableCell>
+        <TableRow key={index}>
+          <TableCell className="font-bold">
+            <HasTranslation translation={row.subjT} >
+              {row.subj}
+            </HasTranslation>
+          </TableCell>
+          <TableCell>
+            <HasTranslation translation={row.objT} >
+              {row.obj}
+            </HasTranslation>
+          </TableCell>
+          <TableCell>
+            <HasTranslation translation={row.adjT} >
+              {row.adj}
+            </HasTranslation>
+          </TableCell>
+          <TableCell>
+            <HasTranslation translation={row.possT} >
+              {row.poss}
+            </HasTranslation>
+          </TableCell>
+          <TableCell>
+            <HasTranslation translation={row.reflT} >
+              {row.refl}
+            </HasTranslation>
+          </TableCell>
         </TableRow>
       ))}
     </TableBody>
@@ -64,12 +132,12 @@ export const COMPLETE_PRONOUNS_DATA = [
 
 <br />
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <Alert variant="info" title="Pronombres Sujeto vs Objeto">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+  <Alert variant="info" title="Pronombres Sujeto vs Objeto" className="my-0">
     **Sujeto:** Realiza la acción (va antes del verbo). <br/>
     **Objeto:** Recibe la acción (va después del verbo).
   </Alert>
-  <Alert variant="info" title="Adjetivos vs Pronombres Posesivos">
+  <Alert variant="info" title="Adjetivos vs Pronombres Posesivos" className="my-0">
     **Adjetivo:** Necesita un sustantivo después (*My house*). <br/>
     **Pronombre:** Sustituye al sustantivo (*The house is mine*).
   </Alert>
@@ -85,7 +153,7 @@ export const COMPLETE_PRONOUNS_DATA = [
     { label: 'Object', text: 'Music loves me.', translation: 'La música me ama.' },
     { label: 'Poss. Adj.', text: 'This is my music.', translation: 'Esta es mi música.' },
     { label: 'Poss. Pron.', text: 'The music is mine.', translation: 'La música es mía.' },
-    { label: 'Reflexive', text: 'I make music for myself.', translation: 'Hago música para mí mismo.' },
+    { label: 'Reflex. Pron.', text: 'I make music for myself.', translation: 'Hago música para mí mismo.' },
   ].map((item, index) => (
     <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
       <strong className="text-nowrap min-w-25">{item.label}:</strong>

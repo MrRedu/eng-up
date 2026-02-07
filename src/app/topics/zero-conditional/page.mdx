@@ -6,24 +6,113 @@ export const metadata = constructMetadata({
   keywords: ['zero conditional', 'condicional cero', 'gramática inglesa', 'situaciones generales', 'hechos científicos', 'hábitos']
 });
 
-<span  className="text-xs mb-4 bg-amber-500/10 text-amber-500 border-amber-500/20">
-  (Tema por corregir*)
-</span>
+export const ZERO_CONDITIONAL_STRUCTURE = [
+  { label: "Affirmative", value: "If + Subject + Present Simple, Subject + Present Simple" },
+  { label: "Affirmative", value: "Subject + Present Simple, if + Subject + Present Simple" },
+  { label: "Negative", value: "If + Subject + do/does not + Present Simple, Subject + do/does not + Present Simple" },
+  { label: "Negative", value: "Subject + do/does not + Present Simple, if + Subject + do/does not + Present Simple" },
+];
+
+export const ZERO_CONDITIONAL_EXAMPLES = [
+  { type: "Affirmative", text: "If I heat water to 100 degrees Celsius, it boils.", translation: "Si caliento agua a 100 grados Celsius, hierve." },
+  { type: "Negative", text: "If you don't water plants, they die.", translation: "Si no riegas las plantas, se mueren." },
+  { type: "Interrogative", text: "What happens if you hit a policeman?", translation: "¿Qué pasa si golpeas a un policía?" },
+];
+
+export const PRINCIPAL_USES_ZERO_CONDITIONAL = [
+  {
+    rule: 'General Facts',
+    ruleTranslation: 'Hechos Generales',
+    description: <>Verdades universales o leyes de la naturaleza.</>,
+    example: "If you heat ice, it melts.",
+    translation: "Si calientas hielo, se derrite."
+  },
+  {
+    rule: 'Instructions',
+    ruleTranslation: 'Instrucciones',
+    description: <>Para dar órdenes o indicaciones claras.</>,
+    example: "If the bill is high, don't pay it.",
+    translation: "Si la cuenta es alta, no la pagues."
+  },
+  {
+    rule: 'Habits and Routines',
+    ruleTranslation: 'Hábitos y Rutinas',
+    description: <>Cosas que siempre haces en ciertas circunstancias.</>,
+    example: "If I’m late, my father takes me to school.",
+    translation: "Si estoy tarde, mi padre me lleva a la escuela."
+  },
+];
+
+export const SUMMARY_CONDITIONAL = [
+  { name: 'Zero', usage: 'Hechos / Hábitos', struct: 'Present → Present', ex: 'If you heat ice, it melts.', translation: 'Si calientas hielo, se derrite.' },
+];
 
 # Zero Conditional
 
-<Typography variant="p" className="text-center text-balance">{`El zero conditional se utiliza para hablar de situaciones generales, hechos científicos y hábitos. Situaciones muy probables en el futuro.`}</Typography>
+<Typography variant="p" className="text-center text-balance">{`El zero conditional se utiliza para hablar de situaciones generales, hechos científicos y hábitos. Situaciones que ocurrirán con 100% de probabilidad.`}</Typography>
+<Typography variant="p" className="text-center text-balance">{`Consta de una cláusula condicional y una cláusula de resultado. `} <strong>Se forma con el presente simple en ambas partes de la oración.</strong></Typography>
 
 <br />
 <br />
+
+## 1. Estructura y Formación
 
 <GrammarExample 
-structure={[
-  { label: "Affirmative", value: "If + Subject + Present Simple, Subject + Present Simple" },
-  { label: "Negative", value: "If + Subject + don't/doesn't + Present Simple, Subject + don't/doesn't + Present Simple" }
-]}
-examples={[
-  { type: "Affirmative", text: "If I heat water to 100 degrees Celsius, it boils.", translation: "Si caliento agua a 100 grados Celsius, hierve." },
-  { type: "Negative", text: "If you don't water plants, they die.", translation: "Si no riegas las plantas, se mueren." },
-]}
+  structure={ZERO_CONDITIONAL_STRUCTURE}
+  examples={ZERO_CONDITIONAL_EXAMPLES}
 />
+
+<br/>
+
+## 2. Usos Principales
+
+<List>
+  {PRINCIPAL_USES_ZERO_CONDITIONAL.map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <HasTranslation as="strong" translation={item.ruleTranslation} >
+        {item.rule}
+      </HasTranslation>
+      <Typography className="mt-0!">{item.description} <br/>
+      <HasTranslation translation={item.translation} >
+        {item.example}
+      </HasTranslation>
+      </Typography>
+    </ListItem>
+  ))}
+</List>
+
+<br />
+
+<Alert variant="info" title="Tip: If vs. When">
+  En el Zero Conditional, puedes sustituir **"If"** por **"When"** sin cambiar el significado, ya que ambos expresan algo que siempre ocurre.
+  
+  *Ejemplo:* **When** you heat ice, it melts.
+</Alert>
+
+<br />
+<br />
+
+## 3. Resumen de Condicionales
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Conditional</TableHead>
+      <TableHead>Usage</TableHead>
+      <TableHead>Structure</TableHead>
+      <TableHead>Example</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {SUMMARY_CONDITIONAL.map((row, i) => (
+      <TableRow key={i}>
+        <TableCell className="font-bold">{row.name}</TableCell>
+        <TableCell className="text-sm">{row.usage}</TableCell>
+        <TableCell className="font-mono text-xs">{row.struct}</TableCell>
+        <TableCell className="italic text-sm">
+          <HasTranslation translation={row.translation}>{row.ex}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>

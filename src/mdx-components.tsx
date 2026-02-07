@@ -10,7 +10,18 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { AlertTriangle } from 'lucide-react';
+import {
+  AlertTriangle,
+  BookOpen,
+  SearchIcon,
+  Zap,
+  Globe,
+  Heart,
+  ArrowRight,
+  Code,
+  Users,
+  ShieldCheck,
+} from 'lucide-react';
 import { cn } from './lib/utils';
 import { Typography } from '@/components/ui/typography';
 import { List, ListItem } from '@/components/list-component';
@@ -22,6 +33,7 @@ import {
 } from '@/components/ui/popover';
 import Link from 'next/link';
 import { HasTranslation } from '@/components/ui/has-translation';
+import Image from 'next/image';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -62,6 +74,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ListItem,
     Link,
     HasTranslation,
+    // Next.js
+    Image,
     // Shadcn
     // shadcn-Table
     Table,
@@ -77,5 +91,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     PopoverTrigger,
     // Icons
     AlertTriangle,
+    BookOpen,
+    SearchIcon,
+    Zap,
+    Globe,
+    Heart,
+    ArrowRight,
+    Code,
+    Users,
+    ShieldCheck,
   };
 }

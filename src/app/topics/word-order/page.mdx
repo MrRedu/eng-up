@@ -1,0 +1,145 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Word Order',
+  description: 'Aprende las reglas básicas del orden de las palabras en inglés para formar oraciones correctamente (SVO, adjetivos, adverbios y más).',
+  keywords: ['word order', 'orden de las palabras', 'gramática inglesa', 'SVO inglés', 'posición adjetivos', 'posición adverbios']
+});
+
+export const WORD_ORDER_STRUCTURE = [
+  { label: "Basic Sentence", value: "Subject + Verb + Object" },
+  { label: "Adjectives", value: "Adjective + Noun" },
+  { label: "Adv. Frequency", value: "Subject + Adverb + Verb" },
+  { label: "Adv. Frequency (be verb)", value: "Subject + be + Adverb" },
+  { label: "Place & Time", value: "Subject + Verb + Place + Time" },
+];
+
+export const WORD_ORDER_EXAMPLES = [
+  { type: "SVO", text: "I love music.", translation: "Amo la música." },
+  { type: "Adjectives", text: "It is a blue car.", translation: "Es un coche azul." },
+  { type: "Adv. Frequency", text: "We often go out.", translation: "A menudo salimos." },
+  { type: "Place & Time", text: "They arrived home at 10 PM.", translation: "Llegaron a casa a las 10 PM." },
+];
+
+export const PRINCIPAL_RULES_WORD_ORDER = [
+  {
+    rule: 'Basic Order (SVO)',
+    ruleTranslation: 'Orden Básico (SVO)',
+    description: <>La estructura fundamental es <strong>Sujeto + Verbo + Objeto</strong>. Nunca los separes <em>(excepto con adverbios de frecuencia)</em>.</>,
+    example: "I usually bake cakes on Sundays.",
+    translation: "Suelo hornear pasteles los domingos."
+  },
+  {
+    rule: 'Adjectives',
+    ruleTranslation: 'Adjetivos',
+    description: <>A diferencia del español, el adjetivo se coloca casi siempre delante del sustantivo.</>,
+    example: "She has long hair.",
+    translation: "Ella tiene el pelo largo."
+  },
+  {
+    rule: 'Adverbs of Frequency',
+    ruleTranslation: 'Adverbios de Frecuencia',
+    description: <>Van antes del verbo principal (eat, go, play), pero después del verbo 'be' (am, is, are).</>,
+    example: "I always study. / You are always busy.",
+    translation: "Siempre estudio. / Siempre estás ocupado."
+  },
+  {
+    rule: 'Place and Time',
+    ruleTranslation: 'Lugar y Tiempo',
+    description: <>El orden suele ser Lugar seguido de Tiempo, generalmente al final de la oración.</>,
+    example: "I worked in London last year.",
+    translation: "Trabajé en Londres el año pasado."
+  },
+];
+
+# Word Order
+
+<Typography variant="p" className="text-center text-balance">{`El orden de las palabras en inglés es mucho más rígido que en español. Cambiar el orden puede cambiar el significado de la oración o hacer que no tenga sentido.`}</Typography>
+<Typography variant="p" className="text-center text-balance">{`La base fundamental es el sistema `}<strong>SVO</strong>{` (Subject-Verb-Object), que se mantiene constante en la mayoría de las oraciones afirmativas y negativas.`}</Typography>
+
+<br />
+<br />
+
+## 1. Estructuras Comunes
+
+<GrammarExample 
+  structure={WORD_ORDER_STRUCTURE}
+  examples={WORD_ORDER_EXAMPLES}
+/>
+
+<br/>
+
+## 2. Reglas Principales
+
+<List>
+  {PRINCIPAL_RULES_WORD_ORDER.map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <HasTranslation as="strong" translation={item.ruleTranslation} nowrap>
+        {item.rule}:
+      </HasTranslation>
+      <Typography className="mt-0!">{item.description} <br/>
+      <HasTranslation translation={item.translation} >
+        {item.example}
+      </HasTranslation>
+      </Typography>
+    </ListItem>
+  ))}
+</List>
+
+<br />
+
+<Alert variant="info" title="Tip: Manner, Place, Time">
+  Si tienes muchos adverbios al final, el orden suele ser: **Manera** (cómo), **Lugar** (dónde) y **Tiempo** (cuándo).
+  
+  *Ejemplo:* He played **skillfully** (manner) **at the stadium** (place) **yesterday** (time).
+</Alert>
+
+<br />
+<br />
+
+## 3. Preguntas: ASV y QUASM
+
+<Typography variant="p">Para hacer preguntas, el orden cambia. Usamos **ASV** (Auxiliar - Sujeto - Verbo) o **QUASM** (Question Word - Auxiliar - Sujeto - Verbo principal).</Typography>
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Concept</TableHead>
+      <TableHead>Order</TableHead>
+      <TableHead>Example</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-bold text-primary">Yes/No Questions</TableCell>
+      <TableCell className="font-mono text-xs text-muted-foreground">Aux + Subject + Verb</TableCell>
+      <TableCell className="italic text-sm">
+        <HasTranslation translation="¿Vives aquí?">Do you live here?</HasTranslation>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-bold text-primary">Wh- Questions</TableCell>
+      <TableCell className="font-mono text-xs text-muted-foreground">Wh- + Aux + Subject + Verb</TableCell>
+      <TableCell className="italic text-sm">
+        <HasTranslation translation="¿Dónde vive ella?">Where does she live?</HasTranslation>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-bold text-primary">Verb 'To Be'</TableCell>
+      <TableCell className="font-mono text-xs text-muted-foreground">Be + Subject + ...</TableCell>
+      <TableCell className="italic text-sm">
+        <HasTranslation translation="¿Estás feliz?">Are you happy?</HasTranslation>
+      </TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+<Alert variant="warn" title="¡Cuidado con el 'Object'!">
+  En inglés, el objeto directo y el verbo casi nunca se separan. 
+  
+  *Correcto:* I **read the book** last night. <br/>
+  *Incorrecto:* <del>I read last night the book.</del>
+</Alert>

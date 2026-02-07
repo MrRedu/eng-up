@@ -8,7 +8,37 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
-    version: 'v1.9.6',
+    version: 'v1.16.1',
+    title: 'Add Spanish translations to the pronoun comparison table',
+    description: 'Added Spanish translations to the pronoun comparison table.',
+    date: '2026-02-06 21:50:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.16.0',
+    title: 'Added New Landing Page',
+    description: 'Added new landing page 🚀.',
+    date: '2026-02-07 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.15.5',
+    title: 'Word Order Lesson',
+    description:
+      'Added a new topic for Word Order covering basic sentence structure (SVO), adjective and adverb positioning, and question formation.',
+    date: '2026-02-06 20:45:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.15.4',
+    title: 'Complete Conditionals Set',
+    description:
+      'Developed and structured the 4 types of conditionals (0, 1, 2, 3) with progressive comparison tables and advanced grammar tips.',
+    date: '2026-02-03 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.15.3',
     title: 'Reflexive Pronouns & Global Comparison',
     description:
       'Added Reflexive Pronouns lesson and a comprehensive comparison table for all types of pronouns in the resources section.',
@@ -16,7 +46,7 @@ export const CHANGELOG_DATA: ChangelogEntry[] = [
     type: 'feat',
   },
   {
-    version: 'v1.9.5',
+    version: 'v1.15.2',
     title: 'Object Pronouns Lesson',
     description:
       'Added a new topic for object pronouns (me, you, him, her, etc.) with usage rules and subject/object comparisons.',
@@ -24,7 +54,7 @@ export const CHANGELOG_DATA: ChangelogEntry[] = [
     type: 'feat',
   },
   {
-    version: 'v1.9.4',
+    version: 'v1.15.1',
     title: 'Possessive Pronouns Lesson',
     description:
       'Added a new topic for possessive pronouns (mine, yours, hers, etc.) with comparison tables and usage rules.',
@@ -32,7 +62,7 @@ export const CHANGELOG_DATA: ChangelogEntry[] = [
     type: 'feat',
   },
   {
-    version: 'v1.9.3',
+    version: 'v1.15.0',
     title: 'Possessive Adjectives Lesson',
     description:
       'Added a new topic for possessive adjectives (my, your, his, her, etc.) with comparison tables and common mistake alerts.',

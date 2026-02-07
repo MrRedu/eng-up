@@ -57,7 +57,7 @@ export const NAVIGATION_DATA: NavGroup[] = [
             url: '/resources/tables-of-truth',
           },
           {
-            title: 'Pronouns & Possessive Adj.',
+            title: 'Tipos de pronombres',
             url: '/resources/pronouns-comparison',
           },
         ],
@@ -153,7 +153,7 @@ export const NAVIGATION_DATA: NavGroup[] = [
           {
             title: 'Futuro',
             subItems: [
-              { title: 'Simple (Will)', url: '/grammar/future-simple' },
+              { title: 'Simple (will)', url: '/grammar/future-simple' },
               { title: 'Going to', url: '/grammar/future-going-to' },
               { title: 'Continuous', url: '/grammar/future-continuous' },
               { title: 'Perfect', url: '/grammar/future-perfect' },
