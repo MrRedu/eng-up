@@ -229,7 +229,25 @@ export const NAVIGATION_DATA: NavGroup[] = [
         icon: Layers,
         subItems: [
           { title: 'Have as an idiom', url: '/topics/have-idioms' },
-          { title: 'Adverbs of frequency', url: '/topics/adverbs-frequency' },
+          {
+            title: 'Adverbs',
+            subItems: [
+              {
+                title: 'Adverbs of frequency',
+                url: '/topics/adverbs-frequency',
+              },
+              { title: 'Adverbs of manner', url: '/topics/adverbs-manner' },
+              { title: 'Adverbs of time', url: '/topics/adverbs-time' },
+              { title: 'Adverbs of place', url: '/topics/adverbs-place' },
+              { title: 'Adverbs of degree', url: '/topics/adverbs-degree' },
+              { title: 'Adverbs of duration', url: '/topics/adverbs-duration' },
+              { title: 'Adverbs of order', url: '/topics/adverbs-order' },
+              {
+                title: 'Adverbs of certainty',
+                url: '/topics/adverbs-certainty',
+              },
+            ],
+          },
           { title: 'Time expressions', url: '/topics/time-expressions' },
           { title: 'Either / Neither', url: '/topics/either-neither' },
           { title: 'Emphatic form', url: '/topics/emphatic-form' },

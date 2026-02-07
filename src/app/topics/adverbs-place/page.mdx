@@ -1,0 +1,89 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Place',
+  description: 'Aprende a usar los adverbios de lugar en inglés para indicar dónde ocurre una acción. Ejemplos con "here", "there", "everywhere" y más.',
+  keywords: ['adverbs of place', 'adverbios de lugar', 'here', 'there', 'everywhere', 'nearby', 'gramática inglesa'],
+});
+
+# Adverbs of Place
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de lugar nos indican dónde sucede la acción. Responden a la pregunta `}<HasTranslation as="strong" translation="¿Dónde?" >"Where?"</HasTranslation>{` y normalmente se colocan después del verbo principal o del objeto directo.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Adverbios de Lugar Comunes
+
+Aquí tienes una lista de los más utilizados.
+
+<br />
+
+export const PLACE_DATA = [
+  { adverb: 'Here / There', translation: 'Aquí / Allí' },
+  { adverb: 'Everywhere', translation: 'En todas partes' },
+  { adverb: 'Somewhere / Anywhere', translation: 'En algún lugar / En cualquier lugar' },
+  { adverb: 'Nowhere', translation: 'En ningún lugar' },
+  { adverb: 'Nearby', translation: 'Cerca' },
+  { adverb: 'Inside / Outside', translation: 'Dentro / Fuera' },
+  { adverb: 'Above / Below', translation: 'Arriba / Abajo' },
+  { adverb: 'Away', translation: 'Lejos / Fuera' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adverbio</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {PLACE_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. Adverbios que terminan en "-wards"
+
+Estos indican **dirección** o **movimiento**:
+
+*   **Towards:** Hacia (él/ella/ello).
+*   **Backwards:** Hacia atrás.
+*   **Forwards:** Hacia adelante.
+*   **Upwards / Downwards:** Hacia arriba / Hacia abajo.
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure="Subject + Verb + (Object) + Place Adverb"
+  examples={[
+    { type: 'Location', text: "Please come here.", translation: "Por favor, ven aquí." },
+    { type: 'Distribution', text: "I've looked everywhere for my keys.", translation: "He buscado mis llaves por todas partes." },
+    { type: 'Direction', text: "The birds flew away.", translation: "Los pájaros se fueron volando (se alejaron)." },
+    { type: 'Location', text: "Is there a gas station nearby?", translation: "¿Hay una gasolinera cerca?" },
+    { type: 'Specific', text: "They are playing outside.", translation: "Ellos están jugando afuera." }
+  ]}
+/>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/word-order" className="underline">Word Order</Link>
+  </ListItem>
+</List>

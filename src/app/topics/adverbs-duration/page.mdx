@@ -1,0 +1,89 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Duration',
+  description: 'Descubre los adverbios de duración en inglés para indicar cuánto tiempo dura una acción. Ejemplos con "since", "for", "briefly" y más.',
+  keywords: ['adverbs of duration', 'adverbios de duración', 'since', 'for', 'briefly', 'temporarily', 'gramática inglesa'],
+});
+
+# Adverbs of Duration
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de duración nos indican cuánto tiempo dura una acción o estado. Responden a la pregunta `}<HasTranslation as="strong" translation="¿Por cuánto tiempo?" >"How long?"</HasTranslation>{`.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Adverbios de Duración Comunes
+
+Podemos dividirlos en aquellos que indican un periodo específico y los que son más generales.
+
+<br />
+
+export const DURATION_DATA = [
+  { adverb: 'For', translation: 'Durante / Por (periodo de tiempo)' },
+  { adverb: 'Since', translation: 'Desde (punto de inicio)' },
+  { adverb: 'Briefly / Shortly', translation: 'Brevemente / Por poco tiempo' },
+  { adverb: 'Temporarily', translation: 'Temporalmente' },
+  { adverb: 'Permanently', translation: 'Permanentemente' },
+  { adverb: 'Long', translation: 'Mucho tiempo (especialmente en preguntas/negativas)' },
+  { adverb: 'Overnight', translation: 'Durante la noche / De la noche a la mañana' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adverbio</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {DURATION_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. For vs. Since
+
+Es fundamental entender la diferencia al hablar de duración:
+
+*  **For:** Se usa con un intervalo de tiempo (*For two hours, for five years*).
+*  **Since:** Se usa con un momento específico en el pasado (*Since 2010, since Monday*).
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure="Subject + Verb + (Object) + Duration Adverb"
+  examples={[
+    { type: 'Period', text: "I have lived here for ten years.", translation: "He vivido aquí por diez años." },
+    { type: 'Origin', text: "She has been working since 8 AM.", translation: "Ella ha estado trabajando desde las 8 de la mañana." },
+    { type: 'Adverb', text: "We stopped briefly to take photos.", translation: "Paramos brevemente para tomar fotos." },
+    { type: 'State', text: "The museum is temporarily closed.", translation: "El museo está temporalmente cerrado." },
+    { type: 'Question', text: "Did you stay long?", translation: "¿Te quedaste mucho tiempo?" }
+  ]}
+/>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/grammar/present-perfect" className="underline">Present Perfect (For/Since)</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/adverbs-time" className="underline">Adverbs of Time</Link>
+  </ListItem>
+</List>

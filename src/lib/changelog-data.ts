@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.17.0',
+    title: 'Adverbs Module & Content Refactoring',
+    description:
+      'Created a comprehensive adverbs module with hierarchical navigation. Refactored all adverb lessons to include interactive translations and standardized grammatical structures. Standardized cross-references between related grammar topics (verb "to have", modals, and adverbs).',
+    date: '2026-02-07 12:00:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.16.6',
     title: 'Modal "Have to" Lesson',
     description:

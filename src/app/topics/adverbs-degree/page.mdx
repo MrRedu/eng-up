@@ -1,0 +1,93 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Degree',
+  description: 'Aprende a usar los adverbios de grado en inglés para calificar la intensidad de adjetivos, verbos u otros adverbios. Ejemplos con "very", "too", "enough" y más.',
+  keywords: ['adverbs of degree', 'adverbios de grado', 'very', 'too', 'enough', 'quite', 'extremely', 'gramática inglesa'],
+});
+
+# Adverbs of Degree
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de grado nos indican la intensidad o el nivel de una cualidad, acción u otro adverbio. Responden a la pregunta `}<HasTranslation as="strong" translation="¿Qué tanto?" >"How much?"</HasTranslation>{`.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Adverbios de Grado Comunes
+
+Se suelen colocar antes del adjetivo, adverbio o verbo al que modifican:
+
+<br />
+
+export const DEGREE_DATA = [
+  { adverb: 'Very / Extremely', translation: 'Muy / Extremadamente' },
+  { adverb: 'Quite / Pretty', translation: 'Bastante' },
+  { adverb: 'Too', translation: 'Demasiado' },
+  { adverb: 'Enough', translation: 'Suficiente / Lo suficiente' },
+  { adverb: 'Almost / Nearly', translation: 'Casi' },
+  { adverb: 'Hardly / Scarcely', translation: 'Apenas / Casi no' },
+  { adverb: 'Just', translation: 'Solo / Justo' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adverbio</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {DEGREE_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. El uso de "Enough" y "Too"
+
+Estos dos adverbios tienen reglas específicas de posición:
+
+*   **Too:** Antes del adjetivo/adverbio (*It's **too** hot*).
+*   **Enough:** Después del adjetivo/adverbio (*It's hot **enough***) o antes de un sustantivo (*I have **enough** money*).
+
+<Alert variant="info" title="Quite vs Very">
+  **Very** indica una intensidad mayor que **Quite**. 
+
+  *The movie was **quite** good.* (Fue buena, pero no excelente). <br/>
+  *The movie was **very** good.* (Fue muy buena).
+</Alert>
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure="Adverb + Adjective / Adverb / Verb"
+  examples={[
+    { type: 'Intensity', text: "I'm extremely tired today.", translation: "Estoy extremadamente cansado hoy." },
+    { type: 'Limitation', text: "The water is too cold to swim.", translation: "El agua está demasiado fría para nadar." },
+    { type: 'Sufficiency', text: "Is your room warm enough?", translation: "¿Tu habitación está lo suficientemente caliente?" },
+    { type: 'Focus', text: "I've just finished my lunch.", translation: "Acabo de terminar mi almuerzo." },
+    { type: 'Level', text: "She speaks English quite well.", translation: "Ella habla inglés bastante bien." }
+  ]}
+/>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/much-many" className="underline">Much / Many / A lot of</Link>
+  </ListItem>
+</List>
