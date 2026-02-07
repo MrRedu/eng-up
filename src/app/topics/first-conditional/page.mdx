@@ -1,0 +1,146 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'First Conditional',
+  description: 'Aprende a usar el First Conditional (primer condicional) para hablar de situaciones reales o muy probables en el futuro.',
+  keywords: ['first conditional', 'primer condicional', 'probabilidad futuro', 'gramática inglesa']
+});
+
+export const FIRST_CONDITIONAL_STRUCTURE = [
+  { label: "Affirmative", value: "If + Present Simple, Future Simple" },
+  { label: "Affirmative", value: "Future Simple If + Present Simple" },
+  { label: "Negative", value: "If + do/does not + Present Simple, Future Simple" },
+  { label: "Negative", value: "Future Simple If + do/does not + Present Simple" },
+];
+
+export const FIRST_CONDITIONAL_EXAMPLES = [
+  { type: "Affirmative", text: "If it rains tomorrow, I will stay at home.", translation: "Si llueve mañana, me quedaré en casa." },
+  { type: "Negative", text: "If you don't study, you will fail the exam.", translation: "Si no estudias, reprobarás el examen." },
+];
+
+export const KEY_POINTS_FIRST_CONDITIONAL = [
+  { rule: 'Probabilidad Real', description: <>Se refiere a situaciones que tienen una posibilidad real de suceder. No son leyes físicas, sino planes o consecuencias.</> },
+  { rule: 'Uso de Modales', description: <>Aunque <strong>will</strong> es el más común, también se pueden usar otros modales como <strong>can, may, might</strong> o <strong>should</strong> en la cláusula de resultado.</> },
+  { rule: 'Orden de las cláusulas', description: <>Si la cláusula con <strong>"If"</strong> va primero, usamos coma. Si va después, no se necesita coma.</> },
+];
+
+export const COMPARISON_CONDITIONAL = [
+  { trait: 'Usage', zero: 'General facts / Habits', first: 'Specific future situations' },
+  { trait: 'Probability', zero: '100% (Always)', first: 'High probability (Real)' },
+  { trait: 'Structure', zero: 'Present → Present', first: 'Present → Future (Will)' },
+];
+
+export const SUMMARY_CONDITIONAL = [
+  { name: 'Zero', usage: 'Hechos / Hábitos', struct: 'Present → Present', ex: 'If you heat ice, it melts.', translation: 'Si calientas hielo, se derrite.' },
+  { name: 'First', usage: 'Futuro probable', struct: 'Present → Will', ex: 'If it rains, I will stay.', translation: 'Si llueve, me quedaré.' },
+];
+
+# First Conditional
+
+<Typography variant="p" className="text-center text-balance">
+  {`El first conditional se utiliza para expresar una situación futura que es real o muy probable que ocurra si se cumple una condición específica.`}
+</Typography>
+<Typography variant="p" className="text-center text-balance">{`Igualmente, consta de dos clausulas. `} <strong>Se forma con el presente simple en la cláusula condicional y el futuro simple en la cláusula de resultado.</strong></Typography>
+
+
+<br />
+<br />
+
+## 1. Estructura y Formación
+
+<GrammarExample 
+  structure={FIRST_CONDITIONAL_STRUCTURE}
+  examples={FIRST_CONDITIONAL_EXAMPLES}
+/>
+
+<br />
+<br />
+
+## 2. Puntos Clave
+
+<List>
+  {KEY_POINTS_FIRST_CONDITIONAL.map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <strong className="text-nowrap">{item.rule}:</strong>
+      <Typography className="mt-0!">{item.description}</Typography>
+    </ListItem>
+  ))}
+</List>
+
+<br />
+
+<Typography variant="h2">First Conditional vs. <Link href="/topics/zero-conditional" className="underline">Zero Conditional</Link></Typography>
+
+<Typography variant="p">
+  {`La principal diferencia radica en la `}<strong>certeza</strong>{` y el `}<strong>tiempo</strong>{`.`}
+</Typography>
+
+<br />
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Feature</TableHead>
+      <TableHead>Zero Conditional</TableHead>
+      <TableHead>First Conditional</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {COMPARISON_CONDITIONAL.map((row, i) => (
+      <TableRow key={i}>
+        <TableCell className="font-bold">{row.trait}</TableCell>
+        <TableCell>{row.zero}</TableCell>
+        <TableCell className="text-primary font-medium">{row.first}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4">
+  <Alert variant="info" title="Ejemplo Zero Conditional" className="my-0">
+    <HasTranslation translation="Si tocas fuego, te quemas." as="strong">
+      {`If you touch fire, you get burned.`}
+    </HasTranslation> 
+    *(Es un hecho físico, ocurre siempre en todos los casos posibles).*
+  </Alert>
+
+  <Alert variant="info" title="Ejemplo First Conditional" className="my-0">
+    <HasTranslation translation="Si tocas esa estufa, te quemarás." as="strong">
+      {`If you touch that stove, you will get burned.`}
+    </HasTranslation>
+    *(Es una advertencia para una situación específica en el futuro).*
+  </Alert>
+</div>
+
+<br />
+<br />
+
+## 3. Resumen de Condicionales
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Conditional</TableHead>
+      <TableHead>Usage</TableHead>
+      <TableHead>Structure</TableHead>
+      <TableHead>Example</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {SUMMARY_CONDITIONAL.map((row, i) => (
+      <TableRow key={i}>
+        <TableCell className="font-bold">{row.name}</TableCell>
+        <TableCell className="text-sm">{row.usage}</TableCell>
+        <TableCell className="font-mono text-xs">{row.struct}</TableCell>
+        <TableCell className="italic text-sm">
+          <HasTranslation translation={row.translation}>{row.ex}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+
+

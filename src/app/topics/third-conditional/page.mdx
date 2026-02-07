@@ -1,0 +1,112 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Third Conditional',
+  description: 'Aprende a usar el Third Conditional para hablar de situaciones imaginarias en el pasado y remordimientos.',
+  keywords: ['third conditional', 'tercer condicional', 'pasado imaginario', 'remordimientos inglés']
+});
+
+export const THIRD_CONDITIONAL_STRUCTURE = [
+  { label: "Affirmative", value: "If + Past Perfect, Perfect Conditional" },
+  { label: "Affirmative extended", value: "If + Past Perfect (had + V.P.P) + would + have + V.P.P" },
+];
+
+export const THIRD_CONDITIONAL_EXAMPLES = [
+  { type: "Regret", text: "If I had studied more, I would have passed the exam.", translation: "Si hubiera estudiado más, habría aprobado el examen." },
+  { type: "Opportunity", text: "If we had left earlier, we would have caught the train.", translation: "Si hubiéramos salido antes, habríamos alcanzado el tren." },
+  { type: "Luck", text: "If I hadn't missed the bus, I wouldn't have met her.", translation: "Si no hubiera perdido el autobús, no la habría conocido." },
+  { type: "Hypothetical", text: "What would you have done if you had been there?", translation: "¿Qué habrías hecho si hubieras estado allí?" },
+];
+
+export const KEY_POINTS_THIRD_CONDITIONAL = [
+  { rule: 'Pasado Imposible', description: <>Se refiere a algo que ya pasó y no se puede cambiar. Todo es puramente hipotético.</> },
+  { rule: 'Contracciones', description: <>Es muy común contraer ambos "hads" y "woulds". <br /> <em>I'd have (I would have) / I'd studied (I had studied).</em></> },
+  { rule: 'Otros Modales', description: <>Se pueden usar <strong>could have</strong> (habría podido) o <strong>might have</strong> (podría haber) para indicar posibilidad.</> },
+];
+
+export const SUMMARY_CONDITIONAL = [
+  { name: 'Zero', usage: 'Hechos / Hábitos', struct: 'Present → Present', ex: 'If you heat ice, it melts.', translation: 'Si calientas hielo, se derrite.' },
+  { name: 'First', usage: 'Futuro posible', struct: 'Present → Will', ex: 'If it rains, I’ll stay.', translation: 'Si llueve, me quedaré.' },
+  { name: 'Second', usage: 'Imaginario / Raro', struct: 'Past → Would', ex: 'If I won, I’d travel.', translation: 'Si ganara, viajaría.' },
+  { name: 'Third', usage: 'Arrepentimiento / Pasado imaginario', struct: 'Past Perfect → Would have', ex: 'If I’d known, I’d have come.', translation: 'Si hubiera sabido, habría venido.' },
+];
+
+# Third Conditional
+
+<Typography variant="p" className="text-center text-balance">
+  {`El third conditional es el condicional de los arrepentimientos y el `}<strong>{"¿Qué hubiera pasado si...?"}</strong>{`. Lo usamos para imaginar un pasado diferente que no ocurrió.`}
+</Typography>
+<Typography variant="p" className="text-center text-balance">
+  <strong>{`Se estructura con el past perfect en la cláusula condicional y el condicional perfecto en la cláusula de resultado.`}</strong>
+</Typography>
+
+<br />
+<br />
+
+## 1. Estructura y Formación
+
+<Typography variant="p">
+  {`Esta estructura es un poco más compleja porque requiere tiempos compuestos en ambas partes de la oración:`}
+</Typography>
+
+<br />
+
+<GrammarExample 
+  structure={THIRD_CONDITIONAL_STRUCTURE}
+  examples={THIRD_CONDITIONAL_EXAMPLES}
+/>
+
+<br />
+
+## 2. Puntos Clave
+
+<List>
+  {KEY_POINTS_THIRD_CONDITIONAL.map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <strong className="text-nowrap">{item.rule}:</strong>
+      <Typography className="mt-0!">{item.description}</Typography>
+    </ListItem>
+  ))}
+</List>
+
+<br />
+<br />
+
+## 3. Resumen de Condicionales
+
+<Typography variant="p">
+  {`Con este último cierre, tenemos el panorama completo de cómo funciona la condicionalidad en inglés.`}
+</Typography>
+
+<br />
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Conditional</TableHead>
+      <TableHead>Usage</TableHead>
+      <TableHead>Structure</TableHead>
+      <TableHead>Example</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {SUMMARY_CONDITIONAL.map((row, i) => (
+      <TableRow key={i}>
+        <TableCell className="font-bold text-primary">{row.name}</TableCell>
+        <TableCell className="text-sm">{row.usage}</TableCell>
+        <TableCell className="font-mono text-xs">{row.struct}</TableCell>
+        <TableCell className="italic text-sm">
+          <HasTranslation translation={row.translation}>{row.ex}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+
+<br />
+
+<Alert variant="warn" title="Conclusión rápida">
+  Observa cómo a medida que el número del condicional aumenta, el tiempo verbal "retrocede" un paso hacia el pasado, indicando que la situación es cada vez más lejana de la realidad.
+</Alert>
+

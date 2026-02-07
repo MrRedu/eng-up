@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.15.0',
+    title: 'Complete Conditionals Set',
+    description:
+      'Developed and structured the 4 types of conditionals (0, 1, 2, 3) with progressive comparison tables and advanced grammar tips.',
+    date: '2026-02-03 00:00:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.9.6',
     title: 'Reflexive Pronouns & Global Comparison',
     description:

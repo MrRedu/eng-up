@@ -1,0 +1,113 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Second Conditional',
+  description: 'Aprende a usar el Second Conditional para hablar de situaciones imaginarias o poco probables en el presente o futuro.',
+  keywords: ['second conditional', 'segundo condicional', 'situaciones imaginarias', 'gramática inglesa']
+});
+
+export const SECOND_CONDITIONAL_STRUCTURE = [
+  { label: "Affirmative", value: "If + Past Simple, Present Conditional" },
+  { label: "Affirmative extended", value: "If + Past Simple, Subject + would + Verb (base form)" },
+];
+
+export const SECOND_CONDITIONAL_EXAMPLES = [
+  { type: "Imaginary", text: "If I won the lottery, I would buy a mansion.", translation: "Si ganara la lotería, compraría una mansión." },
+  { type: "Unlikely", text: "If I were you, I would study more.", translation: "Si yo fuera tú, estudiaría más." },
+  { type: "Hypothetical", text: "If it snowed in the desert, it would be strange.", translation: "Si nevara en el desierto, sería extraño." },
+  { type: "Advice", text: "Where would you go if you could travel anywhere?", translation: "¿A dónde irías si pudieras viajar a cualquier lugar?" },
+];
+
+export const KEY_POINTS_SECOND_CONDITIONAL = [
+  { rule: 'Situación Irreal', description: <>Expresa algo que no es cierto en el presente o que es muy poco probable que suceda en el futuro.</> },
+  { rule: 'Modales Alternativos', description: <>Se pueden usar <strong>could</strong> o <strong>might</strong> en lugar de <strong>would</strong> para indicar menos certeza o capacidad.</> },
+  { rule: 'Puntuación', description: <>Al igual que en los anteriores, la coma solo es necesaria si la cláusula <strong>"If"</strong> comienza la oración.</> },
+];
+
+export const SUMMARY_CONDITIONAL = [
+  { name: 'Zero', usage: 'Hechos / Hábitos', struct: 'Present → Present', ex: 'If you heat ice, it melts.', translation: 'Si calientas hielo, se derrite.' },
+  { name: 'First', usage: 'Futuro posible', struct: 'Present → Will', ex: 'If it rains, I will stay.', translation: 'Si llueve, me quedaré.' },
+  { name: 'Second', usage: 'Imaginario / Raro', struct: 'Past → Would', ex: 'If I won, I would buy...', translation: 'Si ganara, compraría...' },
+];
+
+# Second Conditional
+
+<Typography variant="p" className="text-center text-balance">
+  {`El second conditional se utiliza para hablar de situaciones hipotéticas, irreales o muy poco probables en el presente o futuro. Es el condicional de los sueños y las suposiciones.`}
+</Typography>
+<Typography variant="p" className="text-center text-balance">
+  <strong>{`Se forma con el pasado simple en la cláusula condicional y el presente condicional en la cláusula de resultado.`}</strong>
+</Typography>
+
+<br />
+<br />
+
+## 1. Estructura y Formación
+
+<Typography variant="p">
+  {`Aunque usamos el pasado simple en la condición, no nos referimos al pasado cronológico, sino a una "distancia" de la realidad.`}
+</Typography>
+
+<br />
+
+<GrammarExample 
+  structure={SECOND_CONDITIONAL_STRUCTURE}
+  examples={SECOND_CONDITIONAL_EXAMPLES}
+/>
+
+<br />
+
+<Alert variant="info" title="Important: If I were">
+  En el inglés formal, se usa **"were"** para todas las personas gramaticales (I, he, she, it, etc.) en la cláusula condicional. 
+  
+  <HasTranslation translation="Exempli gratia (p. ej. - Por ejemplo)" as="strong">e.g.</HasTranslation>: <HasTranslation translation="Si él fuera más rico, viajaría más." as="span">If he **were** richer, he would travel more.</HasTranslation> (Aunque en el habla cotidiana a veces se oye <strong>"was"</strong>).
+</Alert>
+
+<br />
+
+## 2. Puntos Clave
+
+<List>
+  {KEY_POINTS_SECOND_CONDITIONAL.map((item, index) => (
+    <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
+      <strong className="text-nowrap">{item.rule}:</strong>
+      <Typography className="mt-0!">{item.description}</Typography>
+    </ListItem>
+  ))}
+</List>
+
+<br />
+<br />
+
+## 3. Resumen de Condicionales
+
+<Typography variant="p">
+  {`Aquí es donde vemos la progresión de la realidad hacia la fantasía.`}
+</Typography>
+
+<br />
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Conditional</TableHead>
+      <TableHead>Usage</TableHead>
+      <TableHead>Structure</TableHead>
+      <TableHead>Example</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {SUMMARY_CONDITIONAL.map((row, i) => (
+      <TableRow key={i}>
+        <TableCell className="font-bold">{row.name}</TableCell>
+        <TableCell className="text-sm">{row.usage}</TableCell>
+        <TableCell className="font-mono text-xs">{row.struct}</TableCell>
+        <TableCell className="italic text-sm">
+          <HasTranslation translation={row.translation}>{row.ex}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+
