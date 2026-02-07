@@ -8,6 +8,13 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.16.1',
+    title: 'Add Spanish translations to the pronoun comparison table',
+    description: 'Added Spanish translations to the pronoun comparison table.',
+    date: '2026-02-06 21:50:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.16.0',
     title: 'Added New Landing Page',
     description: 'Added new landing page 🚀.',

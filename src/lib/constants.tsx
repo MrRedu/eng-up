@@ -57,7 +57,7 @@ export const NAVIGATION_DATA: NavGroup[] = [
             url: '/resources/tables-of-truth',
           },
           {
-            title: 'Pronouns & Possessive Adj.',
+            title: 'Tipos de pronombres',
             url: '/resources/pronouns-comparison',
           },
         ],
