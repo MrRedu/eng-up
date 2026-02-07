@@ -8,6 +8,21 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.16.0',
+    title: 'Added New Landing Page',
+    description: 'Added new landing page 🚀.',
+    date: '2026-02-07 00:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.15.5',
+    title: 'Word Order Lesson',
+    description:
+      'Added a new topic for Word Order covering basic sentence structure (SVO), adjective and adverb positioning, and question formation.',
+    date: '2026-02-06 20:45:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.15.4',
     title: 'Complete Conditionals Set',
     description:
