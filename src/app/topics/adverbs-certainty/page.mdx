@@ -1,0 +1,88 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Certainty',
+  description: 'Aprende a expresar seguridad o duda en inglés con los adverbios de certeza. Ejemplos con "definitely", "probably", "maybe" y más.',
+  keywords: ['adverbs of certainty', 'adverbios de certeza', 'definitely', 'probably', 'maybe', 'certainly', 'gramática inglesa'],
+});
+
+# Adverbs of Certainty
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de certeza nos indican qué tan seguros estamos de una acción o un hecho. Expresan niveles desde la seguridad total hasta la duda.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Adverbios de Certeza Comunes
+
+La posición de estos adverbios varía según el énfasis y el tipo de verbo.
+
+<br />
+
+export const CERTAINTY_DATA = [
+  { adverb: 'Definitely / Certainly', translation: 'Definitivamente / Ciertamente' },
+  { adverb: 'Surely', translation: 'Seguramente' },
+  { adverb: 'Probably', translation: 'Probablemente' },
+  { adverb: 'Maybe / Perhaps', translation: 'Tal vez / Quizás' },
+  { adverb: 'Possibly', translation: 'Posiblemente' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adverbio</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {CERTAINTY_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. Reglas de Posición
+
+1.  **Antes del verbo principal:** *I **definitely** want to go.*
+2.  **Después del verbo "To Be":** *She is **probably** at home.*
+3.  **Entre el auxiliar y el verbo principal:** *We will **certainly** help you.*
+4.  **Al principio (Maybe / Perhaps):** *Maybe it will rain.*
+
+<Alert variant="info" title="Maybe vs Perhaps">
+  **Maybe** es más informal y se usa frecuentemente al principio de la oración. **Perhaps** es un poco más formal y también suele ir al inicio o a mitad de la frase.
+</Alert>
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure={[{value:"Subject + Adverb + Verb"}, {value:"Adverb + Subject + Verb"}]}
+  examples={[
+    { type: 'Sure', text: "He will definitely win the race.", translation: "Él definitivamente ganará la carrera." },
+    { type: 'Probable', text: "They are probably sleeping now.", translation: "Probablemente estén durmiendo ahora." },
+    { type: 'Doubt', text: "Perhaps we should wait a little longer.", translation: "Quizás deberíamos esperar un poco más." },
+    { type: 'Informal', text: "Maybe I'll see you tomorrow.", translation: "Tal vez te vea mañana." },
+    { type: 'Sure', text: "I certainly didn't expect that!", translation: "¡Ciertamente no esperaba eso!" }
+  ]}
+/>
+
+<br/>
+
+{/* ## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/modals-ability-possibility" className="underline">Modals of Possibility</Link>
+  </ListItem>
+</List> */}

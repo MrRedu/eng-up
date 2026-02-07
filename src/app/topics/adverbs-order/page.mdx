@@ -1,0 +1,88 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Order',
+  description: 'Aprende a usar los adverbios de orden en inglés para secuenciar eventos o ideas. Ejemplos con "firstly", "next", "finally" y más.',
+  keywords: ['adverbs of order', 'adverbios de orden', 'first', 'second', 'finally', 'next', 'gramática inglesa'],
+});
+
+# Adverbs of Order
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de orden (o de secuencia) se utilizan para organizar ideas, pasos de un proceso o eventos cronológicamente. Son esenciales para la cohesión del discurso.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Adverbios de Orden y Secuencia
+
+Se suelen colocar al principio de la oración, seguidos de una coma.
+
+<br />
+
+export const ORDER_DATA = [
+  { adverb: 'First / Firstly', translation: 'En primer lugar / Primero' },
+  { adverb: 'Second / Secondly', translation: 'En segundo lugar / Segundo' },
+  { adverb: 'Then / Next', translation: 'Luego / Después / A continuación' },
+  { adverb: 'After that', translation: 'Después de eso' },
+  { adverb: 'Eventually', translation: 'Finalmente / Con el tiempo' },
+  { adverb: 'Finally / Lastly', translation: 'Finalmente / Por último' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adverbio</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {ORDER_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. Tipos de Secuenciación
+
+1.  **Enumeración:** *First, second, third...*
+2.  **Procesos:** *First, then, next, finally.*
+3.  **Argumentación:** *Firstly, secondly, in addition, lastly.*
+
+<Alert variant="info" title="Nota de Uso">
+  **First** es más común en el habla cotidiana, mientras que **Firstly** se prefiere en contextos más formales o académicos para enumerar puntos de un argumento.
+</Alert>
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure="Adverb + , + Subject + Verb"
+  examples={[
+    { type: 'Sequence', text: "First, preheat the oven to 180 degrees.", translation: "Primero, precalienta el horno a 180 grados." },
+    { type: 'Sequence', text: "Then, add the eggs and the sugar.", translation: "Luego, añade los huevos y el azúcar." },
+    { type: 'Sequence', text: "Finally, bake for 45 minutes.", translation: "Finalmente, hornea por 45 minutos." },
+    { type: 'Argument', text: "Firstly, it's too expensive. Secondly, we don't need it.", translation: "En primer lugar, es demasiado caro. En segundo lugar, no lo necesitamos." },
+    { type: 'Narrative', text: "Eventually, they arrived at the village.", translation: "Finalmente (después de mucho tiempo), llegaron al pueblo." }
+  ]}
+/>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/ordinal-numbers" className="underline">Ordinal Numbers</Link>
+  </ListItem>
+</List>

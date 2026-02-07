@@ -1,0 +1,100 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Frequency',
+  description: 'Aprende a usar los adverbios de frecuencia en inglés como "always", "sometimes" y "never". Guía completa con reglas de posición y ejemplos.',
+  keywords: ['adverbs of frequency', 'adverbios de frecuencia', 'always', 'sometimes', 'never', 'gramática inglesa'],
+});
+
+# Adverbs of Frequency
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de frecuencia nos indican qué tan seguido ocurre una acción. Son fundamentales para hablar de rutinas y hábitos en inglés.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. ¿Qué son los Adverbios de Frecuencia?
+
+Expresan la periodicidad de una acción. La lista principal, ordenada de mayor a menor frecuencia, es:
+
+<br />
+
+export const FREQUENCY_DATA = [
+  { adverb: 'Always', frequency: '100%', translation: 'Siempre' },
+  { adverb: 'Usually', frequency: '90%', translation: 'Usualmente / Normalmente' },
+  { adverb: 'Often', frequency: '70%', translation: 'A menudo / Frecuentemente' },
+  { adverb: 'Sometimes', frequency: '50%', translation: 'A veces' },
+  { adverb: 'Occasionally', frequency: '30%', translation: 'Ocasionalmente' },
+  { adverb: 'Seldom / Rarely', frequency: '10%', translation: 'Rara vez' },
+  { adverb: 'Hardly ever', frequency: '5%', translation: 'Casi nunca' },
+  { adverb: 'Never', frequency: '0%', translation: 'Nunca' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adverbio</TableHead>
+      <TableHead>Frecuencia</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {FREQUENCY_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="font-medium">{item.frequency}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Reglas de Posición
+
+La posición del adverbio depende del tipo de verbo en la oración:
+
+1.  **Después del verbo "To Be":** *She is **always** happy.*
+2.  **Antes de los demás verbos:** *I **usually** drink coffee.*
+3.  **Entre el auxiliar y el verbo principal:** *I have **never** been to Paris.*
+
+<Alert variant="info" title="Excepción: Sometimes y Usually">
+  Estos dos adverbios pueden colocarse también al principio o al final de la oración para dar énfasis.
+  
+  **Sometimes** I go to the gym. / I go to the gym **sometimes**. <br/>
+  **Usually** I drink coffee in the morning. / I **usually** drink coffee in the morning.
+</Alert>
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure={[
+    { label: "Main Verb", value: "Subject + Adverb + Verb"},
+    { label: "To Be", value: "Subject + Be + Adverb"},
+    { label: "Auxiliary", value: "Subject + Auxiliary + Adverb"},
+    ]}
+  examples={[
+    { type: 'Habit', text: "I always brush my teeth before bed.", translation: "Siempre me cepillo los dientes antes de dormir." },
+    { type: 'State', text: "They are often late for meetings.", translation: "A menudo llegan tarde a las reuniones." },
+    { type: 'Negation', text: "He hardly ever watches television.", translation: "Él casi nunca ve la televisión." },
+    { type: 'Question', text: "Do you ever eat spicy food?", translation: "¿Alguna vez comes comida picante?" },
+    { type: 'Perfect', text: "We have never seen such a beautiful sunset.", translation: "Nunca hemos visto un atardecer tan hermoso." }
+  ]}
+/>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/word-order" className="underline">Word Order</Link>
+  </ListItem>
+</List>

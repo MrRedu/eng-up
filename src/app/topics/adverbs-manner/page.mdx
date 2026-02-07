@@ -1,0 +1,118 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Manner',
+  description: 'Aprende a usar los adverbios de modo en inglés para describir cómo se realiza una acción. Ejemplos con "quickly", "well", "hard" y más.',
+  keywords: ['adverbs of manner', 'adverbios de modo', 'quickly', 'slowly', 'well', 'badly', 'gramática inglesa'],
+});
+
+# Adverbs of Manner
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de modo (adverbs of manner) nos dicen cómo se realiza una acción. Generalmente se colocan después del verbo principal o después del objeto.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Formación de los Adverbios de Modo
+
+La mayoría se forman añadiendo **-ly** al adjetivo correspondiente:
+
+<br />
+
+export const MANNER_FORMATION = [
+  { adjective: 'Quick', adverb: 'Quickly', translation: 'Rápido / Rápidamente' },
+  { adjective: 'Careful', adverb: 'Carefully', translation: 'Cuidadoso / Cuidadosamente' },
+  { adjective: 'Quiet', adverb: 'Quietly', translation: 'Silencioso / Silenciosamente' },
+  { adjective: 'Bad', adverb: 'Badly', translation: 'Malo / Malamente' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adjetivo</TableHead>
+      <TableHead>Adverbio (-ly)</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {MANNER_FORMATION.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell>{item.adjective}</TableCell>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Adverbios Irregulares
+
+Algunos adverbios no siguen la regla del **-ly**:
+
+<br />
+
+export const IRREGULAR_MANNER = [
+  { adjective: 'Good', adverb: 'Well', translation: 'Bien' },
+  { adjective: 'Fast', adverb: 'Fast', translation: 'Rápido' },
+  { adjective: 'Hard', adverb: 'Hard', translation: 'Duro / Fuerte' },
+  { adjective: 'Late', adverb: 'Late', translation: 'Tarde' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adjetivo</TableHead>
+      <TableHead>Adverbio (Irregular)</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {IRREGULAR_MANNER.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell>{item.adjective}</TableCell>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="warn" title="Nota Importante">
+  Ten cuidado con **"hardly"** y **"lately"**. Aunque parecen los adverbios de mode de *hard* y *late*, tienen significados diferentes:
+  
+  **Hardly:** Casi no / Apenas. <br/>
+  **Lately:** Últimamente.
+</Alert>
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure="Subject + Verb + (Object) + Adverb"
+  examples={[
+    { type: 'Action', text: "She sings beautifully.", translation: "Ella canta hermosamente." },
+    { type: 'Irregular', text: "He speaks English very well.", translation: "Él habla inglés muy bien." },
+    { type: 'Action', text: "Please drive carefully.", translation: "Por favor, conduce con cuidado." },
+    { type: 'Irregular', text: "You need to work hard to succeed.", translation: "Necesitas trabajar duro para tener éxito." },
+    { type: 'Action', text: "The cat walked quietly across the room.", translation: "El gato caminó silenciosamente por la habitación." }
+  ]}
+/>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/word-order" className="underline">Word Order</Link>
+  </ListItem>
+</List>

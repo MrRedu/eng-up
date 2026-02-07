@@ -1,0 +1,140 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Modal: Have to',
+  description: 'Aprende a usar "Have to" para expresar obligación y necesidad. Reglas gramaticales, ejemplos y diferencias con "must".',
+  keywords: ['have to', 'modal verbs', 'obligación en inglés', 'don\'t have to', 'gramática inglesa'],
+});
+
+# Modal: Have to
+
+<Typography variant="p" className="text-center text-balance">
+  {`Usamos `}<strong>"have to"</strong>{` para expresar una obligación fuerte, generalmente impuesta por una norma externa, una ley o una necesidad real.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Reglas y Conjugación
+
+Al igual que en su uso como verbo de posesión, **have to** cambia a **has to** para la tercera persona del singular (**He, She, It**).
+
+<br />
+
+export const HAVE_TO_RULES = [
+  { subject: 'I / You / We / They', form: 'have to', example: 'I have to go to work', translation: 'Tengo que ir a trabajar' },
+  { subject: 'He / She / It', form: 'has to', example: 'She has to go to work', translation: 'Ella tiene que ir a trabajar' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Sujeto</TableHead>
+      <TableHead>Forma</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {HAVE_TO_RULES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.subject}</TableCell>
+        <TableCell className="font-bold text-primary">{item.form}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Estructuras Gramaticales
+
+Para las formas negativa e interrogativa, **siempre** necesitamos el auxiliar **do / does**.
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { label: "Affirmative", value: "Subject + have / has to + Verb (base form)" },
+    { label: "Negative", value: "Subject + don't / doesn't + have to + Verb (base form)" },
+    { label: "Interrogative", value: "Do / Does + Subject + have to + Verb (base form)?" }
+  ]}
+  examples={[
+    { type: "Affirmative", text: "You have to wear a seatbelt.", translation: "Tienes que usar el cinturón de seguridad." },
+    { type: "Affirmative", text: "He has to finish the report today.", translation: "Él tiene que terminar el informe hoy." },
+    { type: "Negative", text: "I don't have to work on Sundays.", translation: "No tengo que trabajar los domingos. (No es necesario)" },
+    { type: "Negative", text: "She doesn't have to cook dinner.", translation: "Ella no tiene que cocinar la cena." },
+    { type: "Interrogative", text: "Do we have to buy tickets?", translation: "¿Tenemos que comprar entradas?" },
+    { type: "Interrogative", text: "Does he have to wake up early?", translation: "¿Él tiene que despertarse temprano?" }
+  ]}
+/>
+
+<br />
+
+<Alert variant="info" title="Don't have to = No es necesario">
+  Es un error común pensar que **don't have to** significa prohibición. En realidad, significa que **no hay obligación** o que algo no es necesario.
+</Alert>
+
+<br />
+
+## 3. Have to vs. Must
+
+Aunque ambos expresan obligación, hay un matiz importante:
+
+<br />
+
+export const HAVE_TO_VS_MUST = [
+  { modal: 'Must', type: 'Interna (sentimiento personal o consejo fuerte).', example: 'I must call my mom.', translation: 'Tengo que llamar a mi mamá.' },
+  { modal: 'Have to', type: 'Externa (regla, leyes, circunstancias).', example: 'I have to wear a seatbelt.', translation: 'Tengo que usar el cinturón de seguridad.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Modal</TableHead>
+      <TableHead>Tipo de Obligación</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+  {HAVE_TO_VS_MUST.map((item, index) => (
+    <TableRow key={index}>
+      <TableCell className="font-bold">{item.modal}</TableCell>
+      <TableCell>{item.type}</TableCell>
+      <TableCell>
+        <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+      </TableCell>
+    </TableRow>
+  ))}
+  </TableBody>
+</Table>
+
+<Alert variant="warn" title="Peligro: Prohibición">
+  Si realmente quieres decir que algo está **prohibido**, usa **Mustn't**.
+
+  *<HasTranslation translation="No debes fumar aquí" as="strong">You mustn't smoke here</HasTranslation>* (Prohibido).<br/>
+  *<HasTranslation translation="No tienes que fumar aquí" as="strong">You don't have to smoke here</HasTranslation>* (Puedes hacerlo si quieres, pero no es obligatorio).
+
+</Alert>
+
+<Typography variant="blockquote">
+  Recuerda: **Have to** es mucho más común en el habla cotidiana que **Must** para expresar obligaciones generales.
+</Typography>
+
+
+<br/>
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/grammar/present-verb-to-have" className="underline">Present Simple: Verb "to have"</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/have-idioms" className="underline">Have as an idiom</Link>
+  </ListItem>
+</List>
+    

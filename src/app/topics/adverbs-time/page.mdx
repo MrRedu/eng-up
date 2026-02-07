@@ -1,0 +1,92 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Adverbs of Time',
+  description: 'Descubre los adverbios de tiempo en inglés para indicar cuándo ocurre algo. Ejemplos con "now", "yesterday", "soon" y más.',
+  keywords: ['adverbs of time', 'adverbios de tiempo', 'now', 'yesterday', 'soon', 'already', 'yet', 'gramática inglesa'],
+});
+
+# Adverbs of Time
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los adverbios de tiempo nos indican cuándo ocurre una acción, por cuánto tiempo o con qué frecuencia. Generalmente se sitúan al final de la oración.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Adverbios de Tiempo Comunes
+
+Estos adverbios responden a la pregunta <HasTranslation translation="¿Cuándo?" as="strong">"When?"</HasTranslation>:
+
+<br />
+
+export const TIME_DATA = [
+  { adverb: 'Now', translation: 'Ahora' },
+  { adverb: 'Yesterday / Today / Tomorrow', translation: 'Ayer / Hoy / Mañana' },
+  { adverb: 'Soon / Later', translation: 'Pronto / Luego' },
+  { adverb: 'Recently / Lately', translation: 'Recientemente / Últimamente' },
+  { adverb: 'Afterwards', translation: 'Después / Más tarde' },
+  { adverb: 'Already / Yet', translation: 'Ya / Todavía' },
+  { adverb: 'Still', translation: 'Todavía / Aun' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Adverbio</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {TIME_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.adverb}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Posición en la oración
+
+1.  **Al final (lo más común):** *I will call you **later**.*
+2.  **Al principio (para dar énfasis):** *Yesterday, I went to the park.*
+3.  **Antes del verbo principal (adverbios específicos como 'already' o 'still'):** *I have **already** finished.*
+
+<Alert variant="info" title="Yet vs Still">
+  **Still:** Se usa para algo que continúa ocurriendo (positivas/preguntas). <br/>
+  **Yet:** Se usa para algo que esperamos que ocurra (negativas/preguntas), usualmente al final.
+</Alert>
+
+<br />
+
+## 3. Ejemplos Prácticos
+
+<br />
+
+<GrammarExample
+  structure="Subject + Verb + (Object) + Time Adverb"
+  examples={[
+    { type: 'Future', text: "I'll see you soon.", translation: "Te veré pronto." },
+    { type: 'Past', text: "We visited them yesterday.", translation: "Los visitamos ayer." },
+    { type: 'Present', text: "She is working now.", translation: "Ella está trabajando ahora." },
+    { type: 'Emphasis', text: "Today, we are going to start a new project.", translation: "Hoy vamos a empezar un proyecto nuevo." },
+    { type: 'Specific', text: "I haven't finished my homework yet.", translation: "Aún no he terminado mis deberes." }
+  ]}
+/>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/time-expressions" className="underline">Time Expressions</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/adverbs-duration" className="underline">Adverbs of Duration</Link>
+  </ListItem>
+</List>

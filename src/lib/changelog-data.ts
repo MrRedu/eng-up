@@ -8,10 +8,41 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.17.0',
+    title: 'Adverbs Module & Content Refactoring',
+    description:
+      'Created a comprehensive adverbs module with hierarchical navigation. Refactored all adverb lessons to include interactive translations and standardized grammatical structures. Standardized cross-references between related grammar topics (verb "to have", modals, and adverbs).',
+    date: '2026-02-07 12:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.16.6',
+    title: 'Modal "Have to" Lesson',
+    description:
+      'Added a comprehensive guide on the modal "have to" for expressing obligation, including negation with don\'t/doesn\'t and differences with "must".',
+    date: '2026-02-07 11:15:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.16.5',
+    title: 'Enhanced Verb "to have" Lesson',
+    description:
+      'Completely redesigned the "Verb to have" lesson with conjugation tables, clearer grammatical structures (do/does), and a comparison with "have got".',
+    date: '2026-02-07 11:10:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.16.4',
+    title: 'Have as an Idiom Lesson',
+    description:
+      'Added a new lesson covering the use of "have" in common idiomatic expressions like "have a shower", "have a look", and social interactions.',
+    date: '2026-02-07 11:15:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.16.3',
     title: 'Mobile Responsive Hero Section',
-    description:
-      'Added mobile responsive hero section.',
+    description: 'Added mobile responsive hero section.',
     date: '2026-02-06 23:30:00',
     type: 'style',
   },
