@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <div className="section space-y-16">
       {/* Hero Section */}
-      <section className="py-12 w-full">
+      <section className="py-12 w-full min-h-[calc(100vh-8rem)] md:min-h-auto grid place-items-center">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="mx-auto max-w-4xl text-center">
             <Image
@@ -222,17 +222,17 @@ export default function Home() {
                   Temas
                 </span>
               </div>
-              <div className="h-48 bg-primary rounded-2xl p-6 flex flex-col justify-between text-primary-foreground">
+              <div className="h-48 bg-primary rounded-2xl p-2 sm:p-6 flex flex-col justify-between text-primary-foreground">
                 <Zap className="h-8 w-8" />
-                <span className="text-lg font-bold leading-tight">
+                <span className="text-md md:text-lg font-bold leading-tight">
                   Gramática que fluye
                 </span>
               </div>
             </div>
             <div className="space-y-4 pt-8">
-              <div className="h-48 bg-card border rounded-2xl p-6 flex flex-col justify-between">
+              <div className="h-48 bg-card border rounded-2xl p-2 sm:p-6 flex flex-col justify-between">
                 <SearchIcon className="h-8 w-8 text-muted-foreground" />
-                <span className="text-lg font-bold leading-tight uppercase tracking-tighter">
+                <span className="text-md md:text-lg font-bold leading-tight uppercase tracking-tighter">
                   Búsqueda Global
                 </span>
               </div>
