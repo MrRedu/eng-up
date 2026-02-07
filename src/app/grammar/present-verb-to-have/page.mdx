@@ -9,50 +9,99 @@ export const metadata = constructMetadata({
 
 # Present Simple: Verb "to have"
 
-<Typography variant="p" className="text-center">{`El verbo `}<strong>"to have"</strong>{` se usa para posesión, características y también como auxiliar o en modismos.`}</Typography>
+<Typography variant="p" className="text-center text-balance">
+  {`El verbo `}<strong>"to have"</strong>{` es uno de los más versátiles en inglés. Se utiliza principalmente para indicar `}<strong>posesión</strong>{`, pero también para describir `}<strong>características físicas</strong>{`, relaciones y estados.`}
+</Typography>
 
 <br />
+<br />
+
+## 1. Conjugación y Posesión
+
+A diferencia de la mayoría de los verbos, "to have" es irregular en la tercera persona del singular (**He, She, It**).
+
+<br />
+
+export const HAVE_CONJUGATION = [
+  { subject: 'I / You / We / They', form: 'have', example: 'I have a car', translation: 'Tengo un coche' },
+  { subject: 'He / She / It', form: 'has', example: 'She has a car', translation: 'Ella tiene un coche' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Sujeto</TableHead>
+      <TableHead>Forma</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {HAVE_CONJUGATION.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.subject}</TableCell>
+        <TableCell className="font-bold text-primary">{item.form}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. Estructuras Gramaticales
+
+Para negar o preguntar con el verbo **have**, necesitamos el auxilar **do / does**. Cuando el auxiliar está presente, el verbo siempre vuelve a su forma base: **have**.
+
 <br />
 
 <GrammarExample 
   structure={[
-    { label: "Affirmative", value: "Subject + have/has + Complement" },
-    { label: "Negative", value: "Subject + have/has + not + Complement" },
-    { label: "Interrogative", value: "Have/Has + Subject + Complement?" }
+    { label: "Affirmative", value: "Subject + have / has + Complement" },
+    { label: "Negative", value: "Subject + do / does + not + have + Complement" },
+    { label: "Interrogative", value: "Do / Does + Subject + have + Complement?" }
   ]}
   examples={[
-    { type: "Affirmative (I/You/We/They)", text: "I have a big house.", translation: "Tengo una casa grande." },
-    { type: "Affirmative (He/She/It)", text: "He has a new car.", translation: "Él tiene un carro nuevo." },
-    { type: "Negative", text: "I don't have enough time.", translation: "No tengo suficiente tiempo." },
-    { type: "Negative (3rd Person)", text: "She doesn't have a cat.", translation: "Ella no tiene un gato." },
-    { type: "Interrogative", text: "Do you have a car?", translation: "¿Tienes un carro?" },
-    { type: "Interrogative (3rd Person)", text: "Does she have a cat?", translation: "¿Ella tiene un gato?" },
-    { type: "Answer (+)", text: "Yes, I do.", translation: "Sí, lo tengo." },
-    { type: "Answer (-)", text: "No, she doesn't.", translation: "No, no lo tiene." },
+    { type: "Affirmative", text: "I have two sisters.", translation: "Tengo dos hermanas." },
+    { type: "Affirmative", text: "The dog has blue eyes.", translation: "El perro tiene ojos azules." },
+    { type: "Negative", text: "We don't have a map.", translation: "No tenemos un mapa." },
+    { type: "Negative", text: "He doesn't have any money.", translation: "Él no tiene nada de dinero." },
+    { type: "Interrogative", text: "Do you have a pen?", translation: "¿Tienes un bolígrafo?" },
+    { type: "Interrogative", text: "Does it have a battery?", translation: "¿Tiene (eso) una batería?" },
+    { type: "Answer (+)", text: "Yes, I do / Yes, she does.", translation: "Sí." },
+    { type: "Answer (-)", text: "No, we don't / No, he doesn't.", translation: "No." },
   ]}
 />
 
-<Alert variant="warn" title="Dato importante">
-  Recuerda que en negativo e interrogativo usamos el auxiliar **do/does** y el verbo vuelve a ser **have** siempre.
+<br />
+
+<Alert variant="info" title="Dato Pro: Have vs Have got">
+  En inglés británico es muy común usar **"have got"** para posesión. <br/>
+  *I have a car* = *I've got a car*. <br/>
+  *He has a cold* = *He's got a cold*.
+  
+  La gran diferencia es que **"have got"** no usa auxiliares para negar o preguntar: *I haven't got / Have you got?*
 </Alert>
 
 <br />
+
+## 3. Como Modismo (<Link href="/topics/have-idioms" className="underline">Have as an idiom</Link>)
+
+A veces **have** no significa "tener", sino que describe una acción. En estos casos, casi nunca se usa "have got".
+
 <br />
 
-## Como Modismo (<Link href="/topics/have-idioms" className="underline">Have as an idiom</Link>)
-
-A veces **have** no significa **tener**, sino que forma parte de una expresión:
-
-export const HAVE_AS_AN_IDIOM = [
-  { label: "Have lunch", value: "Almorzar." },
-  { label: "Have a party", value: "Hacer una fiesta." },
+export const HAVE_IDIOMS_SAMPLES = [
+  { label: "Have lunch/breakfast", value: "Almorzar/Desayunar." },
+  { label: "Have a shower", value: "Ducharse." },
+  { label: "Have a look", value: "Echar un vistazo." },
+  { label: "Have a seat", value: "Tomar asiento." },
   { label: "Have fun", value: "Divertirse." },
-  { label: "Have a talk", value: "Conversar." },
-  { label: "Have a rest", value: "Descansar." },
 ];
 
 <div className="flex flex-wrap gap-x-3 gap-y-3 items-center mt-4 mb-8">
-{HAVE_AS_AN_IDIOM.map((idiom, index) => (
+{HAVE_IDIOMS_SAMPLES.map((idiom, index) => (
   <Fragment key={`${idiom.label}-${index}`}>
     <Popover >
       <PopoverTrigger asChild>
@@ -60,11 +109,26 @@ export const HAVE_AS_AN_IDIOM = [
       </PopoverTrigger>
       <PopoverContent align="start" className="w-fit max-w-70 p-3 text-sm italic">{idiom.value}</PopoverContent>
     </Popover>
-    <span className="text-muted-foreground/30">•</span>
+    {index < HAVE_IDIOMS_SAMPLES.length - 1 && <span className="text-muted-foreground/30">•</span>}
     </Fragment>
   ))}
 </div>
 
 <Typography variant="blockquote">
-  Puedes encontrar más ejemplos en la sección de <Link href="/topics/have-idioms" className="underline">Have as an idiom</Link>.
+  Para profundizar más en estas expresiones, visita la lección completa sobre <Link href="/topics/have-idioms" className="underline">Have as an idiom</Link>.
 </Typography>
+
+<br/>
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/modal-have-to" className="underline">Modal: Have to</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/have-idioms" className="underline">Have as an idiom</Link>
+  </ListItem>
+</List>
+    

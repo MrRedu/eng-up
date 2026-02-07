@@ -1,0 +1,97 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Have as an Idiom',
+  description: 'Aprende a usar el verbo "have" en expresiones idiomáticas comunes. Guía sobre "have a shower", "have a look" y más.',
+  keywords: ['have as idiom', 'have expressions', 'expresiones con have', 'gramática inglesa', 'vocabulario inglés'],
+});
+
+# Have as an Idiom
+
+<Typography variant="p" className="text-center text-balance">
+  {`En inglés, el verbo "have" no solo se usa para indicar posesión o como auxiliar. También forma parte de numerosas expresiones idiomáticas donde "have + sustantivo" describe una acción.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. ¿Qué es "Have as an idiom"?
+
+Usamos **have** seguido de un sustantivo para referirnos a acciones cotidianas, especialmente aquellas relacionadas con la comida, el descanso, la higiene y las interacciones sociales. En estos casos, "have" suele equivaler a verbos como "tomar", "hacer" o "dar".
+
+<br />
+
+export const HAVE_IDIOMS_DATA = [
+  { category: 'Comida y Bebida', expressions: 'have breakfast / lunch / dinner, have a drink, have a snack, have a cup of tea', translation: 'desayunar / almorzar / cenar, tomar algo, merendar, tomar una taza de té' },
+  { category: 'Higiene y Cuidado', expressions: 'have a bath, have a shower, have a wash', translation: 'bañarse, ducharse, lavarse' },
+  { category: 'Descanso y Sueño', expressions: 'have a rest, have a sleep, have a dream, have a nap', translation: 'descansar, dormir, tener un sueño, echarse una siesta' },
+  { category: 'Interacción Social', expressions: 'have a chat, have a conversation, have a meeting, have a row / argument', translation: 'charlar, tener una conversación, tener una reunión, tener una pelea' },
+  { category: 'Actividades y Otros', expressions: 'have a look, have a swim, have a walk, have a go, have a holiday', translation: 'echar un vistazo, nadar, dar un paseo, intentarlo, irse de vacaciones' },
+  { category: 'Eventos de Vida', expressions: 'have a baby, have an accident, have a party, have a nice time', translation: 'tener un bebé, tener un accidente, dar una fiesta, pasarla bien' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Categoría</TableHead>
+      <TableHead>Expresiones</TableHead>
+      <TableHead>Traducción</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {HAVE_IDIOMS_DATA.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.category}</TableCell>
+        <TableCell className="font-bold text-primary">{item.expressions}</TableCell>
+        <TableCell className="italic text-muted-foreground text-sm">{item.translation}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="Nota Gramatical">
+  En estas frases idiomáticas, **have** es el verbo principal. Por lo tanto, para preguntas y negaciones en presente simple, usamos el auxiliar **do / does**. <br/>
+  
+  **Correcto:** *Did you have a good holiday?* <br/>
+  **Incorrecto:** *Had you a good holiday?*
+</Alert>
+
+<br />
+
+## 2. Ejemplos Prácticos
+
+A continuación verás cómo se aplican estas expresiones en contextos reales.
+
+<br />
+
+<GrammarExample
+  structure="Subject + Have (conjugated) + Noun phrase"
+  examples={[
+    { type: 'Activity', text: "I'm going to have a shower before dinner.", translation: "Me voy a dar una ducha antes de la cena." },
+    { type: 'Social', text: "We had a long conversation about our future.", translation: "Tuvimos una larga conversación sobre nuestro futuro." },
+    { type: 'Food', text: "Would you like to have a drink with us?", translation: "¿Te gustaría tomar algo con nosotros?" },
+    { type: 'Rest', text: "You look tired. Why don't you have a rest?", translation: "Pareces cansado. ¿Por qué no descansas un poco?" },
+    { type: 'Experience', text: "I hope you have a nice time at the party!", translation: "¡Espero que te lo pases bien en la fiesta!" },
+    { type: 'Look', text: "Can I have a look at your photos?", translation: "¿Puedo echarle un vistazo a tus fotos?" }
+  ]}
+/>
+
+<Alert variant="info" title="Dato Pro">
+  En estas expresiones, no solemos usar "have got". Decimos <HasTranslation translation="Yo me ducho todas las mañanas" as="strong">"I have a shower every morning"</HasTranslation>, no <HasTranslation translation="Yo tengo una ducha" as="strong">"I've got a shower"</HasTranslation> *(esto último significaría que posees una ducha física en tu casa)*.
+</Alert>
+
+<br/>
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/grammar/present-verb-to-have" className="underline">Present Simple: Verb "to have"</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/modal-have-to" className="underline">Modal: Have to</Link>
+  </ListItem>
+</List>
+    
