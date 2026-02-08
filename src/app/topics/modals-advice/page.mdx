@@ -1,0 +1,95 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Modals: Should and Ought to',
+  description: 'Aprende a dar consejos y expresar deberes morales equilibrados usando Should y Ought to. Reglas, diferencias y ejemplos prácticos.',
+  keywords: ['should', 'ought to', 'advice', 'consejos inglés', 'modal verbs', 'gramática inglesa'],
+  canonical: '/topics/modals-advice'
+});
+
+# Modals: Should and Ought to
+
+<Typography variant="p" className="text-center text-balance">
+  {`Utilizamos estos verbos modales principalmente para dar consejos, hacer recomendaciones o expresar lo que consideramos que es correcto o "debido" hacer.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Should vs. Ought to
+
+Ambos significan "debería", pero tienen matices distintos en su uso cotidiano:
+
+<br />
+
+export const ADVICE_COMPARISON = [
+  { modal: 'Should', usage: 'El más común. Se usa para consejos personales, opiniones y sugerencias.', example: 'You should drink more water.', translation: 'Deberías beber más agua.' },
+  { modal: 'Ought to', usage: 'Más formal. Suele referirse a leyes, normas morales o lo que es "objetivamente" correcto.', example: 'We ought to respect the elderly.', translation: 'Deberíamos respetar a los mayores.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Modal</TableHead>
+      <TableHead>Uso Principal</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {ADVICE_COMPARISON.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.modal}</TableCell>
+        <TableCell>{item.usage}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<Alert variant="info" title="Estructura de Ought to">
+  A diferencia de la mayoría de los modales, **Ought to** siempre incluye la partícula **"to"** antes del verbo principal.  
+  *Correct: "You ought **to** study"*  
+  *Incorrect: "You ought study"*
+</Alert>
+
+<br />
+
+## 2. Estructuras Gramaticales
+
+<GrammarExample 
+  structure={[
+    { label: "Affirmative", value: "Subject + should / ought to + Verb (base form)" },
+    { label: "Negative", value: "Subject + shouldn't (should not) + Verb (base form)" },
+    { label: "Interrogative", value: "Should + Subject + Verb (base form)?" }
+  ]}
+  examples={[
+    { type: "Present - Advice (Should)", text: "You should see a doctor.", translation: "Deberías ver a un médico." },
+    { type: "Present - Negative Advice (Shouldn't)", text: "You shouldn't eat so much junk food.", translation: "No deberías comer tanta comida chatarra." },
+    { type: "Present - Question (Should)", text: "Should I call him now?", translation: "¿Debería llamarlo ahora?" },
+    { type: "Present - Moral Obligation (Ought to)", text: "Everyone ought to follow the rules.", translation: "Todos deberían seguir las reglas." }
+  ]}
+/>
+
+<Alert variant="warn" title="Negativa de Ought to">
+  La forma negativa **"ought not to"** es extremadamente formal y poco común. En el 99% de los casos, la gente usa **shouldn't** para dar consejos negativos.
+</Alert>
+
+<Alert variant="destructive" title="Had better: Un consejo fuerte">
+  Si el consejo es una advertencia o tiene consecuencias negativas si no se sigue, usamos **had better** (mejor que...).  
+  *Example: <HasTranslation translation="Mejor que te apures o perderás el bus.">"You'd better hurry or you'll miss the bus."</HasTranslation>*
+</Alert>
+
+<br />
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/modals-basic" className="underline">Modals: Can, Could, Must</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/modals-ability-possibility" className="underline">Modals: Ability and Possibility</Link>
+  </ListItem>
+</List>

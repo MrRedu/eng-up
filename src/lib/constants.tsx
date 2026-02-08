@@ -176,7 +176,6 @@ export const NAVIGATION_DATA: NavGroup[] = [
             url: '/topics/modals-ability-possibility',
           },
           { title: 'Should / Ought to', url: '/topics/modals-advice' },
-          { title: "Auxiliar 'Did'", url: '/topics/auxiliary-did' },
         ],
       },
     ],

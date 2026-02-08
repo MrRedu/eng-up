@@ -8,6 +8,30 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.21.0',
+    title: 'Modals: Should and Ought to Lesson',
+    description:
+      'Added a new lesson covering advice and recommendations with Should, Ought to, and the stronger alternative Had better.',
+    date: '2026-02-08 16:10:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.20.0',
+    title: 'Modals: Ability and Possibility Lesson',
+    description:
+      'Added a new lesson covering Ability and Possibility modals: Can, Could, Be able to, May, and Might, with detailed comparisons and tense usage.',
+    date: '2026-02-08 16:00:00',
+    type: 'feat',
+  },
+  {
+    version: 'v1.19.0',
+    title: 'Modals Basic Lesson (Can, Could, Must)',
+    description:
+      'Added a new lesson covering basic modal verbs: Can, Could, and Must, including their use for ability, permission, possibility, and obligation.',
+    date: '2026-02-08 15:55:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.18.0',
     title: 'Added New Sitemap and Robots.txt',
     description: 'Added new sitemap and robots.txt for SEO purposes.',

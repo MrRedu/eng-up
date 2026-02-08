@@ -1,0 +1,143 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Modals: Ability and Possibility',
+  description: 'Domina los modales de habilidad y posibilidad: Can, Could, Be able to, May y Might. Diferencias de uso, tiempos verbales y ejemplos.',
+  keywords: ['ability', 'possibility', 'can', 'could', 'be able to', 'may', 'might', 'modal verbs', 'gramática inglesa'],
+  canonical: '/topics/modals-ability-possibility'
+});
+
+# Modals: Ability and Possibility
+
+<Typography variant="p" className="text-center text-balance">
+  {`En inglés, expresar lo que somos capaces de hacer o lo que es posible requiere el uso de verbos modales específicos. Estas estructuras nos permiten indicar desde una certeza casi total hasta una remota probabilidad.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Expresando Habilidad (Ability)
+
+Usamos **Can**, **Could** y **Be able to** dependiendo del tiempo verbal y el contexto.
+
+<br />
+
+export const ABILITY_RULES = [
+  { form: 'Can', usage: 'Habilidad general en el presente.', example: 'I can swim.', translation: 'Puedo nadar.' },
+  { form: 'Could', usage: 'Habilidad general en el pasado.', example: 'I could run fast when I was a child.', translation: 'Podía correr rápido cuando era niño.' },
+  { form: 'Be able to', usage: 'Habilidad en cualquier tiempo verbal (especialmente futuro y perfectos).', example: 'I will be able to help you tomorrow.', translation: 'Podré ayudarte mañana.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Estructura</TableHead>
+      <TableHead>Uso</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {ABILITY_RULES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.form}</TableCell>
+        <TableCell>{item.usage}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="Could vs. Was able to">
+  Usamos **Could** para una habilidad general en el pasado. Sin embargo, para una acción específica y exitosa en un momento concreto del pasado, es mejor usar **was/were able to** o **managed to**.
+  
+  *Ejemplo: <HasTranslation translation="Incluso si la puerta estaba cerrada, pude abrirla." >"Even though the door was locked, I **was able to** open it."</HasTranslation>*
+</Alert>
+
+<br />
+<br />
+
+## 2. Expresando Posibilidad (Possibility)
+
+Para hablar de cosas que pueden suceder, usamos **May**, **Might** y **Could**.
+
+<br />
+
+export const POSSIBILITY_LEVELS = [
+  { modal: 'May', level: 'Probabilidad media/alta (Factual o formal).', example: 'It may rain later.', translation: 'Puede que llueva más tarde.' },
+  { modal: 'Might', level: 'Probabilidad baja (Remota o hipotética).', example: 'We might win the lottery.', translation: 'Podríamos ganar la lotería.' },
+  { modal: 'Could', level: 'Posibilidad teórica o sugerencia.', example: 'You could be right.', translation: 'Podrías tener razón.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Modal</TableHead>
+      <TableHead>Grado de Certeza</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {POSSIBILITY_LEVELS.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.modal}</TableCell>
+        <TableCell>{item.level}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="warn" title="Interrogativas con May/Might">
+  No solemos usar **May** o **Might** en preguntas para hablar de posibilidad. En su lugar, preferimos **Could** o la expresión **Do you think...?**
+  
+  *<HasTranslation translation="Correcto" as="strong">Correct</HasTranslation>: <HasTranslation translation="¿Crees que lloverá?" >"Do you think it will rain?"</HasTranslation>* o *<HasTranslation translation="¿Podría ser verdad?" >"Could it be true?"</HasTranslation>*  
+  *<HasTranslation translation="Poco común" as="strong">Uncommon</HasTranslation>: <HasTranslation translation="¿Podría llover?" >"May it rain?"</HasTranslation>*
+</Alert>
+
+<br />
+
+## Estructuras Gramaticales
+
+<GrammarExample 
+  structure={[
+    { label: "Affirmative", value: "Subject + Modal + Verb (base form)" },
+    { label: "Negative", value: "Subject + Modal + not + Verb (base form)" },
+    { label: "Interrogative", value: "Modal + Subject + Verb (base form)?" }
+  ]}
+  examples={[
+    { type: "Present - Ability (Can't)", text: "She can't find her keys.", translation: "Ella no puede encontrar sus llaves." },
+    { type: "Present/Future - Possibility (Might not)", text: "They might not come tonight.", translation: "Puede que no vengan esta noche." },
+    { type: "Future - Ability (Will be able to)", text: "Will you be able to finish on time?", translation: "¿Serás capaz de terminar a tiempo?" },
+    { type: "Past - Ability (Could)", text: "He could read when he was four years old.", translation: "Él podía leer cuando tenía cuatro años." },
+    { type: "Present/Future - Possibility (Could)", text: "It could be a mistake.", translation: "Podría ser un error." },
+    { type: "Future - Remote Possibility (Might)", text: "If I win the lottery, I might buy a house.", translation: "Si gano la lotería, puede que compre una casa." },
+    { type: "Present/Future - Formal Possibility (May)", text: "The meeting may be cancelled due to the rain.", translation: "La reunión puede ser cancelada debido a la lluvia." },
+    { type: "Pres. Perfect - Ability (Been able to)", text: "I haven't been able to sleep well lately.", translation: "No he podido dormir bien últimamente." }
+  ]}
+/>
+
+<Alert variant="info" title="May as Permission">
+  Recuerda que **May** también se usa para pedir permiso de forma muy formal.  
+  *Example: <HasTranslation translation="¿Puedo pasar? (De entrar a un lugar)">"May I come in?"</HasTranslation>*
+</Alert>
+
+<br />
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/modals-basic" className="underline">Modals: Can, Could, Must</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/modal-have-to" className="underline">Modal: Have to</Link>
+  </ListItem>
+</List>
