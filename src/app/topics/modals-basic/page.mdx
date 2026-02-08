@@ -1,0 +1,147 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Modals: Can, Could, Must',
+  description: 'Aprende los usos básicos de Can, Could y Must en inglés. Guía sobre habilidad, permiso, posibilidad y obligación con ejemplos prácticos.',
+  keywords: ['can', 'could', 'must', 'modal verbs', 'verbos modales', 'gramática inglesa', 'inglés básico'],
+  canonical: '/topics/modals-basic'
+});
+
+# Modals: Can, Could, Must
+
+<Typography variant="p" className="text-center text-balance">
+  {`Los verbos modales son herramientas esenciales para expresar matices como la capacidad, el permiso, la posibilidad o la necesidad. A diferencia de otros verbos, son invariables y siempre preceden a un verbo en infinitivo sin "to".`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Can (Poder)
+
+Es el modal más versátil. Lo usamos principalmente en el presente para tres situaciones clave:
+
+<br />
+
+export const CAN_USES = [
+  { use: 'Habilidad / Capacidad', example: 'I can speak three languages.', translation: 'Puedo hablar tres idiomas.' },
+  { use: 'Permiso (Informal)', example: 'Can I use your pen?', translation: '¿Puedo usar tu bolígrafo?' },
+  { use: 'Posibilidad real', example: 'It can be very cold in winter.', translation: 'Puede hacer mucho frío en invierno.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Uso</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {CAN_USES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium text-nowrap">{item.use}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+<br />
+
+## 2. Could (Podía / Podría)
+
+Se utiliza como el pasado de "can" o como una forma más educada y condicional.
+
+<br />
+
+export const COULD_USES = [
+  { use: 'Habilidad en el pasado', example: 'When I was young, I could run fast.', translation: 'Cuando era joven, podía correr rápido.' },
+  { use: 'Petición cortés', example: 'Could you open the window, please?', translation: '¿Podría abrir la ventana, por favor?' },
+  { use: 'Sugerencia o posibilidad', example: 'We could go to the cinema tonight.', translation: 'Podríamos ir al cine esta noche.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Uso</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {COULD_USES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium text-nowrap">{item.use}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 3. Must (Deber)
+
+Expresa una obligación ineludible o una conclusión lógica muy clara.
+
+<br />
+
+export const MUST_USES = [
+  { use: 'Obligación fuerte', example: 'You must wear a uniform at school.', translation: 'Debes usar uniforme en la escuela.' },
+  { use: 'Deducción lógica (Certeza)', example: 'You have worked all day. You must be tired.', translation: 'Has trabajado todo el día. Debes estar cansado.' },
+  { use: 'Prohibición (Mustn\'t)', example: 'You mustn\'t smoke here.', translation: 'No debes fumar aquí. (Prohibido)' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Uso</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {MUST_USES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium text-nowrap">{item.use}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="Diferencia Crucial: Mustn't vs. Don't have to">
+  **Mustn't** significa que algo está prohibido o es una muy mala idea.  
+  **Don't have to** significa que no es necesario, pero tienes la opción de hacerlo.
+</Alert>
+
+<br />
+
+## Estructura General
+
+Todos los modales comparten la misma estructura gramatical simple:
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { label: "Affirmative", value: "Subject + Modal + Verb (base form)" },
+    { label: "Negative", value: "Subject + Modal + not + Verb (base form)" },
+    { label: "Interrogative", value: "Modal + Subject + Verb (base form)?" }
+  ]}
+  examples={[
+    { type: "Affirmative", text: "He can play the guitar.", translation: "Él puede tocar la guitarra." },
+    { type: "Negative", text: "I couldn't sleep last night.", translation: "No pude dormir anoche." },
+    { type: "Interrogative", text: "Must we leave now?", translation: "¿Debemos irnos ahora?" }
+  ]}
+/>
+
+<Alert variant="destructive" title="Importante">
+    Nunca uses **"to"** después de los modales. Decir **"I can to swim"** es un error común que debes evitar.
+</Alert>

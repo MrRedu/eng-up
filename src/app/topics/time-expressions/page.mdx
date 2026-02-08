@@ -1,0 +1,116 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Time Expressions in English',
+  description: 'Guía sobre expresiones de tiempo en inglés para presente, pasado y futuro. Aprende a situar acciones en el tiempo correctamente.',
+  keywords: ['time expressions', 'expresiones de tiempo', 'ago', 'last', 'next', 'in', 'on', 'at', 'gramática inglesa'],
+  canonical: '/topics/time-expressions'
+});
+
+# Time Expressions
+
+<Typography variant="p" className="text-center text-balance">
+  {`Las expresiones de tiempo son fundamentales para situar nuestras acciones en el cronograma correcto. Dependiendo del tiempo verbal que estemos usando, existen palabras clave que nos ayudan a ser más precisos.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Expresiones por Tiempo Verbal
+
+Cada tiempo tiene sus expresiones "favoritas" que suelen acompañarlo casi siempre.
+
+<br />
+
+export const TIME_EXPRESSIONS = [
+  { tense: 'Present Simple', words: 'Every day, usually, often, on Mondays.', example: 'I study every day.', translation: 'Estudio todos los días.' },
+  { tense: 'Present Continuous', words: 'Now, at the moment, right now.', example: 'I am eating right now.', translation: 'Estoy comiendo justo ahora.' },
+  { tense: 'Past Simple', words: 'Yesterday, ago, last week, in 2010.', example: 'I went home two hours ago.', translation: 'Me fui a casa hace dos horas.' },
+  { tense: 'Future', words: 'Tomorrow, next month, soon, in the future.', example: 'We will travel next month.', translation: 'Viajaremos el próximo mes.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Tiempo Verbal</TableHead>
+      <TableHead>Expresiones Comunes</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {TIME_EXPRESSIONS.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium text-nowrap">{item.tense}</TableCell>
+        <TableCell className="text-primary">{item.words}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+## 2. El uso de "Ago", "Last" y "Next"
+
+Estas tres palabras son los pilares de las referencias temporales en inglés.
+
+<List variant="alpha">
+  <ListItem>
+    <HasTranslation as="strong" translation="Hace">Ago</HasTranslation>: Se coloca **al final** del periodo de tiempo.
+    *   <HasTranslation translation="Hace diez minutos">"Ten minutes **ago**"</HasTranslation>
+    *   <HasTranslation translation="Hace tres años">"Three years **ago**"</HasTranslation>
+  </ListItem>
+  <ListItem>
+    <HasTranslation as="strong" translation="Pasado/a">Last</HasTranslation>: Se coloca **antes** del periodo.
+    *   <HasTranslation translation="La semana pasada">"**Last** week"</HasTranslation>
+    *   <HasTranslation translation="El año pasado">"**Last** year"</HasTranslation>
+  </ListItem>
+  <ListItem>
+    <HasTranslation as="strong" translation="Próximo/a">Next</HasTranslation>: Se coloca **antes** del periodo.
+    *   <HasTranslation translation="El próximo mes">"**Next** month"</HasTranslation>
+    *   <HasTranslation translation="El próximo lunes">"**Next** Monday"</HasTranslation>
+  </ListItem>
+</List>
+
+<Alert variant="destructive" title="Preposiciones de Tiempo (At, In, On)">
+  Recuerda la regla básica:
+  *   **At**: Horas y momentos específicos (*At 5:00, At night*).
+  *   **On**: Días y fechas (*On Monday, On My birthday*).
+  *   **In**: Meses, años y periodos largos (*In July, In 2024, In the morning*).
+</Alert>
+
+<br />
+
+## Ejemplos Dinámicos
+
+<GrammarExample 
+  structure={[
+    { label: "Structure", value: "Subject + Verb + ... + Time Expression" }
+  ]}
+  examples={[
+    { type: "Past - Ago", text: "They left five minutes ago.", translation: "Se fueron hace cinco minutos." },
+    { type: "Future - Next", text: "I'll see you next weekend.", translation: "Te veré el próximo fin de semana." },
+    { type: "Present - Habit", text: "She exercises every morning.", translation: "Ella hace ejercicio cada mañana." },
+    { type: "Past - Specific", text: "We met in 2015.", translation: "Nos conocimos en el 2015." }
+  ]}
+/>
+
+<Alert variant="warn" title="Evita este error">
+  No uses "the" antes de **last** o **next** cuando hablas de periodos relativos al ahora.  
+  *Incorrect: "I saw him the last week."* → *Correct: "I saw him **last week**."*
+</Alert>
+
+<br />
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/adverbs-time" className="underline">Adverbs of Time</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/adverbs-frequency" className="underline">Adverbs of Frequency</Link>
+  </ListItem>
+</List>

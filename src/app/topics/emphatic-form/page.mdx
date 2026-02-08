@@ -1,0 +1,113 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Emphatic Form: Do, Does, Did',
+  description: 'Aprende a usar la forma enfática en inglés para resaltar sentimientos, contradecir afirmaciones o dar seguridad. Guía sobre el uso de Do, Does y Did en oraciones afirmativas.',
+  keywords: ['emphatic form', 'do for emphasis', 'enfático inglés', 'do does did emphasis', 'gramática inglesa'],
+  canonical: '/topics/emphatic-form'
+});
+
+# Emphatic Form (Do, Does, Did)
+
+<Typography variant="p" className="text-center text-balance">
+  {`La forma enfática consiste en usar los auxiliares `}<strong>do</strong>{`, `}<strong>does</strong>{` o `}<strong>did</strong>{` en oraciones afirmativas, donde normalmente no se usarían. Su propósito es dar fuerza emocional, enfatizar una verdad o contradecir lo que alguien más ha dicho.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. ¿Cómo funciona?
+
+En lugar de usar solo el verbo principal, añadimos el auxiliar correspondiente antes del verbo en su **forma base**.
+
+<br />
+
+export const EMPHATIC_RULES = [
+  { tense: 'Present (I/You/We/They)', structure: 'do + verb', example: 'I do like pizza.', translation: 'Realmente me gusta la pizza.' },
+  { tense: 'Present (He/She/It)', structure: 'does + verb', example: 'She does look tired.', translation: 'Ella sí que parece cansada.' },
+  { tense: 'Past (All subjects)', structure: 'did + verb', example: 'We did go to the party.', translation: 'Sí que fuimos a la fiesta.' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Tiempo / Sujeto</TableHead>
+      <TableHead>Estructura</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {EMPHATIC_RULES.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-medium">{item.tense}</TableCell>
+        <TableCell className="font-bold text-primary">{item.structure}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="info" title="El Verbo vuelve a su forma base">
+  Al igual que en las negativas e interrogativas, cuando usamos el auxiliar enfático, el verbo principal **no** lleva "s" ni cambia al pasado.  
+  *Incorrect: "She does looks..."* → *Correct: "She **does look**..."*  
+  *Incorrect: "I did went..."* → *Correct: "I **did go**..."*
+</Alert>
+
+<br />
+
+## 2. ¿Cuándo usarla?
+
+Existen tres situaciones principales donde el énfasis es clave:
+
+<List variant="alpha">
+  <ListItem>
+    **Para contradecir a alguien**: Si alguien dice <HasTranslation translation="¡Tú no estudias!">"You don't study"</HasTranslation>, tú respondes: <HasTranslation translation="¡Yo sí estudio!">"I **do** study!"</HasTranslation>.
+  </ListItem>
+  <ListItem>
+    **Para mostrar sentimientos fuertes**: <HasTranslation translation="¡De verdad me encanta esta canción!">"I **do** love this song!"</HasTranslation>.
+  </ListItem>
+  <ListItem>
+    **Para dar seguridad o confirmar**: <HasTranslation translation="Sí que cerré la puerta.">"I **did** lock the door."</HasTranslation>
+  </ListItem>
+</List>
+
+<br />
+
+## Ejemplos Comparativos
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { label: "Normal", value: "Sujeto + Verbo" },
+    { label: "Enfática", value: "Sujeto + Do/Does/Did + Verbo (base)" }
+  ]}
+  examples={[
+    { type: "Present - Normal", text: "I like your hair.", translation: "Me gusta tu cabello." },
+    { type: "Present - Emphatic", text: "I do like your hair!", translation: "¡Realmente me gusta tu cabello!" },
+    { type: "Past - Normal", text: "He called you.", translation: "Él te llamó." },
+    { type: "Past - Emphatic", text: "He did call you, but you didn't answer.", translation: "Él sí te llamó, pero no respondiste." },
+    { type: "3rd Person - Emphatic", text: "It does rain a lot here.", translation: "Vaya que llueve mucho aquí." }
+  ]}
+/>
+
+<Alert variant="warn" title="Pronunciación">
+  Al hablar, el auxiliar (**do/does/did**) siempre se pronuncia con más fuerza (estrés) para marcar el énfasis.
+</Alert>
+
+<br />
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/grammar/present-simple" className="underline">Present Simple (Do/Does)</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/grammar/past-simple" className="underline">Past Simple (Did)</Link>
+  </ListItem>
+</List>
