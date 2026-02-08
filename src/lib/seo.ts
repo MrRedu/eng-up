@@ -6,6 +6,7 @@ interface MetadataProps {
   keywords?: string[];
   image?: string;
   noIndex?: boolean;
+  canonical?: string;
 }
 
 export function constructMetadata({
@@ -14,16 +15,23 @@ export function constructMetadata({
   keywords,
   image = '/og-1920x1080.webp',
   noIndex = false,
+  canonical,
 }: MetadataProps): Metadata {
+  const baseUrl = 'https://eng-up.vercel.app';
+  const canonicalUrl = canonical ? `${baseUrl}${canonical}` : baseUrl;
+
   return {
     title,
     description,
     keywords,
-    metadataBase: new URL('https://eng-up.vercel.app'),
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title,
       description,
-      url: 'https://eng-up.vercel.app',
+      url: canonicalUrl,
       siteName: 'Eng-Up',
       locale: 'es_ES',
       type: 'website',
