@@ -25,6 +25,7 @@ export const metadata = constructMetadata({
     'cuaderno digital',
     'inglés interactivo',
   ],
+  canonical: '/',
 });
 
 const FEATURES = [

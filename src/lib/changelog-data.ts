@@ -8,6 +8,13 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.18.0',
+    title: 'Added New Sitemap and Robots.txt',
+    description: 'Added new sitemap and robots.txt for SEO purposes.',
+    date: '2026-02-08 00:00:00',
+    type: 'docs',
+  },
+  {
     version: 'v1.17.0',
     title: 'Adverbs Module & Content Refactoring',
     description:

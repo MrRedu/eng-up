@@ -16,6 +16,7 @@ export const metadata = constructMetadata({
     'verbos ingleses',
     'recursos educativos',
   ],
+  canonical: '/topics',
 });
 
 export default function TopicsPage() {
