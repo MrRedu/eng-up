@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.23.0',
+    title: 'Time Expressions Lesson',
+    description:
+      'Added a new lesson covering time expressions for present, past, and future, including the use of "ago", "last", "next", and time prepositions (at, in, on).',
+    date: '2026-02-08 16:25:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.22.0',
     title: 'Emphatic Form Lesson',
     description:
