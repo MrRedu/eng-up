@@ -161,6 +161,7 @@ export default function Home() {
               </div>
               <Typography
                 variant="h4"
+                as="h3"
                 className="mb-2 uppercase tracking-wide text-sm font-bold"
               >
                 {feature.title}
@@ -278,6 +279,8 @@ export default function Home() {
                     src={member.avatar}
                     alt={member.name}
                     // fill
+                    width={48}
+                    height={48}
                     className="object-cover"
                   />
                 ) : (
@@ -305,6 +308,8 @@ export default function Home() {
                   <Link
                     href={`https://github.com/${member.handle.replace('@', '')}`}
                     target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver perfil de GitHub de ${member.name}`}
                   >
                     <Code className="size-3" />
                   </Link>
@@ -318,6 +323,7 @@ export default function Home() {
           <div className="space-y-2">
             <Typography
               variant="h4"
+              as="h3"
               className="border-none mb-0 tracking-tight"
             >
               ¿Quieres colaborar?
@@ -333,7 +339,9 @@ export default function Home() {
             <Link
               href="https://github.com/MrRedu/eng-up"
               target="_blank"
+              rel="noopener noreferrer"
               className="gap-2"
+              aria-label="Ver Repositorio en GitHub"
             >
               <Code className="h-4 w-4" /> Ver Repositorio
             </Link>

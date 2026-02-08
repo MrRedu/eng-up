@@ -41,6 +41,7 @@ type POSSIBLE_VARIANTS =
 
 interface TypographyProps {
   variant?: POSSIBLE_VARIANTS;
+  as?: keyof JSX.IntrinsicElements;
   className?: string;
   id?: string;
   children: React.ReactNode;
@@ -64,12 +65,13 @@ const tagMap: Record<POSSIBLE_VARIANTS, keyof JSX.IntrinsicElements> = {
 
 export const Typography = ({
   variant = 'p',
+  as,
   className,
   children,
   id,
   ...props
 }: TypographyProps) => {
-  const Tag = tagMap[variant] || 'p';
+  const Tag = as || tagMap[variant] || 'p';
 
   return (
     <Tag

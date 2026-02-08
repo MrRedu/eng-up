@@ -8,7 +8,7 @@ export const HeaderSidebar = () => {
     <SidebarHeader className="p-4">
       <Link href="/" className="flex items-center gap-2">
         <Image src="/logo.svg" alt="Logo" width={40} height={40} />
-        <Typography variant="h1" className="text-xl">
+        <Typography variant="h1" as="span" className="text-xl">
           Eng-Up
         </Typography>
       </Link>
