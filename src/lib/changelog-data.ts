@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.22.0',
+    title: 'Emphatic Form Lesson',
+    description:
+      'Added a new lesson covering the Emphatic Form using Do, Does, and Did in affirmative sentences to add emphasis or contradict statements.',
+    date: '2026-02-08 16:20:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.21.0',
     title: 'Modals: Should and Ought to Lesson',
     description:
