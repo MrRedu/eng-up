@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.24.0',
+    title: 'WH Questions Lesson',
+    description:
+      'Added a comprehensive guide on WH Questions, covering interrogative words (Who, What, Where, When, Why, How, Which, Whose) and their grammatical structures in questions.',
+    date: '2026-02-16 14:30:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.23.0',
     title: 'Time Expressions Lesson',
     description:
