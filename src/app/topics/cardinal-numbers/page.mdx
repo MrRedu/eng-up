@@ -182,11 +182,8 @@ export const metadata = constructMetadata({
 </Alert>
 
 <br />
-<br />
 
 ## Ejemplos de uso
-
-<br />
 
 export const CARDINAL_NUMBERS_EXAMPLES = [
   { label: "Quantity", translation: "Cantidad.", content: <>I have <strong>three</strong> brothers.</>, contentTranslation: <>Tengo <strong>tres</strong> hermanos.</> },
@@ -194,7 +191,7 @@ export const CARDINAL_NUMBERS_EXAMPLES = [
   { label: "Year", translation: "Año.", content: <>It is <strong>twenty twenty-six</strong>.</>, contentTranslation: <>Es <strong>veinte veintiséis</strong>.</> }
 ];
 
-<List>
+<List className="mt-0">
   {CARDINAL_NUMBERS_EXAMPLES.map((example, index) => (
     <ListItem key={index} className='flex flex-col md:flex-row items-start gap-2'>
     <HasTranslation translation={example.translation} as="strong">
