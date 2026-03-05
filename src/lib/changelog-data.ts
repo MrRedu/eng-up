@@ -8,6 +8,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: 'v1.25.0',
+    title: 'New Grammar Topics Added',
+    description:
+      'Expanded the curriculum with several new topics including Future Forms (will, be going to, present continuous/simple), Passive Voice, Relative Clauses, Connectors, Gerunds & Infinitives, Phrasal Verbs, and common vocabulary confusions.',
+    date: '2026-03-04 20:42:00',
+    type: 'feat',
+  },
+  {
     version: 'v1.24.0',
     title: 'WH Questions Lesson',
     description:

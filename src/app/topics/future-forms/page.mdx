@@ -1,0 +1,171 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'Future Forms: Will, Going to, Present Continuous & Simple',
+  description: 'Aprende las diferentes formas de expresar el futuro en inglés. Diferencias entre Will, Be Going To, Present Continuous y Present Simple con ejemplos y explicaciones claras.',
+  keywords: ['future forms', 'will vs going to', 'future present continuous', 'future present simple', 'gramática inglesa', 'futuro en inglés'],
+  canonical: '/topics/future-forms'
+});
+
+# Future Forms
+
+<Typography variant="p" className="text-center text-balance">
+  {`En inglés, no existe una única forma de hablar del futuro. La elección de la estructura depende de si estamos hablando de una decisión espontánea, un plan previo, una predicción o un horario establecido.`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Future Simple (Will)
+
+Se utiliza principalmente para acciones que decidimos en el momento de hablar, predicciones basadas en opiniones y promesas.
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { label: "Affirmative", value: "Subject + will + verb (base form)" },
+    { label: "Negative", value: "Subject + won't (will not) + verb (base form)" },
+    { label: "Question", value: "Will + subject + verb (base form)?" }
+  ]}
+  examples={[
+    { type: "Decision", text: "I'll (I will) help you with those bags.", translation: "Te ayudaré con esas maletas." },
+    { type: "Prediction", text: "I think it will rain tomorrow.", translation: "Creo que lloverá mañana." },
+    { type: "Promise", text: "I will always love you.", translation: "Siempre te amaré." }
+  ]}
+/>
+
+<br />
+<br />
+
+## 2. Be Going To
+
+Se utiliza para planes e intenciones previas (ya decididas antes de hablar) y para predicciones basadas en **evidencia física** que vemos en el presente.
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { label: "Affirmative", value: "Subject + am/is/are + going to + verb" },
+    { label: "Negative", value: "Subject + am/is/are + not + going to + verb" },
+    { label: "Question", value: "Am/Is/Are + subject + going to + verb?" }
+  ]}
+  examples={[
+    { type: "Plan", text: "We are going to buy a new car next month.", translation: "Vamos a comprar un coche nuevo el mes que viene." },
+    { type: "Evidence", text: "Look at those clouds! It is going to rain.", translation: "¡Mira esas nubes! Va a llover." },
+    { type: "Intention", text: "I'm going to study harder this year.", translation: "Voy a estudiar más duro este año." }
+  ]}
+/>
+
+<br />
+
+<Alert variant="info" title="Will vs Going To">
+  Usa **Will** para decisiones repentinas ("I'll call you back"). Usa **Going to** para planes ya hechos ("I'm going to visit my grandma on Saturday").
+</Alert>
+
+<br />
+<br />
+
+## 3. Present Continuous for Future
+
+Se utiliza para **acuerdos definitivos** (arrangements). A diferencia de "going to" (que es una intención), el presente continuo implica que ya se han tomado medidas para que ocurra (comprar boletos, reservar una mesa, quedar con alguien).
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { value: "Subject + am/is/are + verb-ing + future time expression" },
+  ]}
+  examples={[
+    { type: "Social", text: "I'm meeting Sarah at 7:00 PM.", translation: "He quedado con Sarah a las 7:00 PM." },
+    { type: "Travel", text: "They are flying to London tomorrow morning.", translation: "Ellos vuelan a Londres mañana por la mañana." },
+    { type: "Professional", text: "We're having a meeting on Tuesday.", translation: "Tenemos una reunión el martes." }
+  ]}
+/>
+
+<br />
+<br />
+
+## 4. Present Simple for Future
+
+Se utiliza principalmente para hablar de **horarios fijos** (timetables) o programas oficiales (transporte público, cine, clases).
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { value: "Subject + verb (s/es for 3rd person) + time expression" },
+  ]}
+  examples={[
+    { type: "Transport", text: "The train leaves at 8:30.", translation: "El tren sale a las 8:30." },
+    { type: "Event", text: "The film starts at 9:00 PM.", translation: "La película empieza a las 9:00 PM." },
+    { type: "Schedule", text: "Classes begin next Monday.", translation: "Las clases empiezan el próximo lunes." }
+  ]}
+/>
+
+<br />
+<br />
+
+## Tabla Comparativa
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Forma</TableHead>
+      <TableHead>Uso Principal</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-bold">Will</TableCell>
+      <TableCell>Decisiones espontáneas, predicciones (opinión), promesas.</TableCell>
+      <TableCell><HasTranslation translation="Tendré un café, por favor.">I'll have a coffee, please.</HasTranslation></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-bold">Going to</TableCell>
+      <TableCell>Planes, intenciones, predicciones (evidencia).</TableCell>
+      <TableCell><HasTranslation translation="Voy a visitar a mis padres.">I'm going to visit my parents.</HasTranslation></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-bold">Pres. Continuous</TableCell>
+      <TableCell>Acuerdos fijos con fecha/hora.</TableCell>
+      <TableCell><HasTranslation translation="Cenamos con ellos mañana.">We're having dinner with them tomorrow.</HasTranslation></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-bold">Pres. Simple</TableCell>
+      <TableCell>Horarios oficiales, transportes.</TableCell>
+      <TableCell><HasTranslation translation="El avión aterriza a las 6:00.">The plane lands at 6:00.</HasTranslation></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+<br />
+
+<Alert variant="warn" title="¿Cuándo no usar Presente Simple?">
+  **No** uses el presente simple para planes personales. <br/><br/>
+  *Correcto*: <HasTranslation translation="Voy al cine esta noche.">"I'm going to the cinema tonight"</HasTranslation> <br/>
+  *Incorrecto*: "I go to the cinema tonight".
+</Alert>
+
+<br />
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/grammar/future-simple" className="underline">Future Simple (Will)</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/grammar/future-going-to" className="underline">Future Simple (Going to)</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/grammar/present-simple" className="underline">Present Simple</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/grammar/present-continuous" className="underline">Present Continuous</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/time-expressions" className="underline">Time Expressions</Link>
+  </ListItem>
+</List>
