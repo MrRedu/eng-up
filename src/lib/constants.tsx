@@ -104,6 +104,8 @@ export const NAVIGATION_DATA: NavGroup[] = [
             title: 'Inferiority comparison',
             url: '/topics/comparatives-inferiority',
           },
+          { title: 'Order of adjectives', url: '/topics/order-adjectives' },
+          { title: 'Like / As', url: '/topics/like-as' },
         ],
       },
     ],
@@ -161,6 +163,16 @@ export const NAVIGATION_DATA: NavGroup[] = [
                 title: 'Perfect Continuous',
                 url: '/grammar/future-perfect-continuous',
               },
+              { title: 'Future forms', url: '/topics/future-forms' },
+            ],
+          },
+          {
+            title: 'Otros',
+            subItems: [
+              {
+                title: 'Gerunds & Infinitives',
+                url: '/topics/gerunds-infinitives',
+              },
             ],
           },
         ],
@@ -207,6 +219,9 @@ export const NAVIGATION_DATA: NavGroup[] = [
           { title: 'Negative Questions', url: '/topics/negative-questions' },
           { title: 'Word Order', url: '/topics/word-order' },
           { title: 'Causative Form', url: '/topics/causative-form' },
+          { title: 'Passive voice', url: '/topics/passive-voice' },
+          { title: 'Relative clauses', url: '/topics/relative-clauses' },
+          { title: 'Connectors (Linking words)', url: '/topics/connectors' },
         ],
       },
     ],
@@ -250,6 +265,29 @@ export const NAVIGATION_DATA: NavGroup[] = [
           { title: 'Time expressions', url: '/topics/time-expressions' },
           { title: 'Either / Neither', url: '/topics/either-neither' },
           { title: 'Emphatic form', url: '/topics/emphatic-form' },
+        ],
+      },
+      {
+        title: 'Phrasal Verbs',
+        icon: Zap,
+        subItems: [
+          { title: 'Look / Take', url: '/topics/phrasal-verbs-look-take' },
+        ],
+      },
+      {
+        title: 'Vocabulario y Confusiones',
+        icon: HelpCircle,
+        subItems: [
+          { title: 'Do / Make', url: '/topics/do-make' },
+          { title: 'Let / Whom / Also / Too', url: '/topics/common-words' },
+          {
+            title: 'Synonyms, Antonyms & Cognates',
+            url: '/topics/vocabulary',
+          },
+          {
+            title: 'Common Confusions',
+            url: '/topics/common-confusions',
+          },
         ],
       },
     ],

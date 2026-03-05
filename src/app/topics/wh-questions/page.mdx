@@ -1,0 +1,153 @@
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: 'WH Questions (Interrogative Words)',
+  description: 'Guía completa sobre las WH Questions en inglés: Who, Whom, What, Where, When, Why, How, Which y Whose. Aprende su significado y cómo formar preguntas correctamente.',
+  keywords: ['wh questions', 'interrogative pronouns', 'whom vs who', 'preguntas ingles', 'what where when who', 'gramática inglesa'],
+  canonical: '/topics/wh-questions'
+});
+
+# WH Questions
+
+<Typography variant="p" className="text-center text-balance">
+  {`Las "WH questions" son preguntas que comienzan con palabras interrogativas (la mayoría empieza por WH) y se utilizan para solicitar información específica en lugar de una simple respuesta de "sí" o "no".`}
+</Typography>
+
+<br />
+<br />
+
+## 1. Las Palabras Interrogativas
+
+A continuación se presentan las palabras WH más comunes y el tipo de información que solicitan:
+
+<br />
+
+export const WH_WORDS = [
+  { word: 'What', usage: 'Cosas, acciones o información general', example: 'What is your name?', translation: '¿Cuál es tu nombre?' },
+  { word: 'Where', usage: 'Lugares o posiciones', example: 'Where do you live?', translation: '¿Dónde vives?' },
+  { word: 'When', usage: 'Tiempo, momentos u ocasiones', example: 'When is the party?', translation: '¿Cuándo es la fiesta?' },
+  { word: 'Who', usage: 'Personas (enfocado en el SUJETO)', example: 'Who is calling?', translation: '¿Quién está llamando?' },
+  { word: 'Whom', usage: 'Personas (enfocado en el OBJETO)', example: 'Whom did you see?', translation: '¿A quién viste?' },
+  { word: 'Why', usage: 'Razones o motivos', example: 'Why are you late?', translation: '¿Por qué llegas tarde?' },
+  { word: 'How', usage: 'Manera, estado o cantidad', example: 'How are you?', translation: '¿Cómo estás?' },
+  { word: 'Which', usage: 'Elección entre opciones limitadas', example: 'Which color do you prefer?', translation: '¿Qué color prefieres?' },
+  { word: 'Whose', usage: 'Posesión', example: 'Whose keys are these?', translation: '¿De quién son estas llaves?' },
+];
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Palabra</TableHead>
+      <TableHead>Uso (Busca...)</TableHead>
+      <TableHead>Ejemplo</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {WH_WORDS.map((item, index) => (
+      <TableRow key={index}>
+        <TableCell className="font-bold text-primary">{item.word}</TableCell>
+        <TableCell>{item.usage}</TableCell>
+        <TableCell>
+          <HasTranslation translation={item.translation}>{item.example}</HasTranslation>
+        </TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+<Alert variant="info" title="Who vs Whom">
+  En el inglés moderno, **Who** se usa casi siempre. **Whom** es mucho más formal y se utiliza específicamente cuando la persona es el **objeto** de la oración (a quien le sucede la acción) o después de una preposición (e.g., *To whom...*).
+</Alert>
+
+<br />
+
+## 2. Estructura de la Pregunta
+
+Para formar preguntas correctamente, la estructura cambia dependiendo del tipo de verbo principal que estemos utilizando.
+
+<br />
+
+### A. Con el "Verb to Be"
+Se utiliza para preguntar sobre estados, identidades o ubicaciones.
+
+<br />
+
+<GrammarExample 
+  structure={[
+    {  value: "WH word + Verb to Be (am/is/are/was/were) + Subject + ...?" },
+  ]}
+  examples={[
+    { type: "Identity", text: "Who is that man?", translation: "¿Quién es ese hombre?" },
+    { type: "Location", text: "Where are my shoes?", translation: "¿Dónde están mis zapatos?" },
+    { type: "Time", text: "When was the exam?", translation: "¿Cuándo fue el examen?" }
+  ]}
+/>
+
+<br />
+<br />
+
+### B. Con Auxiliares (Acciones)
+Se utiliza para preguntar sobre acciones en diferentes tiempos verbales.
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { value: "WH word + Aux verb (do/does/did/will) + subject + verb + ...?" },
+  ]}
+  examples={[
+    { type: "Present", text: "What do you do for fun?", translation: "¿Qué haces para divertirte?" },
+    { type: "Past", text: "Why did she leave early?", translation: "¿Por qué se fue ella temprano?" },
+    { type: "Future", text: "How will they pay for it?", translation: "¿Cómo lo pagarán ellos?" }
+  ]}
+/>
+
+<br />
+<br />
+
+## 3. Variaciones Avanzadas
+
+<br />
+
+### Combinaciones con "How"
+La palabra **How** cambia su significado según el adjetivo o adverbio que la acompañe.
+
+<br />
+
+<GrammarExample 
+  structure={[
+    { label: "How + Adjetivo", value: "How far / How long / How many / How much" },
+    { label: "Pregunta", value: "is it? / does it take? / people were there?" }
+  ]}
+  examples={[
+    { type: "Distance", text: "How far is the airport?", translation: "¿Qué tan lejos está el aeropuerto?" },
+    { type: "Duration", text: "How long is the movie?", translation: "¿Cuánto dura la película?" },
+    { type: "Quantity", text: "How many apps do you have?", translation: "¿Cuántas apps tienes?" },
+    { type: "Price", text: "How much did you pay?", translation: "¿Cuánto pagaste?" }
+  ]}
+/>
+
+<br />
+
+<Alert variant="warn" title="Preguntas de Sujeto">
+  Cuando la palabra WH (**Who** o **What**) actúa como el **sujeto** (la persona o cosa que hace la acción), **no se usa auxiliar** (*do, does, did*).
+  
+  **Subject Question**: <HasTranslation translation="¿Quién rompió el vaso?">"Who **broke** the glass?"</HasTranslation> (Correcto) <br/>
+  *Incorrect*: "Who did break the glass?"
+</Alert>
+
+<br />
+
+## Temas relacionados
+
+<List variant="alpha">
+  <ListItem>
+    <Link href="/topics/word-order" className="underline">Word Order in Questions</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/grammar/present-be" className="underline">Verb to Be (Present)</Link>
+  </ListItem>
+  <ListItem>
+    <Link href="/topics/much-many" className="underline">How Much vs How Many</Link>
+  </ListItem>
+</List>
